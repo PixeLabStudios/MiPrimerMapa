@@ -9,6 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class InputController : MonoBehaviour
 {
+    
     public LayerMask mask;
     public Transform target;  
     public float maxDistance = 20;
@@ -20,7 +21,7 @@ public class InputController : MonoBehaviour
     float distance;
     float min, max;
     public float xDeg, yDeg;
-
+    
     private float currentDistance;
     private Quaternion currentRotation;
     private Quaternion desiredRotation;
@@ -30,11 +31,14 @@ public class InputController : MonoBehaviour
     void Start()
     {
         positions = new Dictionary<string, Vector2>();
-        positions.Add("North America", new Vector2(14, 36));
-        positions.Add("South America", new Vector2(324, 342));
-        max = 3.5f;
-        min = 1.2f;
-        rotationSpeed = 15f;
+        positions.Add("North America", new Vector2(48, 15));
+        positions.Add("South America", new Vector2(36, 324));
+        positions.Add("Africa", new Vector2(314, 354));
+        positions.Add("Europe", new Vector2(321, 25));
+
+        max = 20f;
+        min = 10f;
+        rotationSpeed = 7f;
         GetInitialValues();
     }
     public void GetInitialValues()
@@ -55,11 +59,12 @@ public class InputController : MonoBehaviour
     void Update()
     {
 
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began && Input.GetTouch(0).tapCount >1)
-        {
+       if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began && Input.GetTouch(0).tapCount > 1)
+        { 
+            Debug.Log("Double Tap");
             GoToPosition();
         }
-
+        
         if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
             Vector2 touchposition = Input.GetTouch(0).deltaPosition;
@@ -84,6 +89,9 @@ public class InputController : MonoBehaviour
             Zoom();
         }
     }
+    /// <summary>
+    /// Se encarga del zoom de la camara.
+    /// </summary>
     void Zoom()
     {
         Touch firstTouch = Input.GetTouch(0);
@@ -99,8 +107,11 @@ public class InputController : MonoBehaviour
 
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - difference * 0.01f, min, max);
     }
-
-    private static float ResetAngle(float angle)
+    /// <summary>
+    /// Mantiene el angulo de la camara entre 0 y 360.
+    /// </summary>
+   
+    private float ResetAngle(float angle)
     {
         if (angle > 360)
             angle = 0;
@@ -108,12 +119,16 @@ public class InputController : MonoBehaviour
             angle = 360;
         return angle;
     }
+    /// <summary>
+    /// LLeva la camara a la posicion de un continente.
+    /// </summary>
     void GoToPosition()
     {
         Touch firstTouch = Input.GetTouch(0);
         Ray ray = Camera.main.ScreenPointToRay(firstTouch.position);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            Debug.Log(hit.collider.name);
             if (positions.ContainsKey(hit.collider.name))
             {
                 xDeg = positions[hit.collider.name].x;
