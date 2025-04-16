@@ -21,13 +21,14 @@ public class InputController : MonoBehaviour
     float distance;
     float min, max;
     public float xDeg, yDeg;
-    
+    private GameObject activePanel;
     private float currentDistance;
     private Quaternion currentRotation;
     private Quaternion desiredRotation;
     private Quaternion rotation;
             Vector3 position;
     public Dictionary<string, Vector2> positions;
+
     void Start()
     {
         positions = new Dictionary<string, Vector2>();
@@ -40,6 +41,7 @@ public class InputController : MonoBehaviour
         min = 10f;
         rotationSpeed = 7f;
         GetInitialValues();
+        activePanel = null;
     }
     public void GetInitialValues()
     {
@@ -59,7 +61,7 @@ public class InputController : MonoBehaviour
     void Update()
     {
 
-       if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began && Input.GetTouch(0).tapCount > 1)
+       if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
         { 
             Debug.Log("Double Tap");
             GoToPosition();
@@ -133,8 +135,18 @@ public class InputController : MonoBehaviour
             {
                 xDeg = positions[hit.collider.name].x;
                 yDeg = positions[hit.collider.name].y;
+                activePanel = hit.collider.transform.GetChild(0).gameObject;
+                activePanel.SetActive(true);
             }
 
+        }
+        else 
+        {
+            if(activePanel != null)
+            {
+                activePanel.SetActive(false);
+                activePanel = null;
+            }
         }
  
 

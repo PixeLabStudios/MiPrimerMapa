@@ -5,16 +5,23 @@ public class TutorialScript : MonoBehaviour
 {
    public GameObject panel;
    private Image panelImage;
-   float alpha;
+   private Color panelColor;
+   float currentAlpha;
+   public float desiredAlpha;
     void Start()
     {
       panelImage = panel.GetComponent<Image>();
-        alpha = panelImage.color.a;  
+      panelColor = panelImage.color;
+      currentAlpha= panelImage.color.a;
+      desiredAlpha = currentAlpha;
     }
 
     // Update is called once per frame
     void Update()
     {
-       // panelImage.color = new Color(panelImage.color.r, panelImage.color.g, panelImage.color.b, Mathf.PingPong(Time.time, 1)); 
+        currentAlpha = Mathf.Lerp(currentAlpha, desiredAlpha, Time.deltaTime * 1.7f);
+        panelColor.a = currentAlpha;
+        panelImage.color = panelColor;
+        
     }
 }
