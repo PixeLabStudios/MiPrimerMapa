@@ -6,12 +6,12 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewLayer
-  m_DiffuseTexture: {fileID: 2800000, guid: d3fbc7cb3da4a304b8612676f5a2548b, type: 3}
+  m_Name: Antartida
+  m_DiffuseTexture: {fileID: 2800000, guid: 5cf38e4930293604d9c56ff6ed1c56f2, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 102, y: 100}
-  m_TileOffset: {x: 1.67, y: -0.1}
+  m_TileSize: {x: 300, y: 300}
+  m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0
   m_Smoothness: 0
