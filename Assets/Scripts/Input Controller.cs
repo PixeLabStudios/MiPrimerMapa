@@ -60,19 +60,30 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
+        if (activePanel != null) 
+        {
 
-       if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
-        { 
-            Debug.Log("Double Tap");
+            activePanel.transform.LookAt(Camera.main.transform);
+        }
+
+       if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began )
+        {
+            if (Input.GetTouch(0).tapCount == 1 && activePanel != null) 
+            {
+                //desaparece el panel
+                activePanel.SetActive(false);
+                activePanel= null;
+            }
             GoToPosition();
         }
         
         if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
         {
+            
+
             Vector2 touchposition = Input.GetTouch(0).deltaPosition;
             xDeg += touchposition.x * rotationSpeed * 0.02f;
             yDeg -= touchposition.y * rotationSpeed * 0.02f;
-
             yDeg = ResetAngle(yDeg);
             xDeg = ResetAngle(xDeg);
         }
@@ -112,7 +123,7 @@ public class InputController : MonoBehaviour
     /// <summary>
     /// Mantiene el angulo de la camara entre 0 y 360.
     /// </summary>
-   
+
     private float ResetAngle(float angle)
     {
         if (angle > 360)
@@ -128,28 +139,30 @@ public class InputController : MonoBehaviour
     {
         Touch firstTouch = Input.GetTouch(0);
         Ray ray = Camera.main.ScreenPointToRay(firstTouch.position);
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        if (Physics.Raycast(ray, out RaycastHit hit,mask))
         {
             Debug.Log(hit.collider.name);
             if (positions.ContainsKey(hit.collider.name))
             {
                 xDeg = positions[hit.collider.name].x;
                 yDeg = positions[hit.collider.name].y;
+                activePanel?.SetActive(false);
                 activePanel = hit.collider.transform.GetChild(0).gameObject;
                 activePanel.SetActive(true);
             }
 
         }
-        else 
-        {
-            if(activePanel != null)
-            {
-                activePanel.SetActive(false);
-                activePanel = null;
-            }
-        }
- 
-
+        //else 
+        //{
+        //    if(activePanel != null)
+        //    {
+        //        activePanel.SetActive(false);
+        //        activePanel = null;
+        //    }
+        //}
     }
-
+    //GameObject checkPanel() 
+    //{
+    //    return null;
+    //}
 }
