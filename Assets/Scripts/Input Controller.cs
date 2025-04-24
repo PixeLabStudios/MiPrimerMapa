@@ -12,12 +12,11 @@ public class InputController : MonoBehaviour
     
     public LayerMask mask;
     public Transform target;  
-    public float maxDistance = 20;
-    public float minDistance = .6f;
-    public float panSpeed = 0.3f;
+    public float maxDistance;
+    public float minDistance;
+    public float panSpeed;
     public float zoomDampening = 5.0f;
     private float rotationSpeed;
-    float zoomRate = 10.0f;
     float distance;
     float min, max;
     public float xDeg, yDeg;
@@ -31,17 +30,29 @@ public class InputController : MonoBehaviour
 
     void Start()
     {
-        positions = new Dictionary<string, Vector2>();
-        positions.Add("North America", new Vector2(48, 15));
-        positions.Add("South America", new Vector2(36, 324));
-        positions.Add("Africa", new Vector2(314, 354));
-        positions.Add("Europe", new Vector2(321, 25));
+         
+    positions = new Dictionary<string, Vector2>
+    {
+        { "AmericaCentral", new Vector2(53, 352) },
+        { "AmericaNorte", new Vector2(51, 21) },
+        { "AmericaSur", new Vector2(39, 317) },
+        { "Antartida", new Vector2(106, 274) },
+        { "Asia", new Vector2(266, 28) },
+        { "ContinenteAfricano", new Vector2(314, 352) },
+        { "ContinenteEuropeo", new Vector2(326, 25) },
+        { "Oceania", new Vector2(199, 329) }
+    };
 
         max = 20f;
         min = 10f;
         rotationSpeed = 7f;
         GetInitialValues();
         activePanel = null;
+        maxDistance = 20;
+        minDistance = .6f;
+        panSpeed = 0.3f;
+        zoomDampening = 5.0f;
+
     }
     public void GetInitialValues()
     {
@@ -66,7 +77,7 @@ public class InputController : MonoBehaviour
             activePanel.transform.LookAt(Camera.main.transform);
         }
 
-       if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began )
+       if (Input.touchCount == 1  && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             if (Input.GetTouch(0).tapCount == 1 && activePanel != null) 
             {
@@ -146,9 +157,9 @@ public class InputController : MonoBehaviour
             {
                 xDeg = positions[hit.collider.name].x;
                 yDeg = positions[hit.collider.name].y;
-                activePanel?.SetActive(false);
-                activePanel = hit.collider.transform.GetChild(0).gameObject;
-                activePanel.SetActive(true);
+                //activePanel?.SetActive(false);
+                //activePanel = hit.collider.transform.GetChild(0).gameObject;
+                //activePanel.SetActive(true);
             }
 
         }

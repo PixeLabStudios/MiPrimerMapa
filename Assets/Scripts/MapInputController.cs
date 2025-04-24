@@ -8,15 +8,18 @@ public class MapInputController : MonoBehaviour
 {
     public LayerMask pointMask;
     public GameObject character;
-    public List<Transform> checkpointsPosition = new List<Transform>();
-    MoveCharacter moveCharacter; 
-    List<Transform> checkpointsCleared = new List<Transform>();   
-    Transform nextPoint;
+    public List<GameObject> checkpointsPosition = new List<GameObject>();
+    List<GameObject> checkpointsCleared;
+    MoveCharacter moveCharacter;
+    
+    GameObject nextPoint;
     int index;
+    
     private void Start()
     {
-       moveCharacter = character.GetComponent<MoveCharacter>();
-       int index = 0;
+        checkpointsCleared = new List<GameObject>();
+        moveCharacter = character.GetComponent<MoveCharacter>();
+        int index = 0;
         if (checkpointsPosition.Count > 0)
         {
             nextPoint = checkpointsPosition[index];
@@ -27,9 +30,28 @@ public class MapInputController : MonoBehaviour
         }
        
     }
-    bool CheckIfPointIsCleared(Transform point) 
+    public void SetDestination(GameObject position) 
     {
-        foreach (Transform checkpoint in checkpointsCleared)
+        if (CheckIfPointIsCleared(position) || nextPoint == position) 
+        {
+            if (nextPoint == position)
+            {    
+                checkpointsCleared.Add(position);
+                index++;
+                index = Mathf.Clamp(index, 0, checkpointsPosition.Count - 1);
+                nextPoint = checkpointsPosition[index];
+            }                   
+            moveCharacter.MoveTo(position.transform.position);
+        }
+    }
+    /// <summary>
+    ///  Revisa si un punto ya fue desbloqueado
+    /// </summary>
+    /// <param name="point"></param>
+    /// <returns> un booleano </returns>
+    bool CheckIfPointIsCleared(GameObject point)
+    {
+        foreach (GameObject checkpoint in checkpointsCleared)
         {
             if (checkpoint == point)
             {
@@ -37,47 +59,44 @@ public class MapInputController : MonoBehaviour
             }
         }
         return false;
-        
+
     }
+    
+    //void Update()
+    //{
 
+    //    if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
+    //    {
+    //        Touch firstTouch = Input.GetTouch(0);
+    //        Ray ray = Camera.main.ScreenPointToRay(firstTouch.position);
+    //        if (Physics.Raycast(ray,out RaycastHit hit,1000,pointMask)) 
+    //        {
 
+    //            if (CheckIfPointIsCleared(hit.transform) || nextPoint == hit.transform)
+    //            {
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Touch firstTouch = Input.GetTouch(0);
-            Ray ray = Camera.main.ScreenPointToRay(firstTouch.position);
-            if (Physics.Raycast(ray,out RaycastHit hit,1000,pointMask)) 
-            {
-
-                if (CheckIfPointIsCleared(hit.transform) || nextPoint == hit.transform)
-                {
-
-                    if (nextPoint == hit.transform)
-                    {
-                        checkpointsCleared.Add(hit.transform);
-                        index++;
-                        index = Mathf.Clamp(index, 0, checkpointsPosition.Count - 1);
-                        Debug.Log(index);
-                        nextPoint = checkpointsPosition[index];
-                    }
-                    moveCharacter.MoveTo(hit.collider.transform.position);
-
-
-                }
-                else 
-                { 
-                    Debug.Log("This point is not cleared yet");
-                }
+    //                if (nextPoint == hit.transform)
+    //                {
+    //                    checkpointsCleared.Add(hit.transform);
+    //                    index++;
+    //                    index = Mathf.Clamp(index, 0, checkpointsPosition.Count - 1);                     
+    //                    nextPoint = checkpointsPosition[index];
+    //                }
+    //                moveCharacter.MoveTo(hit.collider.transform.position);
+    //                currentPoint = checkpointsPosition.IndexOf(hit.collider.gameObject);
+    //                Debug.Log(currentPoint);
+    //            }
+    //            else 
+    //            { 
+    //                Debug.Log("This point is not cleared yet");
+    //            }
                     
                
-            }
+    //        }
             
 
-        }
-     }
+    //    }
+     //}
     
     
 }
