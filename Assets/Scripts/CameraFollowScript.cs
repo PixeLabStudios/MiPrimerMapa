@@ -13,7 +13,7 @@ public class CameraFollowScript : MonoBehaviour
         speed = 1.2f;
         currentDistance = Vector3.Distance(transform.position, target.position);
         desiredPosition = transform.position;
-        desiredDistance = 20f;   
+       
     }
 
     // Update is called once per frame
