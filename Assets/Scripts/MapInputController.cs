@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class MapInputController : MonoBehaviour
 {
-    public LayerMask pointMask;
+    
     public GameObject character;
     public List<GameObject> checkpointsPosition = new List<GameObject>();
     List<GameObject> checkpointsCleared;
