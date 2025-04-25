@@ -30,7 +30,8 @@ public class CustomSystem : MonoBehaviour
     public List<GameObject> hairStyles = new List<GameObject>();
 
     public List<Color> hairColors = new List<Color>();
-    public List<Color> skinColors = new List<Color>();
+    //public List<Color> skinColors = new List<Color>();
+    public List<Material> skin = new List<Material>();
 
     public List<GameObject> accessories = new List<GameObject>();
 
@@ -140,31 +141,31 @@ public class CustomSystem : MonoBehaviour
     #region Skin
     public void SkinColorRigh()
     {
-        if (skinColorIndex < skinColors.Count - 1)
+        if (skinColorIndex < skin.Count - 1)
             skinColorIndex++;
         else
             skinColorIndex=0;
         ApplySelection(CustomSystem.TypeCloth.SKIN_COLOR, skinColorIndex);
 
-        if (skinColorIndexF < skinColors.Count - 1)
+        /*if (skinColorIndexF < skinColors.Count - 1)
             skinColorIndexF++;
         else
             skinColorIndexF = 0;
-        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);
+        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);*/
     }
     public void SkinColorLeft()
     {
         if (skinColorIndex > 0)
             skinColorIndex--;
         else
-            skinColorIndex = skinColors.Count - 1;
+            skinColorIndex = skin.Count - 1;
         ApplySelection(CustomSystem.TypeCloth.SKIN_COLOR, skinColorIndex);
 
-        if (skinColorIndexF > 0)
+        /*if (skinColorIndexF > 0)
             skinColorIndexF--;
         else
             skinColorIndexF = skinColors.Count - 1;
-        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);
+        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);*/
     }
     #endregion
 
@@ -443,9 +444,9 @@ public class CustomSystem : MonoBehaviour
                 break;
 
             case CustomSystem.TypeCloth.SKIN_COLOR:
-                meshRenderer.material.color = skinColors[index];
+                //meshRenderer.material.color = skinColors[index];
 
-                //meshRendererF.material.color = skinColors[index];
+                meshRendererF.material = skin[index];
                 break;
         }
     }
@@ -504,7 +505,7 @@ public class CustomSystem : MonoBehaviour
             case CustomSystem.TypeClothF.SKIN_COLOR:
                 //meshRenderer.material.color = skinColors[index];
 
-                meshRendererF.material.color = skinColors[index];
+                //meshRendererF.material.color = skinColors[index];
                 break;
         }
     }

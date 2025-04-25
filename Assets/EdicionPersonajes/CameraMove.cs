@@ -9,7 +9,7 @@ public class CameraMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentPos = positions[4];
+        currentPos = positions[0];
     }
 
     // Update is called once per frame
