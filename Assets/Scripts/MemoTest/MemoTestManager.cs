@@ -1,3 +1,5 @@
+using NUnit.Framework;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -5,24 +7,29 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class MemoTestManager : MonoBehaviour
 {
-    public List<Sprite> imagesList = new List<Sprite>();
+   
+    public List<Sprite> imagesList = new();
     public GameObject prefab;
     public Transform canvasTransform;
     public bool canClick;
-    public List<CardScript> selectedCards = new List<CardScript>();
-    public int score;
-    public int errors;
-    public TextMeshPro text;
-    List<CardScript> cardList = new List<CardScript>();  
-    CardScript[,] cardsGrid;
+    public List<CardScript> selectedCards = new();
+     
     
+    public Button StartButton;
+    List<CardScript> cardList = new();  
+    CardScript[,] cardsGrid;
+    MemoTestUIManager memoTestUIManager;
+    int correct;
+    int errors;
     private void Start()
     {
+        memoTestUIManager = GetComponent<MemoTestUIManager>();
         CreateCards();
         cardsGrid = new CardScript[4, 3];
-        canClick = true;
+        canClick = false;
     }
     /// <summary>
     /// Crea dos cartas por cada imagen en la lista de imagenes
@@ -66,29 +73,40 @@ public class MemoTestManager : MonoBehaviour
             
         }
     }
+    /// <summary>
+    /// ordena las cartas en la pantalla
+    /// </summary>
     void MoveCards() 
     {
+        Vector2 firstPoint = new Vector2(-700, -300); // punto de inicio
+        float width= prefab.GetComponent<RectTransform>().rect.width *1.5f;
+        float height = prefab.GetComponent<RectTransform>().rect.height *1.5f;
         for (int i = 0; i < cardsGrid.GetLength(0); i++)
         {
             for (int j = 0; j < cardsGrid.GetLength(1); j++)
-            {
-                cardsGrid[i, j].transform.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(i* 240+ -700,j * 240 -200);
+            {           
+                   cardsGrid[i, j].transform.gameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(i* width+ +firstPoint.x,j * height +firstPoint.y);
             }
         }
     }
 
+
+    /// <summary>
+    /// Muestra todas las cartas durante un tiempo determinado
+    /// </summary> 
+    /// <returns></returns>
     IEnumerator ShowAllCards(int time) 
     {
         canClick = false;
         foreach (CardScript cardscript in cardList)
-        {
-            
+        {          
            StartCoroutine( cardscript.ShowCard());
         }
         yield return new WaitForSeconds(time);
         foreach (CardScript cardscript in cardList)
         {
-           StartCoroutine( cardscript.HideCard());
+           
+            StartCoroutine( cardscript.HideCard());
         }
         canClick = true;
     }
@@ -102,12 +120,16 @@ public class MemoTestManager : MonoBehaviour
     }
         public void StartGame() 
     {
-        score = 0;
+        correct = 0;
         errors = 0;
+        memoTestUIManager.ChangeCorrectText(correct);
+        memoTestUIManager.ChangeErrorsText(errors);
+        
         ShuffleCards();
-        HideAllCards();
+       // HideAllCards();
         MoveCards();
         StartCoroutine(ShowAllCards(3));
+        memoTestUIManager.DisableStartButton();
     }
     public IEnumerator CheckCards() 
     {
@@ -115,12 +137,18 @@ public class MemoTestManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         if (selectedCards[0].id == selectedCards[1].id)
         {
-            score++;
+            correct++;
+            memoTestUIManager.ChangeCorrectText(correct);
+            if (    correct == imagesList.Count) 
+            {
+                memoTestUIManager.EnableStartButton();
+            }
         }
         else 
         {
+            canClick = false;
             errors++;
-            text.text = "erroes" + errors;           
+            memoTestUIManager.ChangeErrorsText(errors);
             selectedCards[0].StartCoroutine(selectedCards[0].HideCard());
             selectedCards[1].StartCoroutine(selectedCards[1].HideCard());
         }
