@@ -1,0 +1,15 @@
+{
+    "zonas": [
+      {
+        "id": 1,
+        "nombre": "Clima",
+        "descripcion": "Tiene un clima zzz"
+      },
+      {
+        "id": 2,
+        "nombre": "habitantes",
+        "descripcion": "los habitantes son zzz y marrones"
+      }
+    ]
+  }
+  
