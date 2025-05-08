@@ -87,6 +87,7 @@ public class Game1PlayerScript : MonoBehaviour
                 if (hasAFlag)
                 {              
                     DettachFlag();
+                    hasAFlag = false;
                 }
                 StartCoroutine(StunCharacter(2f));
                 break;

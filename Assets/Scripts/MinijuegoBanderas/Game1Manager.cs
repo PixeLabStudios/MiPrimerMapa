@@ -30,12 +30,16 @@ public class Game1Manager : MonoBehaviour
         {
             correctFlags++;
             bases.ShowFlag();
-            Debug.Log("Correct flag");
+            Debug.Log("Bandera Correcta");
+            if (correctFlags == flags.Length) 
+            {
+                Debug.Log("Ganaste");
+            }
             return true;
         }
         else
         {
-            Debug.Log("Incorrect flag");
+            Debug.Log("Bandera Incorrecta");
             return false;
         }
     }
