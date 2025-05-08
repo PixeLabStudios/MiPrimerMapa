@@ -8,12 +8,14 @@ public class MemoTestUIManager : MonoBehaviour
     public Button StartButton;
     public GameObject errorsText;
     public GameObject CorrectText;
-
+   // public GameObject ScoreText;
+    public PlayerData data;
     TextMeshProUGUI errors;
     TextMeshProUGUI correct;
 
     void Start()
     {
+      //  ScoreText.GetComponent<TextMeshProUGUI>().text = data.Score.ToString();
         errors = errorsText.GetComponent<TextMeshProUGUI>();
         correct = CorrectText.GetComponent<TextMeshProUGUI>();
         

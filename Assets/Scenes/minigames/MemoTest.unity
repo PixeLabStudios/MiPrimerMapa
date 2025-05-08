@@ -1294,6 +1294,7 @@ MonoBehaviour:
   StartButton: {fileID: 1301399150}
   errorsText: {fileID: 640145569}
   CorrectText: {fileID: 1647810363}
+  data: {fileID: 0}
 --- !u!1 &1647810363
 GameObject:
   m_ObjectHideFlags: 0

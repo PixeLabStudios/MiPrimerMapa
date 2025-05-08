@@ -2,15 +2,14 @@ using NUnit.Framework;
 
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class MemoTestManager : MonoBehaviour
 {
-   
+  //  public PlayerData playerData;
     public List<Sprite> imagesList = new();
     public GameObject prefab;
     public Transform canvasTransform;
@@ -26,6 +25,7 @@ public class MemoTestManager : MonoBehaviour
     int errors;
     private void Start()
     {
+       
         memoTestUIManager = GetComponent<MemoTestUIManager>();
         CreateCards();
         cardsGrid = new CardScript[4, 3];
