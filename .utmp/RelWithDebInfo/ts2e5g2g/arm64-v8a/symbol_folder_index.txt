@@ -1,0 +1,1 @@
+C:\Users\RIPF\Documents\GitHub\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\ts2e5g2g\obj\arm64-v8a

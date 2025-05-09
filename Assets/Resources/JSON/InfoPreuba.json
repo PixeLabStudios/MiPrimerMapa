@@ -1,0 +1,22 @@
+{
+    "zonas": [
+      {
+        "id": 0,
+        "nombre": "Nombre de la caracteristica o de la posta nose dea",
+        "descripcion": "aqui se mostrara la informacion de la zona, deberia aparecer texto relacionado con la posta 😼👊",
+        "imagenes": ["muestra1", "muestra2"],
+        "video": ["video1_muestra"],
+        "narracion": ["audio_muestra1."]
+      },
+      {
+        "id": 1,
+        "nombre": "BABILONICOS BASADDOS",
+        "descripcion": "los antiguos babiloniicos les gustaba el metalcore",
+        "imagenes": ["Babilopnico1.jpg", "Babilonico2.jpg"],
+        "video": ["babilonico100porsientoreal.mp4"],
+        "narracion": ["audio_Babilonico.mp3"]
+      }
+    ]
+  }
+  
+  
