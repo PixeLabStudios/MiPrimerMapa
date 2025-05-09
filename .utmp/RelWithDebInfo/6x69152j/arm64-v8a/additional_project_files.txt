@@ -1,0 +1,17 @@
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+D:\Adrian\Materias\TUDIV\MiPrimerMapa\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h

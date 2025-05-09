@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/GameStart.unity
     guid: 562635cd86da0b04cbb4bb0178ca1c21
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/Globe.unity
     guid: 0ad0527da484fd044892d3a2746dfb0b
+  - enabled: 1
+    path: Assets/Scenes/Antartida.unity
+    guid: 1874cbf8cfd6f6f4eacd97264113257f
+  - enabled: 1
+    path: Assets/Scenes/minigames/MemoTest.unity
+    guid: 516b6afb072760546816d7b25920fa5d
+  - enabled: 1
+    path: Assets/Scenes/minigames/minigame1a.unity
+    guid: a6b7299f54d687c4eb40565304a43811
+  - enabled: 1
+    path: Assets/Scenes/minigame.unity
+    guid: f3593dc302588f04b9275fab87d72cce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

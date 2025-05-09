@@ -17,6 +17,7 @@ public class MapInputController : MonoBehaviour
     
     private void Start()
     {
+        //character = GameObject.FindGameObjectWithTag("Player");
         checkpointsCleared = new List<GameObject>();
         moveCharacter = character.GetComponent<MoveCharacter>();
         int index = 0;
