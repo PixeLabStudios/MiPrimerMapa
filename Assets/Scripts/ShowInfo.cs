@@ -5,6 +5,12 @@ public class ShowInfo : MonoBehaviour
     public int index;
     public GameObject infoPanel;
     public GameObject button;
+    CameraFollowScript cameraFollowScript;
+
+    private void Awake()
+    {
+        cameraFollowScript =Camera.main.GetComponent<CameraFollowScript>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Trigger entered");
@@ -13,6 +19,7 @@ public class ShowInfo : MonoBehaviour
             Debug.Log("Player entered trigger zone");
             infoPanel.SetActive(true);
             button.SetActive(false);
+            cameraFollowScript.SetDesiredDistance(25f);
         }
         
     }
@@ -22,6 +29,7 @@ public class ShowInfo : MonoBehaviour
         {
             infoPanel.SetActive(false);
             button.SetActive(true);
+            cameraFollowScript.SetDesiredDistance(40f);
         }
     }
 }

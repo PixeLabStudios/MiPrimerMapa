@@ -17,6 +17,7 @@ public class MapInputController : MonoBehaviour
     
     private void Start()
     {
+        
         checkpointsCleared = new List<GameObject>();
         moveCharacter = character.GetComponent<MoveCharacter>();
         int index = 0;
