@@ -7,6 +7,9 @@ public class CambioPanel : MonoBehaviour
     public GameObject panelMascota;
     public GameObject panelGuardarropa;
     public GameObject panelHome;
+    public GameObject pj;
+    public GameObject mundo;
+    public ChangeMascota changeMascota;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,17 +24,23 @@ public class CambioPanel : MonoBehaviour
     {
         actualPanel.SetActive(false);
         panelMascota.SetActive(true);
+        mundo.SetActive(false);
+        changeMascota.mascotas[changeMascota.currentMascota].SetActive(true);
     }
 
     public void changeToHome()
     {
         actualPanel.SetActive(false);
         panelHome.SetActive(true);
+        pj.SetActive(false);
+        mundo.SetActive(true);
     }
     public void changeToGuardarropa()
     {
         actualPanel.SetActive(false);
         panelGuardarropa.SetActive(true);
+        pj.SetActive(true);
+        mundo.SetActive(false);
     }
 
 }
