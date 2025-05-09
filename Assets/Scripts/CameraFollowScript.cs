@@ -11,6 +11,7 @@ public class CameraFollowScript : MonoBehaviour
     public float speed; 
     void Start()
     {
+        //target = GameObject.FindGameObjectWithTag("Player").transform;
         speed = 1.2f;
         currentDistance = Vector3.Distance(transform.position, target.position);
         desiredPosition = transform.position;

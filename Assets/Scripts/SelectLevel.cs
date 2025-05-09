@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class SelectLevel : MonoBehaviour
@@ -9,9 +10,10 @@ public class SelectLevel : MonoBehaviour
     public InputController Controller;
     public List<string> continentes = new List<string>();
     private List<string> namesContinentes = new List<string>();
-    private int currentContinente = 7;
+    private int currentContinente ;
     public TextMeshProUGUI nameContinente;
     public GameObject bloqueado;
+    public GameObject botonPlay;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,7 +29,7 @@ public class SelectLevel : MonoBehaviour
     public void ContinenteLeft()
     {
         if (currentContinente > 0)
-            currentContinente++;
+            currentContinente--;
         else
             currentContinente = continentes.Count - 1;
 
@@ -67,7 +69,13 @@ public class SelectLevel : MonoBehaviour
         if (id == 0)
         {
             bloqueado.SetActive(false);
+            botonPlay.SetActive(true);
         }
-        else bloqueado.SetActive(true);
+        else
+        {
+            bloqueado.SetActive(true);
+            botonPlay.SetActive(false);
+        } 
+            
     }
 }
