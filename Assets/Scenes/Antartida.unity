@@ -541,7 +541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: UN LABORATORIO GIGANTE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2518,7 +2518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: UN LABORATORIO GIGANTE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -2545,7 +2545,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3088,10 +3088,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "TODA ESTA VIDA ES MUY IMPORTANTE. AYUDA A QUE LOS OC\xC9ANOS EST\xC9N
+    SANOS."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -3118,14 +3116,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 27.55
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3923,10 +3921,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "EST\xC1 TAN ALTO QUE PARECE UNA MONTA\xD1A GIGANTE: \xA1EL POLO SUR EST\xC1
+    A 3.000 METROS DE ALTURA!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -3953,14 +3949,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 24.9
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4473,7 +4469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: UN LABORATORIO GIGANTE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -4500,7 +4496,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6144,10 +6140,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "ESTUDIAN EL CLIMA, LA CAPA DE OZONO Y LA VIDA MARINA. \xA1MUY IMPORTANTE
+    PARA TODO EL PLANETA!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -6174,14 +6168,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 24.9
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -6705,10 +6699,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "HACE MUCHO FR\xCDO, HAY MUCHO VIENTO Y NO HAY VERANO. \xA1TODO ES BLANCO
+    COMO LA NIEVE!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -6735,14 +6727,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 28.15
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7416,10 +7408,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "A PESAR DEL FR\xCDO, MUCHOS ANIMALES VIVEN AQU\xCD: PING\xDCINOS, FOCAS,
+    BALLENAS Y KRILL."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -7446,14 +7436,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 29.6
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8452,7 +8442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: "\xBFDONDE ESTAMOS?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -8479,7 +8469,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8935,7 +8925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: LA VIDA BAJO CERO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -8962,7 +8952,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10326,10 +10316,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2033507738526127003, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 18.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033507738526127003, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.47
+      objectReference: {fileID: 0}
     - target: {fileID: 3459196947570123036, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1347566811}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_text
+      value: UN LABORATORIO GIGANTE
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontSize
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_lineSpacing
+      value: -50.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4841001212431593415, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_LocalPosition.x
       value: 170.27
@@ -10369,6 +10383,18 @@ PrefabInstance:
     - target: {fileID: 4841001212431593415, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871889461986571225, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482824749196345005, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_text
+      value: PLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482824749196345005, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8752825312878905314, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: buttonBack
@@ -10612,7 +10638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: LA VIDA BAJO CERO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -10639,7 +10665,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12887,10 +12913,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "HAY UN ACUERDO LLAMADO TRATADO ANT\xC1RTICO. DICE QUE TODOS LOS PA\xCDSES
+    DEBEN CUIDARLA Y NO PELEAR POR ELLA."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -12917,14 +12941,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 24.9
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14260,10 +14284,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "\xA1BIENVENIDO A LA ANT\xC1RTIDA! ES EL CONTINENTE M\xC1S AL SUR DEL PLANETA.
+    EST\xC1 CUBIERTO CASI POR COMPLETO DE HIELO."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -14290,14 +14312,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
-  m_fontSizeBase: 20
+  m_fontSize: 22.95
+  m_fontSizeBase: 23.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14918,10 +14940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "NO VIVE NADIE AQU\xCD TODO EL A\xD1O. SOLO VIENEN CIENT\xCDFICOS A INVESTIGAR."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -14948,14 +14967,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 29.9
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -17054,7 +17073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: LA VIDA BAJO CERO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -17081,7 +17100,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17545,6 +17564,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2033507738526127003, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 18.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033507738526127003, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3323730682563437812, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -17553,6 +17580,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 763191414}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_text
+      value: LA VIDA BAJO CERO
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontSize
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.56
+      objectReference: {fileID: 0}
     - target: {fileID: 4841001212431593415, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_LocalPosition.x
       value: 141.55
@@ -17592,6 +17631,22 @@ PrefabInstance:
     - target: {fileID: 4841001212431593415, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6140899993986312628, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871889461986571225, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482824749196345005, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_text
+      value: PLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482824749196345005, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8752825312878905314, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: buttonBack
@@ -17707,7 +17762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: "\xBFDONDE ESTAMOS?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -17734,7 +17789,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -18416,7 +18471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TITULO PREDEFINIDO LOREM IMPSUM
+  m_text: "\xBFDONDE ESTAMOS?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -18443,7 +18498,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.85
+  m_fontSize: 34.5
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19048,10 +19103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ESTE TEXTO CONTENDRA UN CORTO RESUMEN O EXPLICACION DEL CONTENIDO , EL
-    TAMA\xD1O DE EL TEXTO  VARIARA SEGUN LA CANTIDAD DE CONTENIDO PASADO POR UN ARCHIVO
-    EN FORMATO(json) CREO QUE LA VISUALIZACIOS ES  DECENTE EL TEXTO QUE CABE EN 
-    ESTE SITIO ES B"
+  m_text: "TAMBI\xC9N HAY PLANTAS COMO ALGAS ESPECIALES QUE CRECEN EN EL AGUA HELADA."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
   m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
@@ -19078,14 +19130,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.45
+  m_fontSize: 29.6
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 15
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -23333,6 +23385,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2033507738526127003, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 14.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033507738526127003, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2171322191666909200, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -23413,6 +23473,18 @@ PrefabInstance:
     - target: {fileID: 3323730682563437812, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_text
+      value: "\xBFDONDE ESTAMOS?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontSize
+      value: 1.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992569318583486653, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 4841001212431593415, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23618,6 +23690,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3298de66023b6d346aecf5cbfa209f72, type: 3}
+    - target: {fileID: 8482824749196345005, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_text
+      value: PLAY
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482824749196345005, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8752825312878905314, guid: 35e4249ef2caa20468a774dbb277a852, type: 3}
       propertyPath: buttonBack
       value: 
