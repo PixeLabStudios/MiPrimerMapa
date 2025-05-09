@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CustomSystem : MonoBehaviour
 {
+    //public Singleton singleton;
     public enum TypeCloth
     {
         HAIR,
@@ -156,6 +157,7 @@ public class CustomSystem : MonoBehaviour
         else
             skinColorIndex=0;
         ApplySelection(CustomSystem.TypeCloth.SKIN_COLOR, skinColorIndex);
+        Singleton.Instance.skinColorIndex = skinColorIndex;
 
         /*if (skinColorIndexF < skinColors.Count - 1)
             skinColorIndexF++;
@@ -170,6 +172,7 @@ public class CustomSystem : MonoBehaviour
         else
             skinColorIndex = skin.Count - 1;
         ApplySelection(CustomSystem.TypeCloth.SKIN_COLOR, skinColorIndex);
+        Singleton.Instance.skinColorIndex = skinColorIndex;
 
         /*if (skinColorIndexF > 0)
             skinColorIndexF--;
@@ -219,6 +222,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexHair = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexHair);
+                Singleton.Instance.colorIndexHair = colorIndexHair;
                 break;
             case 1:
                 if (colorIndexChest < Colors.Count - 1)
@@ -226,6 +230,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexChest = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexChest);
+                Singleton.Instance.colorIndexChest = colorIndexChest;
                 break;
             case 2:
                 if (colorIndexLegs < Colors.Count - 1)
@@ -233,6 +238,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexLegs = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexLegs);
+                Singleton.Instance.colorIndexLegs = colorIndexLegs;
                 break;
             case 3:
                 if (colorIndexFeet < Colors.Count - 1)
@@ -240,6 +246,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexFeet = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexFeet);
+                Singleton.Instance.colorIndexFeet = colorIndexFeet;
                 break;
         }
     }
@@ -253,6 +260,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexHair = Colors.Count - 1;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexHair);
+                Singleton.Instance.colorIndexHair = colorIndexHair;
                 break;
             case 1:
                 if (colorIndexChest > 0)
@@ -260,6 +268,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexChest = Colors.Count - 1;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexChest);
+                Singleton.Instance.colorIndexChest = colorIndexChest;
                 break;
             case 2:
                 if (colorIndexLegs > 0)
@@ -267,6 +276,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexLegs = Colors.Count - 1;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexLegs);
+                Singleton.Instance.colorIndexLegs = colorIndexLegs;
                 break;
             case 3:
                 if (colorIndexFeet > 0)
@@ -274,6 +284,7 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexFeet = Colors.Count - 1;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexFeet);
+                Singleton.Instance.colorIndexFeet = colorIndexFeet;
                 break;
         }
     }
@@ -287,6 +298,7 @@ public class CustomSystem : MonoBehaviour
         else
             hairIndex = 0;
         ApplySelection(CustomSystem.TypeCloth.HAIR, hairIndex);
+        Singleton.Instance.hairIndex = hairIndex;
 
         if (hairIndexF < hairStylesF.Count - 1)
             hairIndexF++;
@@ -301,6 +313,7 @@ public class CustomSystem : MonoBehaviour
         else
             hairIndex = hairStyles.Count - 1;
         ApplySelection(CustomSystem.TypeCloth.HAIR, hairIndex);
+        Singleton.Instance.hairIndex = hairIndex;
 
         if (hairIndexF > 0)
             hairIndexF--;
@@ -318,6 +331,7 @@ public class CustomSystem : MonoBehaviour
         else
             chestIndex = 0;
         ApplySelection(CustomSystem.TypeCloth.CHEST, chestIndex);
+        Singleton.Instance.chestIndex = chestIndex;
 
         if (chestIndexF < clothesChestF.Count - 1)
             chestIndexF++;
@@ -332,6 +346,7 @@ public class CustomSystem : MonoBehaviour
         else
             chestIndex = clothesChest.Count - 1;
         ApplySelection(CustomSystem.TypeCloth.CHEST, chestIndex);
+        Singleton.Instance.chestIndex = chestIndex;
 
         if (chestIndexF > 0)
             chestIndexF--;
@@ -349,6 +364,7 @@ public class CustomSystem : MonoBehaviour
         else
             legsIndex = 0;
         ApplySelection(CustomSystem.TypeCloth.LEGS, legsIndex);
+        Singleton.Instance.legsIndex = legsIndex;
 
         if (legsIndexF < clothesLegsF.Count - 1)
             legsIndexF++;
@@ -363,6 +379,7 @@ public class CustomSystem : MonoBehaviour
         else
             legsIndex = clothesLegs.Count - 1;
         ApplySelection(CustomSystem.TypeCloth.LEGS, legsIndex);
+        Singleton.Instance.legsIndex = legsIndex;
 
         if (legsIndexF > 0)
             legsIndexF--;
@@ -380,6 +397,7 @@ public class CustomSystem : MonoBehaviour
         else
             feetIndex = 0;
         ApplySelection(CustomSystem.TypeCloth.FEET, feetIndex);
+        Singleton.Instance.feetIndex = feetIndex;
 
         if (feetIndexF < clothesFeetF.Count - 1)
             feetIndexF++;
@@ -394,6 +412,7 @@ public class CustomSystem : MonoBehaviour
         else
             feetIndex = clothesFeet.Count - 1;
         ApplySelection(CustomSystem.TypeCloth.FEET, feetIndex);
+        Singleton.Instance.feetIndex = feetIndex;
 
         if (feetIndexF > 0)
             feetIndexF--;
