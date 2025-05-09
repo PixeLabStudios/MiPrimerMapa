@@ -46,7 +46,7 @@ public class Game1MoveCharacter : MonoBehaviour
     {
         
         text.text = Application.platform.ToString();
-        if (!isUsingMouse)
+        if (isUsingMouse)
         {
             Debug.Log("Mouse");
             //logica para mover el personaje con el ratón
