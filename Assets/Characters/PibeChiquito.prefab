@@ -2421,9 +2421,10 @@ GameObject:
   - component: {fileID: 4979613030732422665}
   - component: {fileID: 2454183538365778379}
   - component: {fileID: 9078456573296011143}
+  - component: {fileID: 4219197523035097542}
   m_Layer: 0
   m_Name: PibeChiquito
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2438,7 +2439,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 114.42921, y: 6.0062275, z: 192.01273}
-  m_LocalScale: {x: 0.34886602, y: 0.34886602, z: 0.34886602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5550151670850088433}
@@ -2454,7 +2455,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.07
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2501,7 +2502,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a7789dea2c8f54fa5d85b5ed276bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 324641170396805009}
   currentState: 0
+--- !u!54 &4219197523035097542
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386020272212263451}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8393017698665371641
 GameObject:
   m_ObjectHideFlags: 0
