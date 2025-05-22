@@ -9,6 +9,7 @@ TagManager:
   - Animal
   - PosInicial
   - player
+  - Comida
   layers:
   - Default
   - TransparentFX
