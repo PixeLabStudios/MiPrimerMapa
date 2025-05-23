@@ -1,38 +1,49 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
 public class CameraFollowScript : MonoBehaviour
 {
+    [Header("Target Settings")]
     public Transform target; // The target to follow
     public Vector3 offSet;
-    public float desiredDistance ; // Distance from the target
-    Vector3 desiredPosition; // Desired position of the camera
-    float currentDistance; // Current distance from the target
-    public float speed; 
+
+    [Header("Distance Settings")]
+    public float desiredDistance; // Desired distance from the target
+    private float currentDistance; // Current distance from the target
+
+    [Header("Movement Settings")]
+    public float speed = 1.2f; // Speed of camera follow
+    public bool useLerp = true; // Toggle to use Lerp
+
+    private Vector3 desiredPosition; // Desired position of the camera
+
     void Start()
     {
-        //target = GameObject.FindGameObjectWithTag("Player").transform;
-        speed = 1.2f;
         currentDistance = Vector3.Distance(transform.position, target.position);
         desiredPosition = transform.position;
-       
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
-        
-        currentDistance = Mathf.Lerp(currentDistance, desiredDistance, Time.deltaTime *speed);
-        desiredPosition = target.position - (transform.rotation * Vector3.forward * currentDistance)+ offSet;
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime *speed );
+        if (target == null) return;
 
-
-
+        if (useLerp)
+        {
+            currentDistance = Mathf.Lerp(currentDistance, desiredDistance, Time.deltaTime * speed);
+            desiredPosition = target.position - (transform.rotation * Vector3.forward * currentDistance) + offSet;
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * speed);
+        }
+        else
+        {
+            currentDistance = desiredDistance;
+            desiredPosition = target.position - (transform.rotation * Vector3.forward * currentDistance) + offSet;
+            transform.position = desiredPosition;
+        }
     }
-    public void SetDesiredDistance(float target)
+
+    public void SetDesiredDistance(float targetDistance)
     {
-        desiredDistance = target;
+        desiredDistance = targetDistance;
     }
-
 }
