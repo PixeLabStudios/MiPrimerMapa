@@ -1,9 +1,54 @@
 fileFormatVersion: 2
-guid: c1d8cb47a15d93142bff2a6eaa35cb34
+guid: 38359caddeb4b7b45b2878c0f34012c3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ban
+    second: {fileID: 2100000, guid: 77884fe6d3070a34a9d941888002b4b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barco1
+    second: {fileID: 2100000, guid: 853bf7a8bea82484fa2a7889223efb91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barco2
+    second: {fileID: 2100000, guid: 8edcca67bcd32154092ad1554eec2ace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BarcoBase
+    second: {fileID: 2100000, guid: 38ba78e22cf72f3469a75544f8fbb9fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chimenea
+    second: {fileID: 2100000, guid: 93b5b73c55c87c640a2cfe8da02c8cde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madera
+    second: {fileID: 2100000, guid: 63e6e91b7b237964085f76dd2578d6fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madera2
+    second: {fileID: 2100000, guid: b13567016455d0a45a249e04624d832c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Proa
+    second: {fileID: 2100000, guid: fc28fe8b500b0534ab9218af1fd94df3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Techo
+    second: {fileID: 2100000, guid: 79155b763a6bdf24e95763f30cb5af53, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

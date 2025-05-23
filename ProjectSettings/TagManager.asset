@@ -9,6 +9,7 @@ TagManager:
   - Animal
   - PosInicial
   - player
+  - Boat
   layers:
   - Default
   - TransparentFX
