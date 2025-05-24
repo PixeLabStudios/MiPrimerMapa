@@ -814,8 +814,8 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1390,7 +1390,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47a162442768a34d8f5b6eaf4ad575b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 85
+  totalPreguntas: 10
+  aciertos: 7
+  starScoreDisplay: {fileID: 1905514883}
+  score: 0
 --- !u!1 &391322655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,8 +2322,8 @@ MonoBehaviour:
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -2573,7 +2576,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -3852,6 +3855,7 @@ MonoBehaviour:
   - {fileID: 625413814}
   - {fileID: 213229257}
   fillSpeed: 1.5
+  fillSound: {fileID: 8300000, guid: 3cebe98238bb20e479a39a419dd86d53, type: 3}
 --- !u!4 &1905514884
 Transform:
   m_ObjectHideFlags: 0
