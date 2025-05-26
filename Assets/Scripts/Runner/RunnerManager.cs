@@ -13,7 +13,7 @@ public class RunnerManager : MonoBehaviour
     
     private void Update()
     {
-        time += Time.deltaTime;
+       
         
     }
     
@@ -24,5 +24,15 @@ public class RunnerManager : MonoBehaviour
             runnerScript1.ChangeSpeed(0);
             Debug.Log("gano");
         }
+    }
+    public void PauseGame()
+    {
+        Time.timeScale = 0f; // Pausa el juego
+        // StopCoroutine(GenerateObject.Generate());
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f; // Reanuda el juego
+        // StartCoroutine(GenerateObject.Generate());
     }
 }

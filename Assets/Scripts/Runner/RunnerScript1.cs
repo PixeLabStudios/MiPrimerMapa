@@ -10,67 +10,76 @@ public class RunnerScript1 : MonoBehaviour
     #region Movimiento
     Vector3 desiredPosition;
     Vector3 currentPosition;
-    float movementSpeed;
+    public float movementSpeed;
     float swipeThreshold;
     int currentRow;
     bool alreadyMoving;
     #endregion
 
-
+    
 
     private void Start()
     {
         alreadyMoving = false;
-        currentRow = 2; // inicializa en la fila 2 (en el medio), las filas irian de 1 a 4
+        currentRow = 2; 
         currentPosition = transform.position;
         desiredPosition = currentPosition;
-        movementSpeed =2.0f *Time.deltaTime;
+        movementSpeed =5f;
         maxLives = 3;
         lives = maxLives;
         swipeThreshold = 45f;
+        
     }
 
     private void Update()
     {
-        Debug.Log(currentRow);
-        if (Input.touchCount ==1) 
+        InputMobile();
+        
+        transform.position += new Vector3(1*movementSpeed *Time.deltaTime,0,0);
+       
+    }
+    void InputMobile() 
+    {
+        if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
-           
+
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                   // Debug.Log("toco");
+                    // Debug.Log("toco");
                     break;
                 case TouchPhase.Moved:
                     if (touch.deltaPosition.y < -swipeThreshold && !alreadyMoving)
                     {
-                     //   Debug.Log("mueve hacia abajo" + touch.deltaPosition.y);
+                        //   Debug.Log("mueve hacia abajo" + touch.deltaPosition.y);
                         alreadyMoving = true;
                         Move(-1);
-                    } else if (touch.deltaPosition.y >=swipeThreshold && !alreadyMoving) 
+                    }
+                    else if (touch.deltaPosition.y >= swipeThreshold && !alreadyMoving)
                     {
-                     //   Debug.Log("mueve hacia arriba" + touch.deltaPosition.y);
+                        //   Debug.Log("mueve hacia arriba" + touch.deltaPosition.y);
                         alreadyMoving = true;
                         Move(1);
                     }
-                   
+
                     break;
                 case TouchPhase.Ended:
-                  //  Debug.Log("solto");
+                    //  Debug.Log("solto");
                     alreadyMoving = false;
                     break;
             }
-           
-            
-        }
-        transform.position += new Vector3(1*movementSpeed,0,0);
-       
-    }
 
+
+        }
+    }
+    /// <summary>
+    /// Mueve al jugador a la fila de arriba o abajo dependiendo del valor de i
+    /// </summary>
+    /// <param name="i"></param>
     void Move(int i)
     {
-        if (currentRow + i <= 4 && (currentRow +i) >=1) //Revisa que no sea menor que 1 y mayor que 4
+        if (currentRow + i <= 3 && (currentRow +i) >=1) //Revisa que no sea menor que 1 y mayor que 3
         {
             currentRow += i;
             transform.position += new Vector3(0,2*i,0); // si el i es negativo se mueve hacia abajo y arriba si es positivo 
@@ -96,6 +105,13 @@ public class RunnerScript1 : MonoBehaviour
             
             Debug.Log("choque con otro animal");
             ChangeLives(-1);
+            if(lives <= 0)
+            {
+                Debug.Log("perdiste todas las vidas");
+                //GameOver
+                //Destroy(gameObject);
+                //PauseGame();
+            }
         }
     }
 
@@ -103,4 +119,5 @@ public class RunnerScript1 : MonoBehaviour
     {
        lives += i;
     }
+    
 }
