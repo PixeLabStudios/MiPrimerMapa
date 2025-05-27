@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,12 +8,14 @@ public class RunnerUI : MonoBehaviour
     public Button pauseButton;
     public Button piramideButton;
     public GameObject panel;
-
-
+    public GameObject resultPanel;
+    public TextMeshProUGUI resultText;
+    public GameObject[] Hearts;
     private void Start()
     {
         runnerManager = FindFirstObjectByType<RunnerManager>();
         panel.SetActive(false);
+        resultPanel.SetActive(false);
     }
     public void ShowFoodChainPanel() 
     {
@@ -27,7 +30,16 @@ public class RunnerUI : MonoBehaviour
         panel.SetActive(false);
         piramideButton.interactable = true;
         runnerManager.ResumeGame();
-        Debug.Log("HideFoodChainPanel");
+        
     }
+    public void ShowResults(string result) 
+    {
+        resultPanel.SetActive(true);
+        resultText.text = result;
 
+    }
+    public void ShowLives(int i)
+    {
+        //falta
+    }
 }

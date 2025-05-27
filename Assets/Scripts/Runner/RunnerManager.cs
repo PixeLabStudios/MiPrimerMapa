@@ -1,20 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RunnerManager : MonoBehaviour
 {
+    public RunnerUI runnerUI;
+    public GenerateObject objectGenerator;
     public RunnerScript1 runnerScript1; 
     float time;
     bool gameOver;
     public void Start()
     {
+        runnerUI = GetComponent<RunnerUI>();
         gameOver = false;
         time = 0;
-    }
-    
-    private void Update()
-    {
-       
-        
     }
     
     private void OnTriggerEnter(Collider other)
@@ -22,9 +20,23 @@ public class RunnerManager : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             runnerScript1.ChangeSpeed(0);
-            Debug.Log("gano");
+            StopCoroutine(objectGenerator.Generate()); // Detiene la generacion de objetos
+            runnerUI.ShowResults("Ganaste"); // Muestra el panel de resultados
+            
+            //Despues deberia mostrar el puntaje
         }
     }
+    public void Restart() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
+    public void ExitGame() 
+    {
+        SceneManager.LoadScene("Antartida");
+    }
+    
+
+
     public void PauseGame()
     {
         Time.timeScale = 0f; // Pausa el juego

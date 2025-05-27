@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using UnityEngine;
 
 public class RunnerScript1 : MonoBehaviour
@@ -38,6 +39,9 @@ public class RunnerScript1 : MonoBehaviour
         transform.position += new Vector3(1*movementSpeed *Time.deltaTime,0,0);
        
     }
+    /// <summary>
+    /// Controla los inputs en moviles
+    /// </summary>
     void InputMobile() 
     {
         if (Input.touchCount == 1)
@@ -93,7 +97,7 @@ public class RunnerScript1 : MonoBehaviour
     {
         if (other.CompareTag("Comida"))
         {
-            Debug.Log("choque con comida");
+           // Debug.Log("choque con comida");
             if (lives < maxLives)
             {
                 ChangeLives(1);
@@ -103,15 +107,22 @@ public class RunnerScript1 : MonoBehaviour
         else 
         {
             
-            Debug.Log("choque con otro animal");
+           
+
             ChangeLives(-1);
-            if(lives <= 0)
+            Debug.Log("choque con otro animal  Vidas: " + lives);
+            if (lives <= 0)
             {
-                Debug.Log("perdiste todas las vidas");
+                RunnerManager runnerManager = FindFirstObjectByType<RunnerManager>();
+                runnerManager.StopCoroutine(runnerManager.objectGenerator.Generate());
+                runnerManager.runnerUI.ShowResults("Perdiste");
+                ChangeSpeed(0);
+            // Debug.Log("perdiste todas las vidas");
                 //GameOver
                 //Destroy(gameObject);
                 //PauseGame();
             }
+            Destroy(other.gameObject);
         }
     }
 
