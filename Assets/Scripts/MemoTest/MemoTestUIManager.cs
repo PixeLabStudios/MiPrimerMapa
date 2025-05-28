@@ -9,7 +9,7 @@ public class MemoTestUIManager : MonoBehaviour
     public GameObject errorsText;
     public GameObject CorrectText;
    // public GameObject ScoreText;
-    public PlayerData data;
+   
     TextMeshProUGUI errors;
     TextMeshProUGUI correct;
 

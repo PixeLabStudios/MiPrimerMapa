@@ -1,0 +1,42 @@
+{
+    "list": [
+        {
+            "name": "Taj Mahal (India)",
+            "description": "El Taj Mahal es un mausoleo de mármol blanco construido en la ciudad de Agra, India, en el siglo XVII por el emperador Shah Jahan. Fue hecho en honor a su esposa favorita, Mumtaz Mahal. Es una de las obras arquitectónicas más famosas del mundo y está considerada una de las Nuevas 7 Maravillas del Mundo.",
+            "imagePath": "Imagenes/Asia/Taj_Mahal",
+            "questions": [
+                {
+                    "questionText":"¿En qué país se encuentra el Taj Mahal?",
+                    "answers": [
+                        "Buenos Aires, Argentina",
+                        "Berlin, Alemania",
+                        "Roma, Italia",
+                        "Agra, India"
+                    ],
+                    "correctAnswer": "Agra, India"
+                },
+                {
+                    "questionText": "¿Qué tipo de edificio es el Taj Mahal?",
+                    "answers": [
+                        "nose",
+                        "nosse",
+                        "asa",
+                        "mausoleo"
+                    ],
+                    "correctAnswer": "mausoleo"
+                },
+                {
+                    "questionText": "¿Quién mandó a construirlo?",
+                    "answers": [
+                        "un gil",
+                        "pepe",
+                        "pepito",
+                        "Shah Jahan"
+                    ],
+                    "correctAnswer": "Shah Jahan"
+                }
+            ]
+        }
+        
+    ]
+}
