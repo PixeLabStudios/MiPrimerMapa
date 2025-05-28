@@ -1,8 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class BoatManager : MonoBehaviour
 {
+    public Button buttonAccept, buttonReject, StartButton;
+    public AudioClip succes, error;
+    public AudioSource audioSource;
     public List<Texture2D> flagTextures;
     public List<string> countryNames;
     public List<bool> countryAllowed;
@@ -11,91 +16,95 @@ public class BoatManager : MonoBehaviour
     public Transform spawnPoint, inspectionPoint, acceptPoint, rejectPoint;
 
     public float velocidadBoteinicial;
-    public int puntosJugables;
+    private int puntosJugables;
+
     private int acumuladorAciertos;
     private int acumuladorErrores;
 
-    private int bandera;
+    public TimerController timerController;
 
     private BoatController currentBoat;
+    private bool gameActive = false;
 
     private void Start()
     {
-        bandera = puntosJugables;
+        timerController.OnTimerEnd += EndGameDueToTime;
+        timerController.StartTimer();
+        gameActive = true;
+        DisableButton();
         SpawnBoat();
+
     }
+
     public void SpawnBoat()
     {
+        //|| puntosJugables < 0
+        if (!gameActive ) return;
+
         GameObject newBoat = Instantiate(boatPrefab, spawnPoint.position, Quaternion.identity);
         currentBoat = newBoat.GetComponent<BoatController>();
-
         int index = Random.Range(0, flagTextures.Count);
         currentBoat.SetFlag(flagTextures[index], countryNames[index], countryAllowed[index]);
-
-        // 🚫 No se destruye al ir a inspección
-        currentBoat.MoveTo(inspectionPoint.position,false,velocidadBoteinicial);
+        currentBoat.MoveTo(inspectionPoint.position, false, velocidadBoteinicial, true);
+        
     }
 
     public void AcceptBoat()
     {
-        Debug.Log("Botón Aceptar presionado");
-
-        if (currentBoat == null)
-        {
-            Debug.LogError("❌ currentBoat está null. ¿Llamaste a SpawnBoat?");
-            return;
-        }
-
-        // ✅ Se destruye al llegar al punto de aceptación
-        currentBoat.MoveTo(acceptPoint.position, true,velocidadBoteinicial);
+        if (!gameActive) return;
+        DisableButton();
+        currentBoat.MoveTo(acceptPoint.position, true, velocidadBoteinicial, false);
         CheckDecision(true);
     }
 
     public void RejectBoat()
     {
-        Debug.Log("Botón Rechazar presionado");
-
-        // ✅ Se destruye al llegar al punto de rechazo
-        currentBoat.MoveTo(rejectPoint.position, true,velocidadBoteinicial);
+        if (!gameActive) return;
+        DisableButton();
+        currentBoat.MoveTo(rejectPoint.position, true, velocidadBoteinicial, false);
         CheckDecision(false);
     }
-
 
     private void CheckDecision(bool accepted)
     {
         if (currentBoat.isAllowed == accepted)
         {
-            acumuladorAciertos += 1;
-            Debug.Log("Decisión correcta");
-            velocidadBoteinicial += 1.5f;
-
+            acumuladorAciertos++;
+            audioSource.PlayOneShot(succes);
         }
         else
         {
-            acumuladorErrores += 1;
-            Debug.Log("Decisión incorrecta");
-            velocidadBoteinicial += 1.5f;
+            acumuladorErrores++;
+            audioSource.PlayOneShot(error);
         }
-        puntosJugables -= 1;
 
-
-        endGame();
+        velocidadBoteinicial += 1f;
+        //puntosJugables--;
+        Invoke(nameof(SpawnBoat), 2f);
     }
 
-    public void endGame()
+    private void EndGameDueToTime()
     {
-        if (puntosJugables < 0)
-        {
-            
-            Debug.Log("Fin del juego");
-            Debug.Log("Aciertos: " + acumuladorAciertos);
-            Debug.Log("Errores: " + acumuladorErrores);
-            Debug.Log("Puntos totales: " + bandera);
-        }
-        else
-        {
-            Debug.Log("Juego en progreso");
-            Invoke(nameof(SpawnBoat), 2f);
-        }
+        gameActive = false;
+        DisableButton();
+        ShowResults();
+    }
+
+    private void ShowResults()
+    {
+        ///aqui va la logica que llama al panel de resultados que muestras las estrellas
+    }
+
+    public void DisableButton()
+    {
+        buttonAccept.interactable = false;
+        buttonReject.interactable = false;
+    }
+    
+
+    public void EnableButton()
+    {
+        buttonReject.interactable = true;
+        buttonAccept.interactable = true;
     }
 }
