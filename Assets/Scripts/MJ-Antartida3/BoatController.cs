@@ -4,13 +4,23 @@ using System.Collections;
 public class BoatController : MonoBehaviour
 {
     [Header("Bandera")]
-    public Renderer flagRenderer;        // El Renderer del objeto donde se muestra la bandera
-    public Material flagMaterial;        // El material editable (copiado) para aplicar la bandera
-    public string countryName;           // Nombre del país (opcional, por lógica de juego)
-    public bool isAllowed;               // Si está permitido el ingreso según la bandera
+    public Renderer flagRenderer;
+    public Material flagMaterial;
+    public string countryName;
+    public bool isAllowed;
 
-    private Coroutine movementCoroutine; // Referencia al movimiento para evitar múltiples al mismo tiempo
-    // Asigna la textura, país y permiso al barco
+    private BoatManager boatManager;
+    private Coroutine movementCoroutine;
+
+    private void Start()
+    {
+        boatManager = FindFirstObjectByType<BoatManager>(FindObjectsInactive.Include);
+        if (boatManager == null)
+        {
+            Debug.LogError("🚨 No se encontró BoatManager en la escena.");
+        }
+    }
+
     public void SetFlag(Texture2D flagTexture, string country, bool allowed)
     {
         if (flagMaterial == null || flagRenderer == null)
@@ -19,7 +29,7 @@ public class BoatController : MonoBehaviour
             return;
         }
 
-        Material newMaterial = new Material(flagMaterial); // Clonar material base
+        Material newMaterial = new Material(flagMaterial);
         newMaterial.mainTexture = flagTexture;
         flagRenderer.material = newMaterial;
 
@@ -27,17 +37,17 @@ public class BoatController : MonoBehaviour
         isAllowed = allowed;
     }
 
-    // Mueve el barco hacia un destino dado
-    public void MoveTo(Vector3 destination, bool destroyOnArrival = false,float speed = 5)
+    public void MoveTo(Vector3 destination, bool destroyOnArrival = false, float speed = 5f, bool activateButtonsOnArrival = false)
     {
         if (movementCoroutine != null)
+        {
             StopCoroutine(movementCoroutine);
+        }
 
-        movementCoroutine = StartCoroutine(MoveToPosition(destination, destroyOnArrival,speed));
+        movementCoroutine = StartCoroutine(MoveToPosition(destination, destroyOnArrival, speed, activateButtonsOnArrival));
     }
 
-    // Corrutina para mover el barco suavemente
-    private IEnumerator MoveToPosition(Vector3 target, bool destroyOnArrival,float speed)
+    private IEnumerator MoveToPosition(Vector3 target, bool destroyOnArrival, float speed, bool activateButtonsOnArrival)
     {
         float rotationSpeed = 5f;
 
@@ -48,9 +58,14 @@ public class BoatController : MonoBehaviour
 
             if (distance < 0.50f)
             {
+                if (activateButtonsOnArrival && boatManager != null)
+                {
+                    boatManager.EnableButton(); // ✅ Solo activa los botones si se indicó
+                }
+
                 if (destroyOnArrival)
                 {
-                    Destroy(gameObject); // 💥 Solo se destruye si está permitido
+                    Destroy(gameObject);
                 }
                 yield break;
             }
@@ -68,7 +83,6 @@ public class BoatController : MonoBehaviour
             yield return null;
         }
     }
-
-
 }
+
 

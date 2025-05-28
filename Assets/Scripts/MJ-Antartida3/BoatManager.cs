@@ -1,8 +1,14 @@
 ﻿using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
+using TMPro;
 
 public class BoatManager : MonoBehaviour
 {
+    public Button buttonAccept, buttonReject, StartButton;
+    public AudioClip succes, error;
+    public AudioSource audioSource;
     public List<Texture2D> flagTextures;
     public List<string> countryNames;
     public List<bool> countryAllowed;
@@ -19,9 +25,18 @@ public class BoatManager : MonoBehaviour
 
     private BoatController currentBoat;
 
-    private void Start()
+    
+    public TextMeshProUGUI timerText; // o public Text timerText si usás el Text normal
+    public float gameDuration = 60f; // Duración total del minijuego
+    private float remainingTime;
+    private bool gameActive = true;
+
+private void Start()
     {
         bandera = puntosJugables;
+        remainingTime = gameDuration;
+        UpdateTimerDisplay();
+        StartCoroutine(GameTimer());
         SpawnBoat();
     }
     public void SpawnBoat()
@@ -33,8 +48,37 @@ public class BoatManager : MonoBehaviour
         currentBoat.SetFlag(flagTextures[index], countryNames[index], countryAllowed[index]);
 
         // 🚫 No se destruye al ir a inspección
-        currentBoat.MoveTo(inspectionPoint.position,false,velocidadBoteinicial);
+        currentBoat.MoveTo(inspectionPoint.position, false, velocidadBoteinicial, true); // ✅ activa botones al llegar
+
     }
+    private IEnumerator GameTimer()
+    {
+        while (remainingTime > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            remainingTime -= 1f;
+            UpdateTimerDisplay();
+        }
+
+        gameActive = false;
+        DisableButton();
+        Debug.Log("⏰ Tiempo agotado. Fin del juego.");
+        EndGameDueToTime();
+    }
+    private void UpdateTimerDisplay()
+    {
+        int seconds = Mathf.CeilToInt(remainingTime);
+        timerText.text = "Tiempo: " + seconds.ToString() + "s";
+    }
+    private void EndGameDueToTime()
+    {
+        Debug.Log("Aciertos: " + acumuladorAciertos);
+        Debug.Log("Errores: " + acumuladorErrores);
+        Debug.Log("Puntos totales: " + bandera);
+        // Podés añadir aquí: desactivar la UI, mostrar un panel de fin, etc.
+    }
+
+
 
     public void AcceptBoat()
     {
@@ -46,8 +90,8 @@ public class BoatManager : MonoBehaviour
             return;
         }
 
-        // ✅ Se destruye al llegar al punto de aceptación
-        currentBoat.MoveTo(acceptPoint.position, true,velocidadBoteinicial);
+        DisableButton(); // ✅ los desactiva antes de moverse
+        currentBoat.MoveTo(acceptPoint.position, true, velocidadBoteinicial, false);
         CheckDecision(true);
     }
 
@@ -55,10 +99,11 @@ public class BoatManager : MonoBehaviour
     {
         Debug.Log("Botón Rechazar presionado");
 
-        // ✅ Se destruye al llegar al punto de rechazo
-        currentBoat.MoveTo(rejectPoint.position, true,velocidadBoteinicial);
+        DisableButton(); // ✅ los desactiva antes de moverse
+        currentBoat.MoveTo(rejectPoint.position, true, velocidadBoteinicial, false);
         CheckDecision(false);
     }
+
 
 
     private void CheckDecision(bool accepted)
@@ -68,6 +113,7 @@ public class BoatManager : MonoBehaviour
             acumuladorAciertos += 1;
             Debug.Log("Decisión correcta");
             velocidadBoteinicial += 1.5f;
+            audioSource.PlayOneShot(succes);
 
         }
         else
@@ -75,6 +121,7 @@ public class BoatManager : MonoBehaviour
             acumuladorErrores += 1;
             Debug.Log("Decisión incorrecta");
             velocidadBoteinicial += 1.5f;
+            audioSource.PlayOneShot(error);
         }
         puntosJugables -= 1;
 
@@ -97,5 +144,16 @@ public class BoatManager : MonoBehaviour
             Debug.Log("Juego en progreso");
             Invoke(nameof(SpawnBoat), 2f);
         }
+    }
+    public void DisableButton()
+    {
+        
+        buttonAccept.interactable = false;
+        buttonReject.interactable = false;
+    }
+    public void EnableButton()
+    {
+        buttonReject.interactable = true;
+        buttonAccept.interactable = true;
     }
 }
