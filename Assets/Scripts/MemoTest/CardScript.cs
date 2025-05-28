@@ -5,12 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class CardScript : MonoBehaviour
+public class CardScript : Card
 {
-    public int id; // id de la carta
-    public Image cardImage; // imagen de la carta
-    public Button cardButton; // boton de la carta
-    public bool isFlipped; // estado de la carta (volteada o no)
+   
     MemoTestManager memoTestManager;
     private void Start()
     {       
