@@ -6,13 +6,11 @@ public class RunnerManager : MonoBehaviour
     public RunnerUI runnerUI;
     public GenerateObject objectGenerator;
     public RunnerScript1 runnerScript1; 
-    float time;
-    bool gameOver;
+    
     public void Start()
     {
         runnerUI = GetComponent<RunnerUI>();
-        gameOver = false;
-        time = 0;
+        
     }
     
     private void OnTriggerEnter(Collider other)

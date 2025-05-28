@@ -1,48 +1,25 @@
-using System;
+using UnityEngine;
 using System.IO;
 using System.Collections;
-using UnityEngine;
+
 using UnityEngine.UI;
-
-[System.Serializable]
-public class CardScript : Card
+public abstract class Card : MonoBehaviour
 {
-   
-    MemoTestManager memoTestManager;
-    private void Start()
-    {       
-        isFlipped = false;
-        cardImage.gameObject.SetActive(false); 
-        cardButton.onClick.AddListener(Onclick);
-        memoTestManager = GameObject.Find("GameManager").GetComponent<MemoTestManager>();
-    }
-   
-    void Onclick() 
-    {
-        if (memoTestManager.canClick ) 
-        {
-            StartCoroutine(ShowCard());
-            memoTestManager.selectedCards.Add(this);
-            if (memoTestManager.selectedCards.Count >=2) 
-            {
-            StartCoroutine(memoTestManager.CheckCards());
-            }
-        }
-        
+    public int id; // id de la carta
+    public Image cardImage; // imagen de la carta
+    public Button cardButton; // boton de la carta
+    public bool isFlipped; // estado de la carta (volteada o no)
 
-    }
     public IEnumerator ShowCard()
     {
-        
-
         //card =Application.persistentDataPath + "/d.json";
-        
-        if (isFlipped==false)
+
+        if (isFlipped == false)
         {
             cardButton.GetComponent<Button>().interactable = false;
             while (transform.rotation.eulerAngles.y < 179)
             {
-               
+
                 transform.Rotate(0, 10, 0);
 
                 if (transform.rotation.eulerAngles.y >= 90)
@@ -53,11 +30,11 @@ public class CardScript : Card
             }
             isFlipped = !isFlipped;
         }
-        
+
     }
-    public IEnumerator HideCard() 
+    public IEnumerator HideCard()
     {
-        if (isFlipped==true) 
+        if (isFlipped == true)
         {
             while (transform.rotation.eulerAngles.y > 1)
             {
@@ -72,15 +49,11 @@ public class CardScript : Card
             cardButton.GetComponent<Button>().interactable = true;
             isFlipped = !isFlipped;
         }
-       
 
-        
     }
-    public void ChangeImage(Sprite sprite) 
+    public void ChangeImage(Sprite sprite)
     {
-        cardImage.sprite = sprite; 
-    }      
-    
-
+        cardImage.sprite = sprite;
+    }
 
 }
