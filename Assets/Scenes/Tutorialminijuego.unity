@@ -1390,8 +1390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d47a162442768a34d8f5b6eaf4ad575b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalPreguntas: 10
-  aciertos: 7
+  totalPreguntas: 100
+  aciertos: 49
   starScoreDisplay: {fileID: 1905514883}
   score: 0
 --- !u!1 &391322655
