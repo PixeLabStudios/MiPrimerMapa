@@ -11,6 +11,8 @@ TagManager:
   - player
   - Boat
   - Comida
+  - Submarino
+  - Label
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Camino
   - terreno
   - post
-  - 
+  - fondo
   - 
   - 
   - 

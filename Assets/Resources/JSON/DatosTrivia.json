@@ -19,6 +19,43 @@
                     "questionText": "¿Qué tipo de edificio es el Taj Mahal?",
                     "answers": [
                         "nose",
+                        "que te importa",
+                        "asa",
+                        "mausoleo"
+                    ],
+                    "correctAnswer": "mausoleo"
+                },
+                {
+                    "questionText": "¿Quién mandó a construirlo?",
+                    "answers": [
+                        "un gil",
+                        "pepe",
+                        "pepito",
+                        "Shah Jahan"
+                    ],
+                    "correctAnswer": "Shah Jahan"
+                }
+            ]
+        },
+        {
+            "name": "La Gran Muralla China (China)",
+            "description": "La Gran Muralla China es una estructura defensiva construida hace más de 2.000 años para proteger al Imperio chino de invasiones. Se extiende por más de 21.000 kilómetros a lo largo del norte de China. Fue construida por varios emperadores a lo largo del tiempo.",
+            "imagePath": "Imagenes/Asia/Muralla_China",
+            "questions": [
+                {
+                    "questionText":"¿Cuál era el propósito de la Gran Muralla China?",
+                    "answers": [
+                        "Proteccion contra invasiones",
+                        "Centro de comercio",
+                        "Sitio Religioso",
+                        "Mausoleo en honor a un persona"
+                    ],
+                    "correctAnswer": "Proteger de invasores"
+                },
+                {
+                    "questionText": "¿Qué tipo de edificio es el Taj Mahal?",
+                    "answers": [
+                        "nose",
                         "nosse",
                         "asa",
                         "mausoleo"

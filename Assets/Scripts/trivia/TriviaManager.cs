@@ -43,11 +43,12 @@ public class TriviaManager : MonoBehaviour
     {
 
         //prueba con uno solo
-
-        triviaCards[0].data = dataList.list[0]; // Asignar el primer elemento de la lista a la primera carta de trivia
+        Debug.Log(dataList.list.Count);
+        triviaCards[0].data = dataList.list[1]; // paso los datos de un objeto a la carta de trivia.
         triviaCards[0].cardName = triviaCards[0].data.name; // Asignar el nombre de la carta a la variable cardName de TriviaCard
         Sprite sprite = Resources.Load<Sprite>(triviaCards[0].data.imagePath);
-        Debug.Log(triviaCards[0].data.imagePath);
+
+        Debug.Log(triviaCards[0].data.questions);
         triviaCards[0].ChangeImage(sprite); // Cargar la imagen de la carta desde Resources y asignarla a la carta de trivia
     }
 
