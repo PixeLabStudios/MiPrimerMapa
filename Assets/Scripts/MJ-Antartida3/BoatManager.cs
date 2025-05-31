@@ -5,6 +5,12 @@ using TMPro;
 
 public class BoatManager : MonoBehaviour
 {
+    public PanelManager panelManager;
+
+    public StarScoreDisplay starScoreDisplay;
+
+    [Header("Botones de Aceptar y Rechazar")]
+
     public Button buttonAccept, buttonReject, StartButton;
     public AudioClip succes, error;
     public AudioSource audioSource;
@@ -16,7 +22,7 @@ public class BoatManager : MonoBehaviour
     public Transform spawnPoint, inspectionPoint, acceptPoint, rejectPoint;
 
     public float velocidadBoteinicial;
-    private int puntosJugables;
+    private int puntosJugables = 0;
 
     private int acumuladorAciertos;
     private int acumuladorErrores;
@@ -33,6 +39,7 @@ public class BoatManager : MonoBehaviour
         gameActive = true;
         DisableButton();
         SpawnBoat();
+        panelManager.ActivarSoloPanel(0); 
 
     }
 
@@ -92,7 +99,18 @@ public class BoatManager : MonoBehaviour
 
     private void ShowResults()
     {
+        puntosJugables = acumuladorAciertos + acumuladorErrores;
+        float score = (float)acumuladorAciertos / puntosJugables * 120f;
+
+        panelManager.ActivarSoloPanel(2);
+        if (puntosJugables == 0) 
+        {
+            score = 0f; 
+        }
+        starScoreDisplay.ShowStars(score);
+
         ///aqui va la logica que llama al panel de resultados que muestras las estrellas
+       
     }
 
     public void DisableButton()
