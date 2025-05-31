@@ -1,29 +1,29 @@
 {
     "list": [
         {
-            "name": "Taj Mahal (India)",
+            "name": "Taj Mahal",
             "description": "El Taj Mahal es un mausoleo de mármol blanco construido en la ciudad de Agra, India, en el siglo XVII por el emperador Shah Jahan. Fue hecho en honor a su esposa favorita, Mumtaz Mahal. Es una de las obras arquitectónicas más famosas del mundo y está considerada una de las Nuevas 7 Maravillas del Mundo.",
             "imagePath": "Imagenes/Asia/Taj_Mahal",
             "questions": [
                 {
                     "questionText":"¿En qué país se encuentra el Taj Mahal?",
                     "answers": [
-                        "Buenos Aires, Argentina",
-                        "Berlin, Alemania",
-                        "Roma, Italia",
-                        "Agra, India"
+                        "Argentina",
+                        "Alemania",
+                        "Italia",
+                        "India"
                     ],
-                    "correctAnswer": "Agra, India"
+                    "correctAnswer": "India"
                 },
                 {
                     "questionText": "¿Qué tipo de edificio es el Taj Mahal?",
                     "answers": [
-                        "nose",
-                        "que te importa",
-                        "asa",
-                        "mausoleo"
+                        "Monumento",
+                        "Estructura Defensiva",
+                        "Teatro",
+                        "Mausoleo"
                     ],
-                    "correctAnswer": "mausoleo"
+                    "correctAnswer": "Mausoleo"
                 },
                 {
                     "questionText": "¿Quién mandó a construirlo?",
@@ -38,7 +38,7 @@
             ]
         },
         {
-            "name": "La Gran Muralla China (China)",
+            "name": "La Gran Muralla",
             "description": "La Gran Muralla China es una estructura defensiva construida hace más de 2.000 años para proteger al Imperio chino de invasiones. Se extiende por más de 21.000 kilómetros a lo largo del norte de China. Fue construida por varios emperadores a lo largo del tiempo.",
             "imagePath": "Imagenes/Asia/Muralla_China",
             "questions": [
@@ -50,30 +50,220 @@
                         "Sitio Religioso",
                         "Mausoleo en honor a un persona"
                     ],
-                    "correctAnswer": "Proteger de invasores"
+                    "correctAnswer": "Proteccion contra invasiones"
                 },
                 {
-                    "questionText": "¿Qué tipo de edificio es el Taj Mahal?",
+                    "questionText": "¿En qué país está ubicada?",
+
                     "answers": [
-                        "nose",
-                        "nosse",
-                        "asa",
-                        "mausoleo"
+                        "China",
+                        "India",
+                        "Vietnam",
+                        "Japon"
                     ],
-                    "correctAnswer": "mausoleo"
+                    "correctAnswer": "China"
                 },
                 {
-                    "questionText": "¿Quién mandó a construirlo?",
+                    "questionText": "¿Es una estructura natural o construida por humanos?",
                     "answers": [
-                        "un gil",
-                        "pepe",
-                        "pepito",
-                        "Shah Jahan"
+                        "Estructura Natural",
+                        "Construida Por Humanos"                       
                     ],
-                    "correctAnswer": "Shah Jahan"
+                    "correctAnswer": "Construida PorHumanos"
+                }
+            ]
+        },
+        {
+            "name": "Petra",
+            "description": "Petra es una antigua ciudad ubicada en Jordania, famosa por sus edificios tallados directamente en la roca. Fue la capital del reino nabateo y un importante centro comercial hace más de 2.000 años. Hoy es Patrimonio de la Humanidad.",
+            "imagePath": "Imagenes/Asia/Petra",
+            "questions": [
+                {
+                    "questionText":"¿En qué país se encuentra Petra?",
+                    "answers": [
+                        "India",
+                        "Egipto",
+                        "Jordania",
+                        "Camboya"
+                    ],
+                    "correctAnswer": "Jordania"
+                },
+                {
+                    "questionText": "¿Qué tiene de especial su arquitectura?",
+
+                    "answers": [
+                        "no se",
+                        "Que te importa",
+                        "si",
+                        "Respuesta Correcta"
+                    ],
+                    "correctAnswer": "Que te importa"
+                },
+                {
+                    "questionText": "¿Fue un centro comercial, religioso o militar?",
+                    "answers": [
+                        "Comercial",
+                        "Religioso",
+                        "Militar"                       
+                    ],
+                    "correctAnswer": "Comercial"
+                }
+            ]
+        },
+        {
+            "name": "Angkor Wat",
+            "description": "Angkor Wat es el templo religioso más grande del mundo y se encuentra en Camboya. Fue construido en el siglo XII como templo hindú, pero luego se convirtió en templo budista. Es un símbolo nacional y aparece en la bandera del país.",
+            "imagePath": "Imagenes/Asia/Angkor_Wat",
+            "questions": [
+                {
+                    "questionText":"¿Donde esta Angkor?",
+                    "answers": [
+                        "India",
+                        "China",
+                        "Jordania",
+                        "Camboya"
+                    ],
+                    "correctAnswer": "Camboya"
+                },
+                {
+                    "questionText": "¿A qué religiones ha pertenecido este templo?",
+
+                    "answers": [
+                        "Islam y Cristiano",
+                        "Budista",
+                        "Hindu",
+                        "Hindu y Budismo"
+                    ],
+                    "correctAnswer": "Hindu y Budismo"
+                },
+                {
+                    "questionText": "¿Qué representa para Camboya?",
+
+                    "answers": [
+                        "Centro Religioso",
+                        "Simbolo Nacional",
+                        "Simbolo Historico"                       
+                    ],
+                    "correctAnswer": "Simbolo Nacional"
+                }
+            ]
+        },
+        {
+            "name": "Ciudad Prohibida",
+            "description": "La Ciudad Prohibida está en Pekín, China. Fue el palacio imperial durante casi 500 años, donde vivían los emperadores y su corte. Se llama así porque nadie podía entrar sin permiso del emperador. Hoy es un museo y un símbolo de la historia china.",
+            "imagePath": "Imagenes/Asia/Ciudad_Prohibida",
+            "questions": [
+                {
+                    "questionText":"¿Que era la Ciudad Prohibida?",
+                    "answers": [
+                        "Una Ciudad Prohibida",
+                        "Un palacio imperial",
+                        "Una Fortaleza",
+                        "Un Museo"
+                    ],
+                    "correctAnswer": "Un palacio imperial"
+                },
+                {
+                    "questionText": "¿Quienes vivian alli?",
+
+                    "answers": [
+                        "Los emperadores y su corte",
+                        "Monjes budistas",
+                        "Generales",
+                        "Burocratas"
+                    ],
+                    "correctAnswer": "Los emperadores y su corte"
+                },
+                {
+                    "questionText": "¿Donde esta ubicada?",
+
+                    "answers": [
+                        "Pekin, China",
+                        "Jujuy, Argentina",
+                        "Delhi, India",
+                        "Tokio, Japon"                       
+                    ],
+                    "correctAnswer": "Pekin, China"
+                }
+            ]
+        },
+        {
+            "name": "La Meca",
+            "description": "La Meca es la ciudad más sagrada del islam. Está ubicada en Arabia Saudita. Cada año, millones de musulmanes viajan allí para cumplir con la peregrinación llamada Hajj, uno de los cinco pilares del islam. Solo los musulmanes pueden ingresar a La Meca.",
+            "imagePath": "Imagenes/Asia/La_meca",
+            "questions": [
+                {
+                    "questionText":"¿Que religion considera sagrada a la Meca?",
+                    "answers": [
+                        "Cristianismo",
+                        "Islam",
+                        "Sijismo",
+                        "Budismo"
+                    ],
+                    "correctAnswer": "Islam"
+                },
+                {
+                    "questionText": "¿En que pais se encuentra?",
+
+                    "answers": [
+                        "Arabia Saudita",
+                        "Argentina",
+                        "Pakistan",
+                        "Jordania"
+                    ],
+                    "correctAnswer": "Arabia Saudita"
+                },
+                {
+                    "questionText": "¿Que es el Hajj?",
+
+                    "answers": [
+                        "Un deporte",
+                        "Una ciudad",
+                        "Un peregrinaje",
+                        "Un monumento"                       
+                    ],
+                    "correctAnswer": "Un peregrinaje"
+                }
+            ]
+        },
+        {
+            "name": "Borobudur",
+            "description": "Borobudur es un gran templo budista en la isla de Java, Indonesia. Fue construido en el siglo IX y está decorado con miles de relieves que cuentan historias de Buda. Es el templo budista más grande del mundo y un lugar de peregrinación.",
+            "imagePath": "Imagenes/Asia/Borobudur",
+            "questions": [
+                {
+                    "questionText":"¿Que religion se practica en Borobudur?",
+                    "answers": [
+                        "Cristianismo",
+                        "Islam",
+                        "Sijismo",
+                        "Budismo"
+                    ],
+                    "correctAnswer": "Budismo"
+                },
+                {
+                    "questionText": "¿En que pais se encuentra?",
+
+                    "answers": [
+                        "Arabia Saudita",
+                        "Argentina",
+                        "Indonesia",
+                        "Jordania"
+                    ],
+                    "correctAnswer": "Indonesia"
+                },
+                {
+                    "questionText": "¿Qué representan los relieves del templo?",
+
+                    "answers": [
+                        "La Historia del pais",
+                        "Poemas",
+                        "Historias de Buda",
+                        "Mitos y leyendas"                       
+                    ],
+                    "correctAnswer": "Historias de Buda"
                 }
             ]
         }
-        
     ]
 }
