@@ -10,7 +10,7 @@ public class RunnerManager : MonoBehaviour
     public void Start()
     {
         runnerUI = GetComponent<RunnerUI>();
-        
+        StartCoroutine(objectGenerator.Generate(5f)); // Inicia la generacion de objetos
     }
     
     private void OnTriggerEnter(Collider other)
@@ -18,7 +18,7 @@ public class RunnerManager : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             runnerScript1.ChangeSpeed(0);
-            StopCoroutine(objectGenerator.Generate()); // Detiene la generacion de objetos
+            StopAllCoroutines(); // Detiene la generacion de objetos
             runnerUI.ShowResults("Ganaste"); // Muestra el panel de resultados
             
             //Despues deberia mostrar el puntaje

@@ -24,6 +24,7 @@ public class ExampleScrit : MonoBehaviour
     private void Start()
     {
         // Obtener la referencia al script StarScoreDisplay
+        llamadoEstrellas();
     }
 
 

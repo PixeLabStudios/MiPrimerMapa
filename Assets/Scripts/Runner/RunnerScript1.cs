@@ -114,7 +114,7 @@ public class RunnerScript1 : MonoBehaviour
             if (lives <= 0)
             {
                 RunnerManager runnerManager = FindFirstObjectByType<RunnerManager>();
-                runnerManager.StopCoroutine(runnerManager.objectGenerator.Generate());
+                runnerManager.StopAllCoroutines();
                 runnerManager.runnerUI.ShowResults("Perdiste");
                 ChangeSpeed(0);
             // Debug.Log("perdiste todas las vidas");
