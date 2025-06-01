@@ -33,7 +33,10 @@ public class TriviaManager : MonoBehaviour
     public GameObject cardsPanel; // panel que contiene las cartas de trivia en la escena.
     public TriviaCard[] triviaCards;
     public TextMeshProUGUI nametext;
-    public Button playButton; 
+    public Button playButton;
+    public TextMeshProUGUI instructionText;
+    public GameObject roundPanel;
+    public TextMeshProUGUI roundText;
     #endregion
 
     #region Panel de Preguntas
@@ -61,7 +64,9 @@ public class TriviaManager : MonoBehaviour
         QuestionPanel.SetActive(false);
         cardsPanel.SetActive(true);
         playButton.gameObject.SetActive(true);
-
+        instructionText.gameObject.SetActive(false);
+        dataList = JsonUtility.FromJson<SerializableList<CardData>>(File.ReadAllText(Application.dataPath + "/Resources/JSON/DatosTrivia.json"));
+        roundPanel.SetActive(false);
     }
     public void HandleText(Button button)
     {
@@ -88,18 +93,18 @@ public class TriviaManager : MonoBehaviour
     /// <summary>
     /// Empieza el juego desde el un boton.
     /// </summary>
-    public void Play(Button button) 
+    public void Play() 
     {
+        
         score = 0;
         errors = 0;
-        canClick = true; // permite hacer click en las cartas de trivia.
-        QuestionPanel.SetActive(false);
+        canClick = true; // permite hacer click en las cartas de trivia.     
         currentRound = 1;
-        playButton.gameObject.SetActive(false); 
-        if (dataList == null)
-        {
-            Debug.LogError("No se pudo cargar la lista de datos de trivia. Asegúrate de que el archivo JSON existe y es válido.");
-        }
+        instructionText.gameObject.SetActive(true); 
+        playButton.gameObject.SetActive(false);
+        QuestionPanel.SetActive(false);
+        roundPanel.SetActive(true);
+        roundText.text =  currentRound + "/" + maxRounds; 
         LoadData(); 
     }
     /// <summary>
@@ -188,7 +193,9 @@ public class TriviaManager : MonoBehaviour
         }
         
         yield return new WaitForSeconds(1.5f); // espera un segundo para mostrar la respuesta.
+
         currentRound++; // aumenta el contador de rondas.
+       
         if (currentRound > maxRounds)
         {
             Debug.Log("Juego terminado!"); // imprime en la consola que el juego ha terminado.
@@ -196,8 +203,9 @@ public class TriviaManager : MonoBehaviour
         }
         else 
         {
-            
+
             //vuele a elegir otra carta
+            roundText.text =  currentRound + "/" + maxRounds;
             cardsPanel.SetActive(true); // activa el panel de cartas de trivia.
             QuestionPanel.SetActive(false); // desactiva el panel de preguntas.
             HideCards();

@@ -151,7 +151,7 @@
         {
             "name": "Ciudad Prohibida",
             "description": "La Ciudad Prohibida está en Pekín, China. Fue el palacio imperial durante casi 500 años, donde vivían los emperadores y su corte. Se llama así porque nadie podía entrar sin permiso del emperador. Hoy es un museo y un símbolo de la historia china.",
-            "imagePath": "Imagenes/Asia/Ciudad_Prohibida",
+            "imagePath": "Imagenes/Asia/ciudad_prohibida",
             "questions": [
                 {
                     "questionText":"¿Que era la Ciudad Prohibida?",
@@ -262,6 +262,121 @@
                         "Mitos y leyendas"                       
                     ],
                     "correctAnswer": "Historias de Buda"
+                }
+            ]
+        },
+        {
+            "name": "Jerusalén",
+            "description": "Jerusalén es una ciudad sagrada para el judaísmo, el cristianismo y el islam. Se encuentra en la región de Israel y Palestina. Allí están lugares importantes como el Muro de los Lamentos, la Iglesia del Santo Sepulcro y la Cúpula de la Roca.",
+            "imagePath": "Imagenes/Asia/Jerusalen",
+            "questions": [
+                {
+                    "questionText":"¿Para cuántas religiones es sagrada Jerusalén?",
+                    "answers": [
+                        "1",
+                        "2",
+                        "3",
+                        "ninguna"
+                    ],
+                    "correctAnswer": "3"
+                },
+                {
+                    "questionText": "¿Qué importante muro está en Jerusalén?",
+
+                    "answers": [
+                        "Muralla China",
+                        "Muro de los lamentos"                     
+                    ],
+                    "correctAnswer": "Muro de los lamentos"
+                },
+                {
+                    "questionText": "¿En qué región está ubicada?",
+
+                    "answers": [
+                        "Alemania",
+                        "China",
+                        "Israel/Palestina",
+                        "Argentina"                       
+                    ],
+                    "correctAnswer": "Israel/Palestina"
+                }
+            ]
+        },
+        {
+            "name": "Templo Dorado",
+            "description": "El Templo Dorado, o Harmandir Sahib, está en Amritsar, India. Es el lugar más sagrado para los seguidores del sijismo. Está recubierto en oro y rodeado por un lago. Es famoso por su hospitalidad y su cocina comunitaria, que alimenta gratis a miles de personas cada día.",
+            "imagePath": "Imagenes/Asia/templo_dorado",
+            "questions": [
+                {
+                    "questionText":"¿En qué ciudad y país se encuentra el Templo Dorado?",
+                    "answers": [
+                        "Pekin, China",
+                        "Amritsar, India",
+                        "Berlin, Alemania",
+                        "Jujuy, Argentina"
+                    ],
+                    "correctAnswer": "Amritsar, India"
+                },
+                {
+                    "questionText": "¿Qué religión lo considera sagrado?",
+
+                    "answers": [
+                        "Islam",
+                        "Hinduismo",
+                        "Sijismo",
+                        "Budismo"
+                    ],
+                    "correctAnswer": "Sijismo"
+                },
+                {
+                    "questionText": "¿Qué servicio comunitario ofrece?",
+
+                    "answers": [
+                        "Hospitalidad",
+                        "cocina comunitaria",
+                        "Ambas",
+                        "Ninguna"                       
+                    ],
+                    "correctAnswer": "Ambas"
+                }
+            ]
+        },
+        {
+            "name": "Persepolis",
+            "description": "Persépolis fue la capital ceremonial del antiguo Imperio Persa. Está ubicada en Irán y fue construida hace más de 2.500 años. Sus ruinas muestran relieves, columnas y escaleras que revelan el poder y la cultura del imperio aqueménida.",
+            "imagePath": "Imagenes/Asia/Persepolis",
+            "questions": [
+                {
+                    "questionText":"¿Qué imperio tuvo su capital en Persépolis?",
+                    "answers": [
+                        "Imperio Persa",
+                        "Imperio Chino",
+                        "Imperio Romano",
+                        "Imperio Aleman"
+                    ],
+                    "correctAnswer": "Imperio Persa"
+                },
+                {
+                    "questionText": "¿En qué país está?",
+
+                    "answers": [
+                        "Iran",
+                        "Pakistan",
+                        "India",
+                        "China"
+                    ],
+                    "correctAnswer": "Iran"
+                },
+                {
+                    "questionText": "¿Qué tipo de construcciones quedan hoy?",
+
+                    "answers": [
+                        "relieve",
+                        "columnas",
+                        "escalera",
+                        "todas las anteriores"                       
+                    ],
+                    "correctAnswer": "todas las anteriores"
                 }
             ]
         }
