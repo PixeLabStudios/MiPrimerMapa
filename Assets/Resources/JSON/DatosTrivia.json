@@ -28,9 +28,9 @@
                 {
                     "questionText": "¿Quién mandó a construirlo?",
                     "answers": [
-                        "un gil",
-                        "pepe",
-                        "pepito",
+                        "Mumtaz Mahal",
+                        "Julio Cesar",
+                        "Manuel Belgrano",
                         "Shah Jahan"
                     ],
                     "correctAnswer": "Shah Jahan"

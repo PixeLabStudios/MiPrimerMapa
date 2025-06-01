@@ -42,9 +42,11 @@ public class TriviaManager : MonoBehaviour
     #region Panel de Preguntas
 
     public TextMeshProUGUI questionText;
+    public TextMeshProUGUI timeText;
     public TextMeshProUGUI resText;
     public TextMeshProUGUI[] answerTexts; // textos de las respuestas de los botones
     public Button[] answerButtons; // botones de las respuestas
+    public GameObject timePanel;
     #endregion
 
     #region listas
@@ -67,6 +69,7 @@ public class TriviaManager : MonoBehaviour
         instructionText.gameObject.SetActive(false);
         dataList = JsonUtility.FromJson<SerializableList<CardData>>(File.ReadAllText(Application.dataPath + "/Resources/JSON/DatosTrivia.json"));
         roundPanel.SetActive(false);
+        
     }
     public void HandleText(Button button)
     {
@@ -81,11 +84,12 @@ public class TriviaManager : MonoBehaviour
         if (isAnswering) 
         {
             time -= Time.deltaTime; // resta el tiempo de respuesta al tiempo restante.
-            if(time <= 0 && isAnswering) // si el tiempo se acaba
+            timeText.text =Mathf.Clamp(time,0,timeToAnswer).ToString("F0");
+            if (time <= 0 && isAnswering) // si el tiempo se acaba
             {
-                isAnswering = false; // deja de responder
-                canClick = false; // permite hacer click en las cartas de trivia.
-                HideAllButtons(); // desactiva todos los botones de respuestas.
+                
+                StartCoroutine(CheckAnswer("")); 
+                canClick = false; // permite hacer click en las cartas de trivia.             
                 Debug.Log("Tiempo agotado!"); // imprime en la consola que el tiempo se acabo.
             }
         }  
@@ -98,13 +102,17 @@ public class TriviaManager : MonoBehaviour
         
         score = 0;
         errors = 0;
-        canClick = true; // permite hacer click en las cartas de trivia.     
+        timeToAnswer = 20f; 
+
+        canClick = true; 
         currentRound = 1;
+        timeText.text = time.ToString("F0"); 
         instructionText.gameObject.SetActive(true); 
         playButton.gameObject.SetActive(false);
         QuestionPanel.SetActive(false);
         roundPanel.SetActive(true);
-        roundText.text =  currentRound + "/" + maxRounds; 
+        timePanel.SetActive(false);
+        roundText.text =  currentRound + "/" + maxRounds;        
         LoadData(); 
     }
     /// <summary>
@@ -152,6 +160,8 @@ public class TriviaManager : MonoBehaviour
         canClick = true; // permite hacer click en las cartas de trivia.
         correctAnswer = card.data.questions[randomIndex].correctAnswer;
         time = timeToAnswer;
+        timePanel.SetActive(true); // activa el panel de tiempo.
+        isAnswering = true; 
         resText.gameObject.SetActive(false);
     }
     void LoadPanel(CardData datos, int questionIndex) 
@@ -163,39 +173,44 @@ public class TriviaManager : MonoBehaviour
             answerTexts[i].text = datos.questions[questionIndex].answers[i];  
         }
     }
-    void HideAllButtons() 
-    {
-        foreach (Button button in answerButtons) 
-        {
-            button.gameObject.SetActive(false); // desactiva todos los botones de respuestas.
-        }
-    }
+    
 
     IEnumerator CheckAnswer(string answer) 
     {
 
        
         canClick = false;
-        isAnswering = false;     
-        if (answer == correctAnswer)
+        isAnswering = false;
+        if (answer == "")
+
         {
-            Debug.Log("Respuesta correcta!"); // imprime en la consola que la respuesta es correcta.
+            Debug.Log("Se acabo el tiempo"); 
             resText.gameObject.SetActive(true);
-            resText.text = "respuesta correcta!";
-            score++; // aumenta el contador de aciertos.
+            resText.text = "Se te Acabo el tiempo";
+            errors++; 
         }
         else 
         {
-            Debug.Log("Respuesta incorrecta!"); // imprime en la consola que la respuesta es incorrecta.
-            resText.gameObject.SetActive(true);
-            resText.text = "respuesta incorrecta!";
-            errors++; // aumenta el contador de errores.
+            if (answer == correctAnswer)
+            {
+                Debug.Log("Respuesta correcta!"); 
+                resText.gameObject.SetActive(true);
+                resText.text = "respuesta correcta!";
+                score++; 
+            }
+            else
+            {
+                Debug.Log("Respuesta incorrecta!");
+                resText.gameObject.SetActive(true);
+                resText.text = "respuesta incorrecta!";
+                errors++; 
+            }
         }
         
-        yield return new WaitForSeconds(1.5f); // espera un segundo para mostrar la respuesta.
+        
+        yield return new WaitForSeconds(1.0f);
 
-        currentRound++; // aumenta el contador de rondas.
-       
+        currentRound++; // aumenta el contador de rondas.     
         if (currentRound > maxRounds)
         {
             Debug.Log("Juego terminado!"); // imprime en la consola que el juego ha terminado.
@@ -220,6 +235,13 @@ public class TriviaManager : MonoBehaviour
         foreach (TriviaCard card in triviaCards) 
         {
            card.StartCoroutine(card.HideCard()); // oculta la carta de trivia.
+        }
+    }
+    void HideAllButtons()
+    {
+        foreach (Button button in answerButtons)
+        {
+            button.gameObject.SetActive(false); // desactiva todos los botones de respuestas.
         }
     }
 }
