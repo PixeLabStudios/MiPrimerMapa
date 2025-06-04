@@ -11,7 +11,7 @@ public class BulletScript : MonoBehaviour
     private void Start()
     {
         gameManager = FindFirstObjectByType<SubmarineGameManager>();
-        speed = 15f; // Set the speed of the bullet
+        speed = 7f; 
         rb = GetComponent<Rigidbody>();
         rb.linearVelocity = direction * speed; // Set the bullet's velocity
     }
