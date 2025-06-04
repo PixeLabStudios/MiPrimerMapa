@@ -45,7 +45,7 @@ public class GenerateObject : MonoBehaviour
             {
             int rand = Random.Range(0, numbers.Count); // elige que punto usara para crear el objeto           
             int ind = Random.Range(0, objects.Length); // elige un objeto de la lista de objetos            
-            Instantiate(objects[ind], spawnpoints[numbers[rand]].position, Quaternion.identity);
+            Instantiate(objects[ind], spawnpoints[numbers[rand]].position, objects[ind].transform.rotation);
             numbers.RemoveAt(rand);
         }
     }

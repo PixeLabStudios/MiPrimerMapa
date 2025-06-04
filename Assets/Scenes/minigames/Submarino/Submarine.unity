@@ -16,10 +16,10 @@ RenderSettings:
   serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 30.77
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -481,7 +481,7 @@ Transform:
   m_GameObject: {fileID: 650984772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.002, y: -0.022, z: 0}
+  m_LocalPosition: {x: 1.28, y: 0.067, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -588,35 +588,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5434033
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.5434033
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.452452
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.4524521
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: -10.437
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4000010731693402, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: ShapeModule.type
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: emitterVelocityMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 8.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010118446818, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 5.55
       objectReference: {fileID: 0}
     - target: {fileID: 199000011340400198, guid: 0d1adb20421ed664b800c8cf3d103e70, type: 3}
       propertyPath: m_Materials.Array.size
@@ -660,7 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9e1ea1b130e304c851622bafe9f6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 820150610723833064, guid: c41a39e869026644da4014f504b80942, type: 3}
+  bulletPrefab: {fileID: 2299780430017050461, guid: eeb31a5ae37ad6141a96e824d1f1c0f6, type: 3}
   spawnPoint: {fileID: 650984773}
   backgroundMask:
     serializedVersion: 2
