@@ -7,6 +7,7 @@ public class RunnerScript1 : MonoBehaviour
     #region vida
     int maxLives;
     int lives;
+    RunnerUI runnerUI;
     #endregion
     #region Movimiento
     Vector3 desiredPosition;
@@ -21,6 +22,7 @@ public class RunnerScript1 : MonoBehaviour
 
     private void Start()
     {
+        runnerUI = FindFirstObjectByType<RunnerUI>();
         alreadyMoving = false;
         currentRow = 2; 
         currentPosition = transform.position;
@@ -101,15 +103,14 @@ public class RunnerScript1 : MonoBehaviour
             if (lives < maxLives)
             {
                 ChangeLives(1);
+                runnerUI.ShowHeart(lives);
             }
             Destroy(other.gameObject);
         }
         else 
         {
-            
-           
-
             ChangeLives(-1);
+            runnerUI.HideHearts(lives);
             Debug.Log("choque con otro animal  Vidas: " + lives);
             if (lives <= 0)
             {

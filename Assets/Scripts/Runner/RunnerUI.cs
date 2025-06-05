@@ -38,8 +38,19 @@ public class RunnerUI : MonoBehaviour
         resultText.text = result;
 
     }
-    public void ShowLives(int i)
+    public void ShowAllLives()
     {
-        //falta
+
+        foreach (GameObject go in Hearts) {
+        go.SetActive(true);
+        }
+    }
+    public void HideHearts(int i) 
+    {
+        Hearts[i].SetActive(false);
+    }
+    public void ShowHeart(int i) 
+    {
+        Hearts[i-1].SetActive(true);
     }
 }

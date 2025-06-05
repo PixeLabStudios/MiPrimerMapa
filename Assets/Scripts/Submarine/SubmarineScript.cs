@@ -20,12 +20,18 @@ public class SubmarineScript : MonoBehaviour
 
     void Shoot(Vector3 target)
     {
-        if (manager.GetCanShoot() && time > lastShot + rateOfFire)
+        Vector3 direction = target - spawnPoint.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        if (manager.GetCanShoot() && time > lastShot + rateOfFire && angle <90 && angle >0)
         {
            GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position,Quaternion.identity);
-           bullet.GetComponent<BulletScript>().SetDirection(target - spawnPoint.position);
-           bullet.transform.LookAt(target);
-           lastShot = time;
+            
+            bullet.GetComponent<BulletScript>().SetDirection(direction);
+            
+            
+
+            bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
+               lastShot = time;
         }
     }
     void Update()
