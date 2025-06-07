@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[Serializable]
+[System.Serializable]
 public class CardData
 {
    public string name; //nombre de la carta "la gran muralla de china" ,El taj Mahal, etc.

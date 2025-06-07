@@ -10,11 +10,8 @@ using UnityEngine.UI;
 
 public class TriviaManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class SerializableList<T>
-    {
-        public List<T> list;
-    }
+    
+    
     #region Variables
     int score; // puntaje del jugador
     int errors; // errores del jugador

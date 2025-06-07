@@ -1,0 +1,64 @@
+{
+    "list":[
+        {
+            "audioPath": "Audio/Oceania/australia",
+            "name": "Australia",
+            "imagePath": "Imagenes/Oceania/paises/australia"
+        },
+        {
+            "audioPath": "Audio/Oceania/fiyi",
+            "name": "Fiyi",
+            "imagePath": "Imagenes/Oceania/paises/fiyi"
+        },
+        {
+            "audioPath": "Audio/Oceania/indonesia",
+            "name": "Papua Nueva Guinea",
+            "imagePath": "Imagenes/Oceania/paises/guinea"
+        },        
+        {
+            "audioPath": "Audio/Oceania/kiribati",
+            "name": "Indonesia",
+            "imagePath": "Imagenes/Oceania/paises/indonesia"
+        },
+        {
+            "audioPath": "Audio/Oceania/fiyi",
+            "name": "Kiribati",
+            "imagePath": "Imagenes/Oceania/paises/kiribati"
+        },
+        {
+            "audioPath": "Audio/Oceania/marshall",
+            "name": "Islas Marshall",
+            "imagePath": "Imagenes/Oceania/paises/marshall"
+        },
+        {
+            "audioPath": "Audio/Oceania/micronesia",
+            "name": "Micronesia",
+            "imagePath": "Imagenes/Oceania/paises/micronesia"
+        },
+        {
+            "audioPath": "Audio/Oceania/nauru",
+            "name": "Nauru",
+            "imagePath": "Imagenes/Oceania/paises/nauru"
+        },
+        {
+            "audioPath": "Audio/Oceania/zelanda",
+            "name": "NuevaZelanda",
+            "imagePath": "Imagenes/Oceania/paises/zelanda"
+        },
+        {
+            "audioPath": "Audio/Oceania/salomon",
+            "name": "Islas Salomon",
+            "imagePath": "Imagenes/Oceania/paises/salomon"
+        },
+        {
+            "audioPath": "Audio/Oceania/samoa",
+            "name": "Samoa",
+            "imagePath": "Imagenes/Oceania/paises/samoa"
+        },
+        {
+            "audioPath": "Audio/Oceania/Palao",
+            "name": "Palao",
+            "imagePath": "Imagenes/Oceania/paises/palao"
+        }
+    ]
+}
