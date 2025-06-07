@@ -11,17 +11,17 @@
             "imagePath": "Imagenes/Oceania/paises/fiyi"
         },
         {
-            "audioPath": "Audio/Oceania/indonesia",
+            "audioPath": "Audio/Oceania/guinea",
             "name": "Papua Nueva Guinea",
             "imagePath": "Imagenes/Oceania/paises/guinea"
         },        
         {
-            "audioPath": "Audio/Oceania/kiribati",
+            "audioPath": "Audio/Oceania/indonesia",
             "name": "Indonesia",
             "imagePath": "Imagenes/Oceania/paises/indonesia"
         },
         {
-            "audioPath": "Audio/Oceania/fiyi",
+            "audioPath": "Audio/Oceania/kiribati",
             "name": "Kiribati",
             "imagePath": "Imagenes/Oceania/paises/kiribati"
         },
