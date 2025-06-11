@@ -76,15 +76,19 @@ public class ActivateButtons : MonoBehaviour
         {
             case 0:
                 customSystem.currentCloth = customSystem.currentHair;
+                customSystem.currentClothF = customSystem.currentHairF;
                 break;
             case 1:
                 customSystem.currentCloth = customSystem.currentChest;
+                customSystem.currentClothF = customSystem.currentChestF;
                 break;
             case 2:
                 customSystem.currentCloth = customSystem.currentLegs;
+                customSystem.currentClothF = customSystem.currentLegsF;
                 break;
             case 3:
                 customSystem.currentCloth = customSystem.currentFeet;
+                customSystem.currentClothF = customSystem.currentFeetF;
                 break;
         }
     }

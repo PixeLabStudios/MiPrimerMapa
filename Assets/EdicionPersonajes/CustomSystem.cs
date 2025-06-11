@@ -26,7 +26,8 @@ public class CustomSystem : MonoBehaviour
         ACCESSORY,
         CHEST,
         LEGS,
-        FEET
+        FEET,
+        Cloth_COLOR2
     }
     #region M
     public List<GameObject> hairStyles = new List<GameObject>();
@@ -34,6 +35,7 @@ public class CustomSystem : MonoBehaviour
     public List<Color> Colors = new List<Color>();
     //public List<Color> skinColors = new List<Color>();
     public List<Material> skin = new List<Material>();
+    public List<Material> skinF = new List<Material>();
 
     public List<GameObject> accessories = new List<GameObject>();
 
@@ -51,6 +53,7 @@ public class CustomSystem : MonoBehaviour
     [HideInInspector] public GameObject currentFeet;
 
     [HideInInspector] public GameObject currentCloth;
+    [HideInInspector] public GameObject currentClothF;
     [HideInInspector] public int currentObjeto;
     #endregion
 
@@ -67,12 +70,12 @@ public class CustomSystem : MonoBehaviour
     public List<GameObject> clothesFeetF = new List<GameObject>();
 
     [SerializeField]
-    private MeshRenderer meshRendererF;
-    private GameObject currentHairF;
-    private GameObject currentAccessoryF;
-    private GameObject currentChestF;
-    private GameObject currentLegsF;
-    private GameObject currentFeetF;
+    private SkinnedMeshRenderer meshRendererF;
+    [HideInInspector] public GameObject currentHairF;
+    [HideInInspector] public GameObject currentAccessoryF;
+    [HideInInspector] public GameObject currentChestF;
+    [HideInInspector] public GameObject currentLegsF;
+    [HideInInspector] public GameObject currentFeetF;
 
     int hairIndexF = 0;
     int hairColorIndexF = 0;
@@ -96,17 +99,33 @@ public class CustomSystem : MonoBehaviour
     int colorIndexLegs = 0;
     int colorIndexFeet = 0;
 
+    int colorIndexHairF = 0;
+    int colorIndexChestF = 0;
+    int colorIndexLegsF = 0;
+    int colorIndexFeetF = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        #region M
+        currentChest = clothesChest[0];
+        currentFeet = clothesFeet[0];
+        currentLegs = clothesLegs[0];
+        currentChestF = clothesChestF[0];
+        currentFeetF = clothesFeetF[0];
+        currentLegsF = clothesLegsF[0];
+        /*#region M
         foreach (var cloth in hairStyles)
         {
             if (cloth != null) cloth.SetActive(false);
         }
-        foreach (var cloth in clothesChest)
+
+        /*foreach (var cloth in clothesChest)
         {
             if (cloth != null) cloth.SetActive(false);
+        }
+        for (int i = 1; clothesChest.Count > i; i++)
+        {
+            if (clothesChest[i] != null) clothesChest[i].SetActive(false);
         }
         foreach (var cloth in clothesFeet)
         {
@@ -120,10 +139,10 @@ public class CustomSystem : MonoBehaviour
         {
             if (cloth != null) cloth.SetActive(false);
         }
-        #endregion
+        #endregion*/
 
         #region F
-        foreach (var cloth in hairStylesF)
+        /*foreach (var cloth in hairStylesF)
         {
             if (cloth != null) cloth.SetActive(false);
         }
@@ -142,7 +161,7 @@ public class CustomSystem : MonoBehaviour
         foreach (var cloth in accessoriesF)
         {
             if (cloth != null) cloth.SetActive(false);
-        }
+        }*/
         #endregion
 
     }
@@ -159,11 +178,11 @@ public class CustomSystem : MonoBehaviour
         ApplySelection(CustomSystem.TypeCloth.SKIN_COLOR, skinColorIndex);
         Singleton.Instance.skinColorIndex = skinColorIndex;
 
-        /*if (skinColorIndexF < skinColors.Count - 1)
+        if (skinColorIndexF < skinF.Count - 1)
             skinColorIndexF++;
         else
             skinColorIndexF = 0;
-        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);*/
+        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);
     }
     public void SkinColorLeft()
     {
@@ -174,11 +193,11 @@ public class CustomSystem : MonoBehaviour
         ApplySelection(CustomSystem.TypeCloth.SKIN_COLOR, skinColorIndex);
         Singleton.Instance.skinColorIndex = skinColorIndex;
 
-        /*if (skinColorIndexF > 0)
+        if (skinColorIndexF > 0)
             skinColorIndexF--;
         else
-            skinColorIndexF = skinColors.Count - 1;
-        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);*/
+            skinColorIndexF = skinF.Count - 1;
+        ApplySelectionF(CustomSystem.TypeClothF.SKIN_COLOR, skinColorIndexF);
     }
     #endregion
 
@@ -223,6 +242,13 @@ public class CustomSystem : MonoBehaviour
                     colorIndexHair = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexHair);
                 Singleton.Instance.colorIndexHair = colorIndexHair;
+
+                if (colorIndexHairF < Colors.Count - 1)
+                    colorIndexHairF++;
+                else
+                    colorIndexHairF = 0;
+                ApplySelectionF(CustomSystem.TypeClothF.Cloth_COLOR2, colorIndexHairF);
+                //Singleton.Instance.colorIndexHair = colorIndexHair;
                 break;
             case 1:
                 if (colorIndexChest < Colors.Count - 1)
@@ -231,6 +257,13 @@ public class CustomSystem : MonoBehaviour
                     colorIndexChest = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexChest);
                 Singleton.Instance.colorIndexChest = colorIndexChest;
+
+                if (colorIndexChestF < Colors.Count - 1)
+                    colorIndexChestF++;
+                else
+                    colorIndexChestF = 0;
+                ApplySelectionF(CustomSystem.TypeClothF.Cloth_COLOR2, colorIndexChestF);
+                //Singleton.Instance.colorIndexChest = colorIndexChest;
                 break;
             case 2:
                 if (colorIndexLegs < Colors.Count - 1)
@@ -239,6 +272,13 @@ public class CustomSystem : MonoBehaviour
                     colorIndexLegs = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexLegs);
                 Singleton.Instance.colorIndexLegs = colorIndexLegs;
+
+                if (colorIndexLegsF < Colors.Count - 1)
+                    colorIndexLegsF++;
+                else
+                    colorIndexLegsF = 0;
+                ApplySelectionF(CustomSystem.TypeClothF.Cloth_COLOR2, colorIndexLegsF);
+                //Singleton.Instance.colorIndexLegs = colorIndexLegs;
                 break;
             case 3:
                 if (colorIndexFeet < Colors.Count - 1)
@@ -246,7 +286,14 @@ public class CustomSystem : MonoBehaviour
                 else
                     colorIndexFeet = 0;
                 ApplySelection(CustomSystem.TypeCloth.Cloth_COLOR2, colorIndexFeet);
-                Singleton.Instance.colorIndexFeet = colorIndexFeet;
+                //Singleton.Instance.colorIndexFeet = colorIndexFeet;
+
+                if (colorIndexFeetF < Colors.Count - 1)
+                    colorIndexFeetF++;
+                else
+                    colorIndexFeetF = 0;
+                ApplySelectionF(CustomSystem.TypeClothF.Cloth_COLOR2, colorIndexFeetF);
+                //Singleton.Instance.colorIndexFeet = colorIndexFeet;
                 break;
         }
     }
@@ -467,11 +514,6 @@ public class CustomSystem : MonoBehaviour
                 currentHair = SearchCloth(type, index);
                 currentCloth = currentHair;
                 //currentObjeto = 0;
-                /*if (currentHairF != null)
-                {
-                    currentHairF.SetActive(false);
-                }
-                currentHairF = SearchCloth(type, index);*/
                 break;
 
             case CustomSystem.TypeCloth.CHEST:
@@ -482,11 +524,6 @@ public class CustomSystem : MonoBehaviour
                 currentChest = SearchCloth(type, index);
                 currentCloth = currentChest;
                 //currentObjeto = 1;
-                /*if (currentChestF != null)
-                {
-                    currentChestF.SetActive(false);
-                }
-                currentChestF = SearchCloth(type, index);*/
                 break;
 
             case CustomSystem.TypeCloth.LEGS:
@@ -497,11 +534,6 @@ public class CustomSystem : MonoBehaviour
                 currentLegs = SearchCloth(type, index);
                 currentCloth = currentLegs;
                 //currentObjeto = 2;
-                /*if (currentLegsF != null)
-                {
-                    currentLegsF.SetActive(false);
-                }
-                currentLegsF = SearchCloth(type, index);*/
                 break;
 
             case CustomSystem.TypeCloth.ACCESSORY:
@@ -526,11 +558,6 @@ public class CustomSystem : MonoBehaviour
                 currentFeet = SearchCloth(type, index);
                 currentCloth = currentFeet;
                 //currentObjeto = 3;
-                /*if (currentFeetF != null)
-                {
-                    currentFeetF.SetActive(false);
-                }
-                currentFeetF = SearchCloth(type, index);*/
                 break;
 
             case CustomSystem.TypeCloth.Cloth_COLOR:
@@ -539,10 +566,10 @@ public class CustomSystem : MonoBehaviour
                     currentHair.GetComponent<MeshRenderer>().material.color = Colors[index];
                 }
 
-               /* if (currentHairF != null)
+                if (currentHairF != null)
                 {
-                    currentHairF.GetComponent<MeshRenderer>().material.color = hairColors[index];
-                }*/
+                    currentHairF.GetComponent<MeshRenderer>().material.color = Colors[index];
+                }
                 break;
 
             case CustomSystem.TypeCloth.Cloth_COLOR2:
@@ -557,7 +584,7 @@ public class CustomSystem : MonoBehaviour
             case CustomSystem.TypeCloth.SKIN_COLOR:
                 meshRenderer.material = skin[index];
 
-                //meshRendererF.material = skin[index];
+                //meshRendererF.material = skinF[index];
                 break;
         }
     }
@@ -572,6 +599,7 @@ public class CustomSystem : MonoBehaviour
                     currentHairF.SetActive(false);
                 }
                 currentHairF = SearchClothF(type, index);
+                currentClothF = currentHairF;
                 break;
 
             case CustomSystem.TypeClothF.CHEST:
@@ -580,6 +608,7 @@ public class CustomSystem : MonoBehaviour
                     currentChestF.SetActive(false);
                 }
                 currentChestF = SearchClothF(type, index);
+                currentClothF = currentChestF;
                 break;
 
             case CustomSystem.TypeClothF.LEGS:
@@ -588,6 +617,7 @@ public class CustomSystem : MonoBehaviour
                     currentLegsF.SetActive(false);
                 }
                 currentLegsF = SearchClothF(type, index);
+                currentClothF = currentLegsF;
                 break;
 
             case CustomSystem.TypeClothF.ACCESSORY:
@@ -604,6 +634,7 @@ public class CustomSystem : MonoBehaviour
                     currentFeetF.SetActive(false);
                 }
                 currentFeetF = SearchClothF(type, index);
+                currentClothF = currentFeetF;
                 break;
 
             case CustomSystem.TypeClothF.HAIR_COLOR:
@@ -616,7 +647,16 @@ public class CustomSystem : MonoBehaviour
             case CustomSystem.TypeClothF.SKIN_COLOR:
                 //meshRenderer.material.color = skinColors[index];
 
-                //meshRendererF.material.color = skinColors[index];
+                meshRendererF.material = skinF[index];
+                break;
+
+            case CustomSystem.TypeClothF.Cloth_COLOR2:
+                if (currentClothF != null)
+                {
+                    //currentCloth.GetComponent<MeshRenderer>().material.color = Colors[index];
+                    currentClothF.GetComponent<SkinnedMeshRenderer>().material.color = Colors[index];
+                }
+
                 break;
         }
     }
