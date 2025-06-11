@@ -8,6 +8,7 @@ public class CambioPanel : MonoBehaviour
     public GameObject panelGuardarropa;
     public GameObject panelHome;
     public GameObject pj;
+    public GameObject pjF;
     public GameObject mundo;
     public ChangeMascota changeMascota;
 
@@ -33,6 +34,7 @@ public class CambioPanel : MonoBehaviour
         actualPanel.SetActive(false);
         panelHome.SetActive(true);
         pj.SetActive(false);
+        pjF.SetActive(false);
         mundo.SetActive(true);
     }
     public void changeToGuardarropa()
