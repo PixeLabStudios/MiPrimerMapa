@@ -8363,8 +8363,8 @@ MonoBehaviour:
   - {r: 0.19607843, g: 0.2901961, b: 0.69803923, a: 1}
   - {r: 0.78039217, g: 0.08235294, b: 0.52156866, a: 1}
   skin:
-  - {fileID: 2100000, guid: 53797fd4c85b34841ad2f6cebdf54f98, type: 2}
   - {fileID: 2100000, guid: 500dd9dac062027489efc599c304fc54, type: 2}
+  - {fileID: 2100000, guid: 53797fd4c85b34841ad2f6cebdf54f98, type: 2}
   - {fileID: 2100000, guid: ab3ecc40df6df8b41841e38ef9be86a2, type: 2}
   skinF:
   - {fileID: 2100000, guid: 98ac20f6edf4f7342ab823b42a4e5d1c, type: 2}
