@@ -811,6 +811,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!114 &45788887
@@ -5661,6 +5662,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!114 &618054292
@@ -10278,6 +10280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3599357b87cae7449646a5d2dbafc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idEscena: 0
 --- !u!4 &1129832611
 Transform:
   m_ObjectHideFlags: 0
@@ -11760,6 +11763,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!114 &1327187117
@@ -13004,6 +13008,7 @@ MonoBehaviour:
   offSet: {x: 5, y: 0, z: 0}
   desiredDistance: 25
   speed: 5
+  useLerp: 1
 --- !u!114 &1408409533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13291,6 +13296,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!114 &1428017083
@@ -15030,6 +15036,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!114 &1667489958
@@ -15106,20 +15113,25 @@ MonoBehaviour:
   - {fileID: 1000297427}
   - {fileID: 1000297426}
   Colors:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 0.5974767, b: 0, a: 0}
-  - {r: 1, g: 0.81900334, b: 0, a: 0}
-  - {r: 0.30822396, g: 1, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0.8498082, a: 0}
-  - {r: 0.08167696, g: 0, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0.98466873, a: 0}
-  - {r: 0.9811321, g: 0.96724814, b: 0.96724814, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0.4339623, g: 0.43191528, b: 0.43191528, a: 0}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.54582983, b: 0, a: 1}
+  - {r: 0.9792851, g: 1, b: 0, a: 1}
+  - {r: 0.12629855, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0.98145676, a: 1}
+  - {r: 0.08211851, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.8442702, a: 1}
+  - {r: 0.009433985, g: 0.009300485, b: 0.009413044, a: 1}
+  - {r: 1, g: 0.995283, b: 0.99926007, a: 1}
+  - {r: 0.4245283, g: 0.42252582, b: 0.42421418, a: 1}
+  - {r: 0.647177, g: 0.077162705, b: 0.9622642, a: 1}
+  - {r: 0.4566037, g: 0.30859995, b: 0.21968667, a: 1}
+  - {r: 0.6627451, g: 0.5137255, b: 0.02745098, a: 1}
+  - {r: 0.19607843, g: 0.2901961, b: 0.69803923, a: 1}
+  - {r: 0.78039217, g: 0.08235294, b: 0.52156866, a: 1}
   skin:
+  - {fileID: 2100000, guid: 8ef1e18ac8de70040b5a2b8c73bc1b96, type: 2}
   - {fileID: 2100000, guid: 6f1cff65548be5f4d8f2f50ece694e1f, type: 2}
   - {fileID: 2100000, guid: eaf72343ac01dbe42b1c3a1aa8ed0bd2, type: 2}
-  - {fileID: 2100000, guid: 8ef1e18ac8de70040b5a2b8c73bc1b96, type: 2}
   clothesChest:
   - {fileID: 1000297438}
   - {fileID: 1000297437}
@@ -17548,6 +17560,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!114 &2072829139
