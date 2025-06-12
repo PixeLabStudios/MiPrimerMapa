@@ -11,6 +11,7 @@ public class CambioPanel : MonoBehaviour
     public GameObject pjF;
     public GameObject mundo;
     public ChangeMascota changeMascota;
+    //public ChangeColorBack changeColorBack;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +28,7 @@ public class CambioPanel : MonoBehaviour
         panelMascota.SetActive(true);
         mundo.SetActive(false);
         changeMascota.mascotas[changeMascota.currentMascota].SetActive(true);
+        //changeColorBack.cambiarcolor(changeMascota.mascotas[changeMascota.currentMascota].GetComponent<Renderer>().material.color);
     }
 
     public void changeToHome()
