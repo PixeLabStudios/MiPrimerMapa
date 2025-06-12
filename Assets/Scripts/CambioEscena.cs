@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
+    public int idEscena;
     //public Transform puntoInicial;
     //public GameObject personaje;
     //public GameObject personajeInicial;
@@ -28,23 +29,31 @@ public class CambioEscena : MonoBehaviour
         //personaje.transform.position = puntoInicial.position;
     }
 
-    public void CambioDeEscena(int idEscena)
+    public void CambioDeEscena(int id)
     {
-       /* if (idEscena == 0)
-        {
-            personaje.SetActive(false);
-        }
-        else 
-            personaje.SetActive(true);
+        idEscena = id;
+        Invoke("CambioConRetraso", 0.5f);
+        /* if (idEscena == 0)
+         {
+             personaje.SetActive(false);
+         }
+         else 
+             personaje.SetActive(true);
 
-        if (idEscena == 2)
-        {
-            //personajeInicial = GameObject.FindGameObjectWithTag("player");
-            //personajeInicial.SetActive(false);
-            personaje.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
-        }
-        else
-            personaje.transform.localScale = Vector3.one;/*/
+         if (idEscena == 2)
+         {
+             //personajeInicial = GameObject.FindGameObjectWithTag("player");
+             //personajeInicial.SetActive(false);
+             personaje.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
+         }
+         else
+             personaje.transform.localScale = Vector3.one;/*/
+       
+    }
+    public void CambioConRetraso() 
+    { 
         SceneManager.LoadScene(idEscena);
+        
+
     }
 }

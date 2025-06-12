@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CustomSystem : MonoBehaviour
 {
@@ -564,6 +565,7 @@ public class CustomSystem : MonoBehaviour
                 if (currentHair != null)
                 {
                     currentHair.GetComponent<MeshRenderer>().material.color = Colors[index];
+                    
                 }
 
                 if (currentHairF != null)

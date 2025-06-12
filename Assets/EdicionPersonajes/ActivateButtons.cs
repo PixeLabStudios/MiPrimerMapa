@@ -13,6 +13,7 @@ public class ActivateButtons : MonoBehaviour
 
     public GameObject colorRightButton;
     public GameObject colorLeftButton;
+    public Image colorIconImage;
     public CustomSystem customSystem;
 
     void Start()
@@ -34,6 +35,7 @@ public class ActivateButtons : MonoBehaviour
         }
         colorLeftButton.SetActive(false);
         colorRightButton.SetActive(false);
+        colorIconImage.gameObject.SetActive(false);
     }
 
     public void ActivarBotones(int index)
@@ -70,6 +72,7 @@ public class ActivateButtons : MonoBehaviour
     {
         colorLeftButton.SetActive(true);
         colorRightButton.SetActive(true);
+        colorIconImage.gameObject.SetActive(true);
         customSystem.currentObjeto = index;
 
         switch (index)
@@ -97,6 +100,7 @@ public class ActivateButtons : MonoBehaviour
     {
         colorLeftButton.SetActive(false);
         colorRightButton.SetActive(false);
+        colorIconImage.gameObject.SetActive(false);
     }
 
 }
