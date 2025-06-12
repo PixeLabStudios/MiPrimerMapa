@@ -5596,7 +5596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones:
   - {fileID: 289238133}
-  - {fileID: 0}
   - {fileID: 1899571389}
   - {fileID: 1603144432}
   - {fileID: 1380523497}
