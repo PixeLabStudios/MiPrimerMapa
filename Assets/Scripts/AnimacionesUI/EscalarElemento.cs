@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +32,11 @@ public class EscalarElemento : MonoBehaviour
 
     private void Start()
     {
+        if(botonUnico == null)
+        {
+            botonUnico = this.gameObject.GetComponent<Button>();
+        }
+        
         // Setup para botones múltiples (modo lista)
         foreach (Button btn in botones)
         {
