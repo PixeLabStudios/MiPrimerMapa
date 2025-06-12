@@ -4340,6 +4340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3599357b87cae7449646a5d2dbafc7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idEscena: 0
 --- !u!4 &1610912048
 Transform:
   m_ObjectHideFlags: 0
@@ -5320,14 +5321,22 @@ MonoBehaviour:
   error: {fileID: 8300000, guid: 8a1281ddc8117354fab0a75e5f023910, type: 3}
   audioSource: {fileID: 1981402017}
   flagTextures:
-  - {fileID: 2800000, guid: 99cc90d8a53acd446a6fdbeab2d1313f, type: 3}
-  - {fileID: 2800000, guid: 2a7e603fdd43356488eb9b0e6a1f15ed, type: 3}
-  - {fileID: 2800000, guid: 324495b9abb11a742bc08d7910ceb3c7, type: 3}
+  - {fileID: 2800000, guid: 57e5e88e2e1f08140824144ce66500a9, type: 3}
+  - {fileID: 2800000, guid: f2680cfa55e2e5e4eaa78bf152de43b8, type: 3}
+  - {fileID: 2800000, guid: 088ad6b20b3dc8444bb40728d31e9484, type: 3}
+  - {fileID: 2800000, guid: 6138103632f69824ba4460e5dc8ccb7d, type: 3}
+  - {fileID: 2800000, guid: 9560938a294c83f4693e39d22fa7dca7, type: 3}
+  - {fileID: 2800000, guid: e8ad2c060bc4a92409b074f731c53f62, type: 3}
+  - {fileID: 2800000, guid: 9fc2ee87b9b4fd240b3f399f177d79c7, type: 3}
   countryNames:
   - Argentina
-  - Bolivia
+  - Chile
+  - Francia
+  - "Gran Breta\xF1a"
+  - Noruega
+  - Nueva Zelanda
   - Pirata
-  countryAllowed: 010000
+  countryAllowed: 01010101010100
   boatPrefab: {fileID: 4759348425394143324, guid: fcb2aface88a9fe44b42a6de87da942d, type: 3}
   spawnPoint: {fileID: 292843471}
   inspectionPoint: {fileID: 1226698045}
