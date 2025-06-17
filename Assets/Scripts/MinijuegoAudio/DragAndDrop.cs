@@ -37,7 +37,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     }
     public void OnDrag(PointerEventData eventData)
     {
-        if(!audioGameManager.candrag) return; // If dragging is not allowed, do nothing
+        if(!audioGameManager.candrag) return;
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
     public void OnEndDrag(PointerEventData eventData)
