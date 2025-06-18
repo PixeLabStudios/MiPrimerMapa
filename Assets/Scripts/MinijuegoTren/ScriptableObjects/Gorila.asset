@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: "Gorila de Monta\xF1a"
   region: Selva Ecuatorial
   description: "Exclusivo de \xC1frica central, en peligro de extinci\xF3n.te."
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: d11a2825b83e2794b95e031c42891d34, type: 3}

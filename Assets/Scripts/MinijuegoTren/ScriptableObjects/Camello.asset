@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: Camello dromedario
   region: Desierto
   description: "Aunque tambi\xE9n se encuentra en Asia, es clave en el norte africano. "
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: c0be4c2824180bb4e8ccaa2200be1bf6, type: 3}

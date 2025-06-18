@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: CebraComun
   region: Sabana
   description: "Con sus rayas \xFAnicas, es un \xEDcono de \xC1frica."
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: 8408fd616f9ffdb4a8f22ecf31d774ff, type: 3}

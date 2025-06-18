@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: Jirafa
   region: Sabana
   description: "Animal terrestre m\xE1s alto del mundo, t\xEDpico de la sabana africana. "
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: 1800ca5596a41be429a706fbe06b810a, type: 3}

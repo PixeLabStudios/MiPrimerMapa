@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: "Chimpanc\xE9"
   region: Selva Ecuatorial
   description: "Solo viven en \xC1frica, muy inteligentes y sociales."
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: 119280b86dd94d641b6d54df97ef007f, type: 3}

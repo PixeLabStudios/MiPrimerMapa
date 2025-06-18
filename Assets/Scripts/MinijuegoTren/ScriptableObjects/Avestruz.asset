@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: Avestruz africana
   region: Desierto
   description: "Ave m\xE1s grande del mundo, t\xEDpica de zonas \xE1ridas. "
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: 33634cf73379a3f429d5cfce3a97ec4a, type: 3}

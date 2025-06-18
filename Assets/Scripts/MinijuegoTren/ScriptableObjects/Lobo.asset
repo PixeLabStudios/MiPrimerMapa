@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: "Lobo et\xEDope"
   region: "Monta\xF1as"
   description: "End\xE9mico de las monta\xF1as de Etiop\xEDa, muy raro. "
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: fcaedb568b11d794e8477f15e3141038, type: 3}

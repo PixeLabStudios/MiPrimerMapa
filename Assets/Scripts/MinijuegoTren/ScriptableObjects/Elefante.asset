@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: Elefante africano de selva
   region: Selva Ecuatorial
   description: "M\xE1s peque\xF1o que el de sabana, habita zonas boscosas."
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: bec7eed439343a6449ab18f6189587ea, type: 3}

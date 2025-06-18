@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: LeonAfricano
   region: Sabana
   description: "El \u201Crey de la sabana\u201D, s\xEDmbolo del continente."
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: d29c80690a282f544814a956aa7216ca, type: 3}

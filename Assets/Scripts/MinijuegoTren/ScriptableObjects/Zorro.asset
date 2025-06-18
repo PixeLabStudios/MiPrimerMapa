@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: ' Zorro del desierto (Fennec)'
   region: Desierto
   description: "De grandes orejas, s\xEDmbolo del Sahara. "
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: 178f4e5aef4659948859aa47e37466cd, type: 3}

@@ -15,4 +15,4 @@ MonoBehaviour:
   animalName: Cabra montesa africana (ibex)
   region: "Monta\xF1as"
   description: "Se mueve en acantilados monta\xF1osos del norte de \xC1frica. "
-  animalImage: {fileID: 0}
+  animalImage: {fileID: 21300000, guid: 84197d45adf4f41448aed2a739d5fcb1, type: 3}
