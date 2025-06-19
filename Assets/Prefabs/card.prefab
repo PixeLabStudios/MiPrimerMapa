@@ -137,6 +137,7 @@ MonoBehaviour:
   id: 0
   cardImage: {fileID: 8518961462010353885}
   cardButton: {fileID: 6645622688524796092}
+  isFlipped: 0
 --- !u!1 &7038321873503387933
 GameObject:
   m_ObjectHideFlags: 0

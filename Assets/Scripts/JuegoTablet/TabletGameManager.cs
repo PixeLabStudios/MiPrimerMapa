@@ -14,6 +14,8 @@ public class TabletGameManager : MonoBehaviour
     {
         tabletScript = FindFirstObjectByType<TabletScript>();
     }
+
+
     void Start()
     {
         totalAnimals = animals.Length;

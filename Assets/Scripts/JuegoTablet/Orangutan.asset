@@ -16,3 +16,4 @@ MonoBehaviour:
   food: "insectos \u2013 frutas, "
   threats: "Deforestaci\xF3n por plantaciones de palma aceitera y caza furtiva."
   classification: Herbivoro
+  continent: Asia

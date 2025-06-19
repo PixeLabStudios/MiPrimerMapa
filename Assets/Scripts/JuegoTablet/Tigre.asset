@@ -16,3 +16,4 @@ MonoBehaviour:
   food: 'Ciervos, jabalies y otros mamiferos '
   threats: "Caza furtiva y p\xE9rdida de h\xE1bitat por expansi\xF3n agr\xEDcola."
   classification: Carnivoro
+  continent: Asia
