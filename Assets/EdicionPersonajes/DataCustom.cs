@@ -16,6 +16,8 @@ public class DataCustom : MonoBehaviour
         FEET
     }
     #region M
+    public GameObject pJHombre;
+
     public List<GameObject> hairStyles = new List<GameObject>();
 
     public List<Color> Colors = new List<Color>();
@@ -27,8 +29,8 @@ public class DataCustom : MonoBehaviour
 
     [SerializeField]
     private SkinnedMeshRenderer meshRenderer;
-    [HideInInspector]
-    /*public GameObject currentHair;
+    /*[HideInInspector]
+    /public GameObject currentHair;
     [HideInInspector] public GameObject currentAccessory;
     [HideInInspector] public GameObject currentChest;
     [HideInInspector] public GameObject currentLegs;
@@ -37,9 +39,25 @@ public class DataCustom : MonoBehaviour
     [HideInInspector] public GameObject currentCloth;
     [HideInInspector] public int currentObjeto;*/
     #endregion
+
+    #region F
+    public GameObject pJMujer;
+
+    public List<GameObject> hairStylesF = new List<GameObject>();
+    public List<Material> skinF = new List<Material>();
+    public List<GameObject> clothesChestF = new List<GameObject>();
+    public List<GameObject> clothesLegsF = new List<GameObject>();
+    public List<GameObject> clothesFeetF = new List<GameObject>();
+
+    [SerializeField]
+    private SkinnedMeshRenderer meshRendererF;
+
+    #endregion
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        pJHombre.SetActive(false);
+        pJMujer.SetActive(false);
         #region M
         foreach (var cloth in hairStyles)
         {
@@ -58,7 +76,38 @@ public class DataCustom : MonoBehaviour
             if (cloth != null) cloth.SetActive(false);
         }
         #endregion
-        SearchCloth();
+
+        #region F
+        foreach (var cloth in hairStylesF)
+        {
+            if (cloth != null) cloth.SetActive(false);
+        }
+        foreach (var cloth in clothesChestF)
+        {
+            if (cloth != null) cloth.SetActive(false);
+        }
+        foreach (var cloth in clothesFeetF)
+        {
+            if (cloth != null) cloth.SetActive(false);
+        }
+        foreach (var cloth in clothesLegsF)
+        {
+            if (cloth != null) cloth.SetActive(false);
+        }
+        #endregion
+
+        if (Singleton.Instance.isMan)
+        {
+            SearchCloth();
+            pJHombre.SetActive(true);
+
+        }
+        else
+        {
+            SearchClothF();
+            pJMujer.SetActive(true);
+        }
+        //SearchCloth();
     }
 
    /* void ApplySelection(CustomSystem.TypeCloth type, int index)
@@ -189,5 +238,59 @@ public class DataCustom : MonoBehaviour
         }
 
         meshRenderer.material = skin[Singleton.Instance.skinColorIndex];
+    }
+
+    public void SearchClothF()
+    {
+        for (int i = 0; i < hairStylesF.Count; i++)
+        {
+            if (i == Singleton.Instance.hairIndex)
+            {
+                if (hairStylesF[i] != null)
+                {
+                    hairStylesF[i].SetActive(true);
+                }
+                hairStylesF[i].GetComponent<SkinnedMeshRenderer>().material.color = Colors[Singleton.Instance.colorIndexHairF];
+            }
+        }
+
+        for (int i = 0; i < clothesChestF.Count; i++)
+        {
+            if (i == Singleton.Instance.chestIndex)
+            {
+                if (clothesChestF[i] != null)
+                {
+                    clothesChestF[i].SetActive(true);
+                }
+                clothesChestF[i].GetComponent<SkinnedMeshRenderer>().material.color = Colors[Singleton.Instance.colorIndexChestF];
+            }
+        }
+
+        for (int i = 0; i < clothesLegsF.Count; i++)
+        {
+            if (i == Singleton.Instance.legsIndex)
+            {
+                if (clothesLegsF[i] != null)
+                {
+                    clothesLegsF[i].SetActive(true);
+                }
+                clothesLegsF[i].GetComponent<SkinnedMeshRenderer>().material.color = Colors[Singleton.Instance.colorIndexLegsF];
+            }
+        }
+
+        for (int i = 0; i < clothesFeetF.Count; i++)
+        {
+            if (i == Singleton.Instance.feetIndex)
+            {
+                if (clothesFeetF[i] != null)
+                {
+                    clothesFeetF[i].SetActive(true);
+                }
+                clothesFeetF[i].GetComponent<SkinnedMeshRenderer>().material.color = Colors[Singleton.Instance.colorIndexFeetF];
+            }
+
+        }
+
+        meshRendererF.material = skinF[Singleton.Instance.skinColorIndexF];
     }
 }
