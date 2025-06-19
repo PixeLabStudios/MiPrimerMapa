@@ -7,4 +7,5 @@ public class Animal : ScriptableObject
     public string food;
     public string threats;
     public string classification;
+    public string continent;
 }
