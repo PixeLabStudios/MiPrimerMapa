@@ -11,6 +11,11 @@ public class ActivateButtons : MonoBehaviour
     public List<GameObject> righButtons = new List<GameObject>();
     public List<GameObject> leftButtons = new List<GameObject>();
 
+    public GameObject colorRightButton;
+    public GameObject colorLeftButton;
+    public Image colorIconImage;
+    public CustomSystem customSystem;
+
     void Start()
     {
         for (int i = 0; i < righButtons.Count; i++)
@@ -28,10 +33,14 @@ public class ActivateButtons : MonoBehaviour
                 leftButtons[i].SetActive(false);
             }
         }
+        colorLeftButton.SetActive(false);
+        colorRightButton.SetActive(false);
+        colorIconImage.gameObject.SetActive(false);
     }
 
     public void ActivarBotones(int index)
     {
+        
         for (int i = 0; i < righButtons.Count; i++)
         {
             if (righButtons[i] != null)
@@ -57,6 +66,41 @@ public class ActivateButtons : MonoBehaviour
                 leftButtons[i].SetActive(false);
             }
         }
+    }
+
+    public void ActivarColorButton(int index)
+    {
+        colorLeftButton.SetActive(true);
+        colorRightButton.SetActive(true);
+        colorIconImage.gameObject.SetActive(true);
+        customSystem.currentObjeto = index;
+
+        switch (index)
+        {
+            case 0:
+                customSystem.currentCloth = customSystem.currentHair;
+                customSystem.currentClothF = customSystem.currentHairF;
+                break;
+            case 1:
+                customSystem.currentCloth = customSystem.currentChest;
+                customSystem.currentClothF = customSystem.currentChestF;
+                break;
+            case 2:
+                customSystem.currentCloth = customSystem.currentLegs;
+                customSystem.currentClothF = customSystem.currentLegsF;
+                break;
+            case 3:
+                customSystem.currentCloth = customSystem.currentFeet;
+                customSystem.currentClothF = customSystem.currentFeetF;
+                break;
+        }
+    }
+
+    public void DesactivarColorButton()
+    {
+        colorLeftButton.SetActive(false);
+        colorRightButton.SetActive(false);
+        colorIconImage.gameObject.SetActive(false);
     }
 
 }

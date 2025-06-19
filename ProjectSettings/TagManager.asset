@@ -4,6 +4,14 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - bandera
+  - Base
+  - Animal
+  - PosInicial
+  - player
+  - Boat
+  - Comida
+  - Submarino
   - Label
   layers:
   - Default
@@ -13,10 +21,10 @@ TagManager:
   - Water
   - UI
   - planeta
-  - 
-  - 
-  - 
-  - 
+  - Camino
+  - terreno
+  - post
+  - fondo
   - 
   - 
   - 

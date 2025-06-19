@@ -31,7 +31,7 @@ public class InputController : MonoBehaviour
     void Start()
     {
          
-    positions = new Dictionary<string, Vector2>
+        positions = new Dictionary<string, Vector2>
     {
         { "AmericaCentral", new Vector2(53, 352) },
         { "AmericaNorte", new Vector2(51, 21) },
@@ -54,8 +54,10 @@ public class InputController : MonoBehaviour
         zoomDampening = 5.0f;
 
     }
+    /// <summ
     public void GetInitialValues()
     {
+       
         distance = Vector3.Distance(transform.position, target.position);
         currentDistance = distance;
 
@@ -71,6 +73,7 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
+        
         if (activePanel != null) 
         {
 

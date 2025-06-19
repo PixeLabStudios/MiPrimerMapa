@@ -8,6 +8,7 @@ public class MapInputController : MonoBehaviour
 {
     
     public GameObject character;
+    public GameObject charaF;
     public List<GameObject> checkpointsPosition = new List<GameObject>();
     List<GameObject> checkpointsCleared;
     MoveCharacter moveCharacter;
@@ -17,8 +18,17 @@ public class MapInputController : MonoBehaviour
     
     private void Start()
     {
+        //character = GameObject.FindGameObjectWithTag("Player");
         checkpointsCleared = new List<GameObject>();
-        moveCharacter = character.GetComponent<MoveCharacter>();
+        if (Singleton.Instance.isMan)
+        {
+            moveCharacter = character.GetComponent<MoveCharacter>();
+        }
+        else
+        {
+            moveCharacter = charaF.GetComponent<MoveCharacter>();
+        }
+        //moveCharacter = character.GetComponent<MoveCharacter>();
         int index = 0;
         if (checkpointsPosition.Count > 0)
         {

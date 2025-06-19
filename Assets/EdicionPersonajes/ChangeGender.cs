@@ -9,11 +9,13 @@ public class ChangeGender : MonoBehaviour
     {
         pjMaculino.SetActive(true);
         pjFemenino.SetActive(false);
+        Singleton.Instance.isMan = true;
     }
 
     public void ActivarPjFemenino()
     {
         pjMaculino.SetActive(false);
         pjFemenino.SetActive(true);
+        Singleton.Instance.isMan = false;
     }
 }
