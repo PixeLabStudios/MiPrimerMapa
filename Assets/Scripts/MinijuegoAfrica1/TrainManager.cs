@@ -13,11 +13,11 @@ public class TrainManager : MonoBehaviour
     float maxTime;
 
     public Transform centerPosition;
-    public Transform initialPosition;
-    public  List<AnimalMove> africanAnimals = new List<AnimalMove>();
-    public  List<AnimalMove> otherAnimals = new List<AnimalMove>();
-    public List<AnimalMove> animalsInTrain = new List<AnimalMove>();
-    public List<AnimalMove> animalsSelected = new List<AnimalMove>();
+   
+    public  List<AnimalMove> africanAnimals = new List<AnimalMove>(); //Animales africanos disponibles para elegir
+    public  List<AnimalMove> otherAnimals = new List<AnimalMove>();   //animales de otros continentes para elegir
+    public List<AnimalMove> animalsInTrain = new List<AnimalMove>();  //Animales que ya llegaron al tren
+    public List<AnimalMove> animalsSelected = new List<AnimalMove>(); //Animales que fueron seleccionados para la ronda e iran al centro para ser elegidos
     public LayerMask mask;
 
     private void Start()
@@ -66,7 +66,9 @@ public class TrainManager : MonoBehaviour
         int randomIndex;
         if (africanAnimals.Count < 2)
         {
+            
             animalsSelected.Add(africanAnimals[0]);// solo mando el que queda
+            africanAnimals.RemoveAt(0);
         }
         else 
         {               
@@ -83,7 +85,7 @@ public class TrainManager : MonoBehaviour
         //agarro un animal que no es africano
             randomIndex = Random.Range(0, otherAnimals.Count);
             animalsSelected.Add(otherAnimals[randomIndex]);
-            otherAnimals.RemoveAt(randomIndex);
+            
             StartCoroutine(MoveAnimalsToCenter(centerPosition.position));
         
     }
@@ -91,9 +93,18 @@ public class TrainManager : MonoBehaviour
      IEnumerator MoveAnimalsToCenter(Vector3 pos)
     { 
         Debug.Log("Empezando ronda");
+        List<int> spots = new()
+        {
+            0,
+            1,
+            2
+        };
+        int random;
         foreach (AnimalMove animal in animalsSelected)
         {
-            animal.MoveToCenter(pos);
+            random = Random.Range(0,spots.Count);
+            animal.MoveToCenter(pos, spots[random]);
+            spots.RemoveAt(random);
         }
         
         yield return new WaitForSeconds(1f);
@@ -129,7 +140,6 @@ public class TrainManager : MonoBehaviour
         if (script.data== null)
         {      
             Debug.Log("Correcto");
-            Debug.Log(AnimalsStopped());
             yield return new WaitForSeconds(1f);
             yield return new WaitUntil(AnimalsStopped);
 
@@ -143,7 +153,10 @@ public class TrainManager : MonoBehaviour
             script.points = 0;
             errors++;
             africanAnimals.Add(script);
-
+            if (animalsInTrain.Count >0) 
+            {
+                StartCoroutine(RemoveAnimal());
+            }
         }
         
 
@@ -168,17 +181,32 @@ public class TrainManager : MonoBehaviour
         if (script.data == null)
         {
             //entro un animal que no es africano
-            Debug.Log("Animal no africano entró al tren: " + script.name);
-            script.Warp();
-            otherAnimals.Add(script);
+            Debug.Log("Animal no africano entró al tren: " + script.name);      
             animalsSelected.Remove(script);
+
         }
         else 
         {
             points += script.points;
+            script.points = 0; // le saco los puntos porque ya lo uso
             animalsInTrain.Add(script);
             animalsSelected.Remove(script);
             //poner sonido de acierto
         }
+        script.Warp();
+    }
+    IEnumerator RemoveAnimal() 
+    {
+        yield return new WaitForSeconds(1f);
+        yield return new WaitUntil(AnimalsStopped);
+        RemoveFromTrain();
+    }
+    void RemoveFromTrain() 
+    {
+       
+        int random = Random.Range(0,animalsInTrain.Count);
+        animalsInTrain[random].Warp();
+        africanAnimals.Add(animalsInTrain[random]);
+        animalsInTrain.RemoveAt(random);
     }
 }

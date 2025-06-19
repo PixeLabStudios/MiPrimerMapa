@@ -20,10 +20,9 @@ public class AnimalMove : MonoBehaviour
         points = 10;
     }
 
-    public void MoveToCenter(Vector3 target) 
+    public void MoveToCenter(Vector3 target,int mult) 
     {
-       target.x -= Random.Range(-5f, 5f);
-       target.z -= Random.Range(-10f, 10f);
+       target.z += 5f * mult;
        agent.isStopped = false;
        agent.SetDestination(target);      
     }
