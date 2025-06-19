@@ -6916,7 +6916,6 @@ MonoBehaviour:
   hairIndex: 1
   colorIndex: 1
   skinColorIndex: 1
-  accessoryIndex: 1
   chestIndex: 1
   legsIndex: 1
   feetIndex: 1
@@ -6924,6 +6923,17 @@ MonoBehaviour:
   colorIndexChest: 2
   colorIndexLegs: 3
   colorIndexFeet: 4
+  hairIndexF: 0
+  colorIndexF: 0
+  skinColorIndexF: 0
+  chestIndexF: 0
+  legsIndexF: 0
+  feetIndexF: 0
+  colorIndexHairF: 0
+  colorIndexChestF: 0
+  colorIndexLegsF: 0
+  colorIndexFeetF: 0
+  isMan: 0
 --- !u!4 &710603976
 Transform:
   m_ObjectHideFlags: 0
@@ -8346,6 +8356,7 @@ MonoBehaviour:
   - {fileID: 428437291}
   - {fileID: 353706704}
   - {fileID: 555394197}
+  - {fileID: 1716600532}
   Colors:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 1, g: 0.54582983, b: 0, a: 1}
@@ -8370,9 +8381,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 98ac20f6edf4f7342ab823b42a4e5d1c, type: 2}
   - {fileID: 2100000, guid: 40a71330a4cef534b8dbfbffc6bde280, type: 2}
   - {fileID: 2100000, guid: 0011ee5d17f49ed4ab5850b7c7997452, type: 2}
-  accessories:
-  - {fileID: 0}
-  - {fileID: 1716600532}
+  accessories: []
   clothesChest:
   - {fileID: 1810689926}
   - {fileID: 1043419471}
