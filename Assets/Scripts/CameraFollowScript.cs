@@ -5,7 +5,9 @@ using UnityEngine.UIElements;
 public class CameraFollowScript : MonoBehaviour
 {
     [Header("Target Settings")]
-    public Transform target; // The target to follow
+    [HideInInspector]public Transform target; // The target to follow
+    public GameObject targetM;
+    public GameObject targetF;
     public Vector3 offSet;
 
     [Header("Distance Settings")]
@@ -20,6 +22,14 @@ public class CameraFollowScript : MonoBehaviour
 
     void Start()
     {
+        if (Singleton.Instance.isMan)
+        {
+            target = targetM.transform;
+        }
+        else
+        {
+            target = targetF.transform;
+        }
         currentDistance = Vector3.Distance(transform.position, target.position);
         desiredPosition = transform.position;
     }
