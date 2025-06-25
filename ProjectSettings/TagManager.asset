@@ -13,6 +13,8 @@ TagManager:
   - Comida
   - Submarino
   - Label
+  - agua
+  - balaDrakar
   layers:
   - Default
   - TransparentFX
@@ -26,9 +28,9 @@ TagManager:
   - post
   - fondo
   - Animal
-  - 
-  - 
-  - 
+  - Player
+  - Enemigo
+  - obstaculo
   - 
   - 
   - 

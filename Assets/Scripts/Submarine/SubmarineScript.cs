@@ -27,9 +27,6 @@ public class SubmarineScript : MonoBehaviour
            GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position,Quaternion.identity);
             
             bullet.GetComponent<BulletScript>().SetDirection(direction);
-            
-            
-
             bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
                lastShot = time;
         }
