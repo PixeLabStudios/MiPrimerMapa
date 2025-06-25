@@ -18,7 +18,7 @@ public class BossScript : MonoBehaviour
     public int hp;
     int MaxHp;
     bool canLoseHP;
-    bool corutina;
+    
     public enum Direction 
     {
        Left,
@@ -45,7 +45,7 @@ public class BossScript : MonoBehaviour
        
     }
 
-    void SetTurretStats(TurretScript turret,float newCool,float size, float speed) 
+    public void SetTurretStats(TurretScript turret,float newCool,float size, float speed) 
     {
         turret.speed = speed;
         turret.fireCooldown = newCool;

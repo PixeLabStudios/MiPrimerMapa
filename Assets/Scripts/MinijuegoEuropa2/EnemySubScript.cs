@@ -25,7 +25,7 @@ public class EnemySubScript : MonoBehaviour
         fireRate = 5;
         lastShot = 0;
         time = 0;
-        speed = 13;   
+        speed = 15;   
         initialY = transform.position.y;
         
     }

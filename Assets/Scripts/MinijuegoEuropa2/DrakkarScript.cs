@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DrakkarScript : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class DrakkarScript : MonoBehaviour
     Vector3 inputKeyboard;
 
     #region Movement
+    public ShootButton shootButton;
     float limitVerticalBottom;
     float limitVerticalTop;
     float limitHorizontalLeft;
@@ -56,6 +59,7 @@ public class DrakkarScript : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         canBeHit = true;
     }
+
     private void Start()
     {
         currentDevice = Device.PC;
@@ -70,26 +74,38 @@ public class DrakkarScript : MonoBehaviour
         limitVerticalTop = transform.position.z + 50;
         limitHorizontalLeft = transform.position.x - 35;
         limitHorizontalRight = transform.position.x + 35;
-
+        
         lastShoot = 0;
         fireRate = 0.5f;
         time = 0;
+        canBeHit =true;
     }
-
+    
     private void Update()
     {
-        time += Time.deltaTime;
+        //Debug.Log(canBeHit);
+        #region Movil
         inputMobile.x = joystick.Horizontal;
         inputMobile.z = joystick.Vertical;
 
-        inputKeyboard.x = Input.GetAxis("Horizontal");
-        inputKeyboard.z = Input.GetAxis("Vertical");
-        Move(inputKeyboard);
-
-        if (Input.GetMouseButton(0)) 
+        Move(inputMobile);
+        if (shootButton.buttonPressed) 
         {
             Shoot();
         }
+        #endregion
+
+        #region Pc
+        inputKeyboard.x = Input.GetAxis("Horizontal");
+        inputKeyboard.z = Input.GetAxis("Vertical");
+        Move(inputKeyboard);
+        if (Input.GetMouseButton(0))
+        {
+            Shoot();
+        }
+        #endregion
+        time += Time.deltaTime;
+                
     }
     
     void Move(Vector3 input)
@@ -142,7 +158,7 @@ public class DrakkarScript : MonoBehaviour
        return transform.position;
     }
 
-    void Shoot()
+    public void Shoot()
     {
         if (time > lastShoot +fireRate) 
         {

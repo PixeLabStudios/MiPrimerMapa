@@ -60,6 +60,7 @@ public class Europe2Manager : MonoBehaviour
         //----------2da etapa-jefe y 1 sub---------//
 
         bossScript.gameObject.SetActive(true);
+        
         bossMove = StartCoroutine(bossScript.HandleMovement());
         enemySubs[0].gameObject.SetActive(true);
         yield return new WaitUntil(IsInactive);
@@ -77,14 +78,20 @@ public class Europe2Manager : MonoBehaviour
         StopCoroutine(generation);
         //------------3era etapa jefe y 2 sub----------//
         bossScript.gameObject.SetActive(true);
+        bossScript.SetTurretStats(bossScript.mainTurret, 3, 4, 32);
         bossMove = StartCoroutine(bossScript.HandleMovement());
         enemySubs[0].gameObject.SetActive(true);
         enemySubs[1].gameObject.SetActive(true);
-       
+        yield return new WaitUntil(BossIsdead);
         StartCoroutine(enemySubs[0].Retreat());
         StartCoroutine(enemySubs[1].Retreat());
+        
     }
 
+    bool BossIsdead() 
+    {
+        return bossScript.hp <= 0;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
