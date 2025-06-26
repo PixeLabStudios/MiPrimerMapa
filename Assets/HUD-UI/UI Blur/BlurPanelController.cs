@@ -25,7 +25,7 @@ public class BlurFadeController : MonoBehaviour
     {
         if (currentRoutine != null) StopCoroutine(currentRoutine);
         blurImage.gameObject.SetActive(true);
-        currentRoutine = StartCoroutine(FadeToAlpha(0.9f));
+        currentRoutine = StartCoroutine(FadeToAlpha(1f));
     }
 
     public void FadeOut()
