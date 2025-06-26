@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPrincipal: {fileID: 685891968}
-  paneles:
+  panelesLista:
   - {fileID: 580757241}
   - {fileID: 1324671795}
   - {fileID: 1525805339}
@@ -3410,6 +3410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 820696581}
+  gameObjects: []
   offSet: {x: 0, y: 0, z: 0}
   desiredDistance: 15
   speed: 1

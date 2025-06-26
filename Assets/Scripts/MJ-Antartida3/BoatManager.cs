@@ -35,11 +35,12 @@ public class BoatManager : MonoBehaviour
     private void Start()
     {
         timerController.OnTimerEnd += EndGameDueToTime;
-        timerController.StartTimer();
+        
         gameActive = true;
         DisableButton();
         SpawnBoat();
         panelManager.MostrarSoloPanel("PanelMinijuego");
+        timerController.StartTimer();
 
     }
 
