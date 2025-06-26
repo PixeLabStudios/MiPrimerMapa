@@ -15,20 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Antartida.unity
     guid: 1874cbf8cfd6f6f4eacd97264113257f
   - enabled: 1
-    path: Assets/Scenes/minigames/MemoTest.unity
-    guid: 516b6afb072760546816d7b25920fa5d
-  - enabled: 1
-    path: Assets/Scenes/minigames/minigame1a.unity
-    guid: a6b7299f54d687c4eb40565304a43811
-  - enabled: 1
-    path: Assets/Scenes/minigame.unity
-    guid: f3593dc302588f04b9275fab87d72cce
-  - enabled: 1
-    path: Assets/Scenes/Tutorialminijuego.unity
-    guid: f4b6427baefb7cd49b3376d7c1c245a3
-  - enabled: 1
-    path: Assets/Scenes/minigames/JuegoDeBarcos.unity
-    guid: e73398618e36cf849b0a13b078e4ba78
+    path: Assets/Scenes/MINIJUEGOS/Antartida-Games/JuegoAntartida2.unity
+    guid: 8a230993d38bbdb4fa3c09f87642a961
   - enabled: 1
     path: Assets/Scenes/MINIJUEGOS/Antartida-Games/JuegoAntartida3.unity
     guid: 866fd8019cb6bee4890274306e7545b1
