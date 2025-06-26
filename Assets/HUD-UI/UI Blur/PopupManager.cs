@@ -8,13 +8,13 @@ public class PopupManager : MonoBehaviour
     //public GameObject popup;
     public BlurFadeController blurController;
 
-    public void ShowPopup()
+    public void ActivateBlur()
     {
         blurController.FadeIn();
         //popup.SetActive(true);
     }
 
-    public void HidePopup()
+    public void DisactivateBlur()
     {
         blurController.FadeOut();
         //popup.SetActive(false);
