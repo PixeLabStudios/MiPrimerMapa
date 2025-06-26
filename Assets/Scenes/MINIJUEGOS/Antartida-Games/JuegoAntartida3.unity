@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1764191175224685584, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blurImage: {fileID: 925665446}
-  fadeSpeed: 1.2
+  fadeSpeed: 2
 --- !u!4 &2098864792
 Transform:
   m_ObjectHideFlags: 0
@@ -3436,7 +3436,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1209201119}
         m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
-        m_MethodName: HidePopup
+        m_MethodName: DisactivateBlur
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4443,7 +4443,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1209201119}
         m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
-        m_MethodName: ShowPopup
+        m_MethodName: ActivateBlur
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

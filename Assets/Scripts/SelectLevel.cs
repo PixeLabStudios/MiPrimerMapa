@@ -1,29 +1,41 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class SelectLevel : MonoBehaviour
 {
     public InputController Controller;
+
+    [Header("Continentes disponibles")]
     public List<string> continentes = new List<string>();
+
+    [Header("Nombres de Continentes")]
     private List<string> namesContinentes = new List<string>();
-    private int currentContinente ;
+
+    [Header("ID de Continente Actual")]
+    private int currentContinente;
+
+    [Header("UI Referencias")]
     public TextMeshProUGUI nameContinente;
-    public GameObject bloqueado;
-    public GameObject botonPlay;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject bloqueado; // Icono de candado
+    public GameObject botonPlay; // Botón de jugar
+
+    [Header("Continentes desbloqueados")]
+    public List<int> continentesDesbloqueados = new List<int> { 0 }; // Puedes expandir desde el Inspector
+
     void Start()
     {
-        namesContinentes = new List<string>{ "ANTÁRTIDA", "AMÉRICA CENTRAL", "AMÉRICA DEL NORTE", "AMÉRICA DEL SUR", "ASIA", "ÁFRICA", "EUROPA", "OCEANÍA"};
-    }
+        namesContinentes = new List<string>
+        {
+            "ANTÁRTIDA", "AMÉRICA CENTRAL", "AMÉRICA DEL NORTE", "AMÉRICA DEL SUR",
+            "ASIA", "ÁFRICA", "EUROPA", "OCEANÍA"
+        };
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log("esta en "+continentes[currentContinente]);
+        // Establecer nombre e icono inicial
+        ChangeContinente(currentContinente);
+        ChangeName(currentContinente);
+        AnalizarBloqueado(currentContinente);
     }
 
     public void ContinenteLeft()
@@ -37,6 +49,7 @@ public class SelectLevel : MonoBehaviour
         ChangeName(currentContinente);
         AnalizarBloqueado(currentContinente);
     }
+
     public void ContinenteRight()
     {
         if (currentContinente < continentes.Count - 1)
@@ -46,7 +59,7 @@ public class SelectLevel : MonoBehaviour
 
         ChangeContinente(currentContinente);
         ChangeName(currentContinente);
-        AnalizarBloqueado (currentContinente);
+        AnalizarBloqueado(currentContinente);
     }
 
     void ChangeContinente(int continente)
@@ -65,17 +78,21 @@ public class SelectLevel : MonoBehaviour
 
     void AnalizarBloqueado(int id)
     {
-        //PROVISORIO; SIN LOGICA
-        if (id == 0)
-        {
-            bloqueado.SetActive(false);
-            botonPlay.SetActive(true);
-        }
-        else
-        {
-            bloqueado.SetActive(true);
-            botonPlay.SetActive(false);
-        } 
-            
+        bool estaDesbloqueado = continentesDesbloqueados.Contains(id);
+
+        // Mostrar icono de candado si está bloqueado
+        bloqueado.SetActive(!estaDesbloqueado);
+
+        // Activar o desactivar botón Play
+        Button boton = botonPlay.GetComponent<Button>();
+        if (boton != null)
+            boton.interactable = estaDesbloqueado;
+    }
+
+    // Método opcional para desbloquear continentes desde otros scripts
+    public void DesbloquearContinente(int id)
+    {
+        if (!continentesDesbloqueados.Contains(id))
+            continentesDesbloqueados.Add(id);
     }
 }
