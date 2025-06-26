@@ -15,8 +15,11 @@ public class MemoTestManager : MonoBehaviour
     public Transform canvasTransform;
     public bool canClick;
     public List<CardScript> selectedCards = new();
-     
-    
+
+    public float valueX ;
+    public float valueY ;
+
+
     public Button StartButton;
     List<CardScript> cardList = new();  
     CardScript[,] cardsGrid;
@@ -78,9 +81,9 @@ public class MemoTestManager : MonoBehaviour
     /// </summary>
     void MoveCards() 
     {
-        Vector2 firstPoint = new Vector2(-700, -300); // punto de inicio
-        float width= prefab.GetComponent<RectTransform>().rect.width *1.5f;
-        float height = prefab.GetComponent<RectTransform>().rect.height *1.5f;
+        Vector2 firstPoint = new Vector2(valueX, valueY); // punto de inicio
+        float width= prefab.GetComponent<RectTransform>().rect.width *2.3f;
+        float height = prefab.GetComponent<RectTransform>().rect.height *1.6f;
         for (int i = 0; i < cardsGrid.GetLength(0); i++)
         {
             for (int j = 0; j < cardsGrid.GetLength(1); j++)
@@ -122,8 +125,8 @@ public class MemoTestManager : MonoBehaviour
     {
         correct = 0;
         errors = 0;
-        memoTestUIManager.ChangeCorrectText(correct);
-        memoTestUIManager.ChangeErrorsText(errors);
+        //memoTestUIManager.ChangeCorrectText(correct);
+        //memoTestUIManager.ChangeErrorsText(errors);
         
         ShuffleCards();
        // HideAllCards();
@@ -138,7 +141,7 @@ public class MemoTestManager : MonoBehaviour
         if (selectedCards[0].id == selectedCards[1].id)
         {
             correct++;
-            memoTestUIManager.ChangeCorrectText(correct);
+            //memoTestUIManager.ChangeCorrectText(correct);
             if (    correct == imagesList.Count) 
             {
                 memoTestUIManager.EnableStartButton();
@@ -148,7 +151,7 @@ public class MemoTestManager : MonoBehaviour
         {
             canClick = false;
             errors++;
-            memoTestUIManager.ChangeErrorsText(errors);
+            //memoTestUIManager.ChangeErrorsText(errors);
             selectedCards[0].StartCoroutine(selectedCards[0].HideCard());
             selectedCards[1].StartCoroutine(selectedCards[1].HideCard());
         }

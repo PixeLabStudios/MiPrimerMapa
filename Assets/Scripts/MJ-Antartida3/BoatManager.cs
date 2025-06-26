@@ -39,7 +39,7 @@ public class BoatManager : MonoBehaviour
         gameActive = true;
         DisableButton();
         SpawnBoat();
-        panelManager.ActivarSoloPanel(0); 
+        panelManager.MostrarSoloPanel("PanelMinijuego");
 
     }
 
@@ -102,7 +102,7 @@ public class BoatManager : MonoBehaviour
         puntosJugables = acumuladorAciertos + acumuladorErrores;
         float score = (float)acumuladorAciertos / puntosJugables * 120f;
 
-        panelManager.ActivarSoloPanel(2);
+        panelManager.MostrarSoloPanel("PanelFinJuego");
         if (puntosJugables == 0) 
         {
             score = 0f; 

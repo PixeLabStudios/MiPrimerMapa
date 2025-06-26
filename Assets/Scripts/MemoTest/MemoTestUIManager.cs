@@ -6,23 +6,23 @@ using UnityEngine.UI;
 public class MemoTestUIManager : MonoBehaviour
 {
     public Button StartButton;
-    public GameObject errorsText;
-    public GameObject CorrectText;
+    //public GameObject errorsText;
+    //public GameObject CorrectText;
    // public GameObject ScoreText;
    
-    TextMeshProUGUI errors;
-    TextMeshProUGUI correct;
+    //TextMeshProUGUI errors;
+    //TextMeshProUGUI correct;
 
     void Start()
     {
       //  ScoreText.GetComponent<TextMeshProUGUI>().text = data.Score.ToString();
-        errors = errorsText.GetComponent<TextMeshProUGUI>();
-        correct = CorrectText.GetComponent<TextMeshProUGUI>();
+        //errors = errorsText.GetComponent<TextMeshProUGUI>();
+        //correct = CorrectText.GetComponent<TextMeshProUGUI>();
         
     }
 
-    public void ChangeCorrectText(int i) => correct.text = (i.ToString());
-    public void ChangeErrorsText(int i) => errors.text = (i.ToString());
+    //public void ChangeCorrectText(int i) => correct.text = (i.ToString());
+    //public void ChangeErrorsText(int i) => errors.text = (i.ToString());
 
     public void DisableStartButton()
     {

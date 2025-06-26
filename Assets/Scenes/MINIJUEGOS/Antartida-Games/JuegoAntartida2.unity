@@ -1296,10 +1296,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPrincipal: {fileID: 685891968}
-  paneles:
+  panelesLista:
+  - {fileID: 1525805339}
   - {fileID: 580757241}
   - {fileID: 1324671795}
-  - {fileID: 1525805339}
 --- !u!114 &685891971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3410,6 +3410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 820696581}
+  targetM: {fileID: 1892734499}
+  targetF: {fileID: 1892734499}
   offSet: {x: 0, y: 0, z: 0}
   desiredDistance: 15
   speed: 1

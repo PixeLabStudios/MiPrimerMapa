@@ -1,48 +1,53 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PanelManager : MonoBehaviour
 {
     public GameObject panelPrincipal;
-    public GameObject[] paneles;
+    public List<GameObject> panelesLista;
 
-    private int indicePanelActivo = -1;
+    private Dictionary<string, GameObject> paneles = new Dictionary<string, GameObject>();
+    private GameObject panelActivoActual = null;
 
-    void Start()
+    void Awake()
     {
-        panelPrincipal = this.gameObject;
-        // Opcional: desactivar todos los paneles al inicio excepto el principal
-        //for (int i = 0; i < paneles.Length; i++)
-        //{
-            //paneles[i].SetActive(false);
-        //}
-        //panelPrincipal.SetActive(true);
-        //indicePanelActivo = -1;
-    }
-
-    // Activa solo el panel con el índice dado y desactiva el anterior
-    public void ActivarSoloPanel(int indice)
-    {
-        if (indice < 0 || indice >= paneles.Length)
-            return;
-
-        // Desactiva el panel activo anterior si existe
-        if (indicePanelActivo >= 0 && indicePanelActivo < paneles.Length)
+        foreach (GameObject panel in panelesLista)
         {
-            paneles[indicePanelActivo].SetActive(false);
+            if (panel != null && !paneles.ContainsKey(panel.name))
+            {
+                paneles.Add(panel.name, panel);
+                panel.SetActive(false); // Desactiva todos al inicio
+            }
         }
 
-        // Activa el nuevo panel
-        paneles[indice].SetActive(true);
-        indicePanelActivo = indice;
-    }
-    public void changeViewAllPanels(bool visibilidad)
-    {
-        foreach (GameObject panel in paneles)
+        if (panelPrincipal != null)
         {
-            if (panel != panelPrincipal)
-            {
-                panel.SetActive(visibilidad);
-            }
+            panelPrincipal.SetActive(true);
+            panelActivoActual = panelPrincipal;
+        }
+    }
+
+    public void MostrarSoloPanel(string nombre)
+    {
+        if (!paneles.ContainsKey(nombre))
+        {
+            Debug.LogWarning($"Panel '{nombre}' no encontrado.");
+            return;
+        }
+
+        if (panelActivoActual != null)
+            panelActivoActual.SetActive(false);
+
+        paneles[nombre].SetActive(true);
+        panelActivoActual = paneles[nombre];
+    }
+
+    public void MostrarTodos(bool estado)
+    {
+        foreach (var kvp in paneles)
+        {
+            if (kvp.Value != panelPrincipal)
+                kvp.Value.SetActive(estado);
         }
     }
 }
