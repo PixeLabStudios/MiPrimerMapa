@@ -1780,7 +1780,7 @@ GameObject:
   - component: {fileID: 2010757425}
   - component: {fileID: 2010757424}
   m_Layer: 0
-  m_Name: PopUpManager
+  m_Name: UIBackgroundManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2060,6 +2060,6 @@ SceneRoots:
   - {fileID: 619643129}
   - {fileID: 2020440508}
   - {fileID: 1456787497}
+  - {fileID: 2010757425}
   - {fileID: 1259132900}
   - {fileID: 833322030}
-  - {fileID: 2010757425}

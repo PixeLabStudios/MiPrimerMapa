@@ -5,18 +5,18 @@ using System.Collections;
 
 public class PopupManager : MonoBehaviour
 {
-    public GameObject popup;
+    //public GameObject popup;
     public BlurFadeController blurController;
 
     public void ShowPopup()
     {
         blurController.FadeIn();
-        popup.SetActive(true);
+        //popup.SetActive(true);
     }
 
     public void HidePopup()
     {
         blurController.FadeOut();
-        popup.SetActive(false);
+        //popup.SetActive(false);
     }
 }

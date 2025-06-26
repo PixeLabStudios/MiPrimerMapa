@@ -6,7 +6,7 @@ public class BlurFadeController : MonoBehaviour
 {
     [Header("Configuración")]
     public RawImage blurImage;           // Asigna aquí el RawImage que contiene el blur
-    public float fadeSpeed = 2f;         // Velocidad del fade (cuanto mayor, más rápido)
+    public float fadeSpeed = 1.5f;         // Velocidad del fade (cuanto mayor, más rápido)
 
     private Coroutine currentRoutine;
 
@@ -25,7 +25,7 @@ public class BlurFadeController : MonoBehaviour
     {
         if (currentRoutine != null) StopCoroutine(currentRoutine);
         blurImage.gameObject.SetActive(true);
-        currentRoutine = StartCoroutine(FadeToAlpha(1f));
+        currentRoutine = StartCoroutine(FadeToAlpha(0.9f));
     }
 
     public void FadeOut()
