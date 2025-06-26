@@ -17,3 +17,4 @@ Al hacer uso del recurso se debe hacer atribución de uso en el sitio web de don
 <a href="https://www.flaticon.es/iconos-gratis/mascota" title="mascota iconos">Mascota iconos creados por Freepik - Flaticon</a>
 <a href="https://www.flaticon.es/iconos-gratis/guardarropa" title="guardarropa iconos">Guardarropa iconos creados por Ramy W. - Flaticon</a>
 <a href="https://www.flaticon.es/iconos-gratis/triangulo" title="triángulo iconos">Triángulo iconos creados por nawicon - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/hamburguesa" title="hamburguesa iconos">Hamburguesa iconos creados por IYAHICON - Flaticon</a>
