@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PlayerScript : Unit
@@ -5,6 +6,7 @@ public class PlayerScript : Unit
     Joystick joystick;
     PlayerMove movement;
     MeleeAttack melee;
+    EagleScript eagle;
     Vector3 input;
     public enum Device 
     {
@@ -13,7 +15,7 @@ public class PlayerScript : Unit
     public Device currentDevice;
     private void Awake()
     {
-       
+        eagle = FindFirstObjectByType<EagleScript>();
         movement = GetComponent<PlayerMove>();
         melee = GetComponent<MeleeAttack>();
     }
@@ -53,7 +55,10 @@ public class PlayerScript : Unit
                 {
                     Attack();
                 }
-
+                if (Input.GetMouseButtonDown(1)) 
+                {
+                    eagle.Attack();
+                }
                 break;
         }
         
@@ -69,9 +74,13 @@ public class PlayerScript : Unit
     }
     private void OnTriggerEnter(Collider other)
     {
+       
         if (other.TryGetComponent<BulletMove>(out var script)) 
-        { 
+        {
+            Debug.Log("choque con bala");
+            Debug.Log(script.damage);
             TakeDamage(script.damage); 
+            Destroy(other.gameObject);
         }
     }
 

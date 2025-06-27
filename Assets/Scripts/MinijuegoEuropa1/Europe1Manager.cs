@@ -1,11 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Android.Gradle;
-using Unity.Burst.Intrinsics;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static Unity.Burst.Intrinsics.Arm;
+
 
 public class Europe1Manager : MonoBehaviour
 {
@@ -15,12 +11,38 @@ public class Europe1Manager : MonoBehaviour
     public GameObject rangeRobot;
     public GameObject lionRobot;
     int currentRound;
+    int waitTime;
     void Start()
     {
         currentRound = 1;
-       // StartCoroutine(StartRoundFive());
+        waitTime = 2;
+        StartCoroutine(Game());
     }
 
+    IEnumerator Game() 
+    {
+        Debug.Log("Ronda 1");
+        StartCoroutine(StartRoundOne());
+        yield return new WaitUntil(AreNoEnemies);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Ronda 2");
+        StartCoroutine(StartRoundTwo());
+        yield return new WaitUntil(AreNoEnemies);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Ronda 3");
+        StartCoroutine(StartRoundThree());
+        yield return new WaitUntil(AreNoEnemies);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Ronda 4");
+        StartCoroutine(StartRoundFour());
+        yield return new WaitUntil(AreNoEnemies);
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Ronda 5");
+        StartCoroutine(StartRoundFive());
+        yield return new WaitUntil(AreNoEnemies);
+
+        Debug.Log("termino el juego");
+    }
     bool AreNoEnemies() { return unitList.Count <= 0; }
     
     

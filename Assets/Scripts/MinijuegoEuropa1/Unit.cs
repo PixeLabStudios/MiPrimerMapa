@@ -15,6 +15,8 @@ public abstract class Unit : MonoBehaviour
     public void TakeDamage(int value)    
     {
         hp -= value;
+        //mover al atacado un poquito hacia atras donde mira
+        
         if (hp<=0) { OnDeath(); }
     }
     public void SetStats(int hpValue, int speed, int damageValue, float rate)

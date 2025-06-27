@@ -7,6 +7,7 @@ public class RangedRobot : Unit
     float bulletSpeed;
     float range;
     NavMeshAgent agent;
+    Collider col;
     public GameObject bullet;
     public Transform player;
     public Transform spawn;
@@ -16,6 +17,8 @@ public class RangedRobot : Unit
         agent = GetComponent<NavMeshAgent>();
         player = FindFirstObjectByType<PlayerScript>().transform;
         manager = FindFirstObjectByType<Europe1Manager>();
+        col= GetComponent<Collider>();
+        
     }
 
     private void Start()
@@ -36,15 +39,23 @@ public class RangedRobot : Unit
     
     void Update()
     {
-        if (CanAttack())
+        if (transform.parent == null)
         {
-            agent.isStopped = true;
-            Attack();
+            if (CanAttack())
+            {
+                agent.isStopped = true;
+                Attack();
+            }
+            else
+            {
+                agent.isStopped = false;
+                agent.SetDestination(player.position);
+            }
         }
-        else
+        else 
         {
-            agent.isStopped = false;
-            agent.SetDestination(player.position);
+            agent.enabled = false;
+            col.enabled = false;
         }
     }
 
