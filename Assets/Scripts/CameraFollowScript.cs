@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections.Generic;
 
 
 public class CameraFollowScript : MonoBehaviour
 {
     [Header("Target Settings")]
     [HideInInspector]public Transform target; // The target to follow
-    public GameObject targetM;
-    public GameObject targetF;
+    public List<GameObject> gameObjects = new List<GameObject>();
+    //public GameObject targetM;
+    //public GameObject targetF;
     public Vector3 offSet;
 
     [Header("Distance Settings")]
@@ -22,13 +24,16 @@ public class CameraFollowScript : MonoBehaviour
 
     void Start()
     {
-        if (Singleton.Instance.isMan)
+        if (gameObjects.Count > 0)
         {
-            target = targetM.transform;
-        }
-        else
-        {
-            target = targetF.transform;
+            if (Singleton.Instance.isMan)
+            {
+                target = gameObjects[0].transform;
+            }
+            else
+            {
+                target = gameObjects[1].transform;
+            }
         }
         currentDistance = Vector3.Distance(transform.position, target.position);
         desiredPosition = transform.position;

@@ -23,7 +23,7 @@ public class PanelManager : MonoBehaviour
         if (panelPrincipal != null)
         {
             panelPrincipal.SetActive(true);
-            panelActivoActual = panelPrincipal;
+            //panelActivoActual = panelPrincipal;
         }
     }
 
