@@ -9,13 +9,13 @@ public class ObstacleGenerator : MonoBehaviour
     public List<Transform> spawnLocations;
     public Material[] materials;
     float genCooldown;
-    int maxobject;
+  
     
     void Start()
     {
        
         genCooldown = 2;
-        maxobject=3;      
+          
     }
    
     
