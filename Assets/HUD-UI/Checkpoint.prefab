@@ -496,6 +496,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!1 &874058794216311342
@@ -1503,7 +1504,7 @@ RectTransform:
   - {fileID: 4761586543108638032}
   - {fileID: 6986301547814161323}
   - {fileID: 3096290736539995518}
-  m_Father: {fileID: 4468348381047508308}
+  m_Father: {fileID: 5061845301460506213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2415,7 +2416,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8752825312878905314}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PopUpManager, Assembly-CSharp
         m_MethodName: NextCanvas
         m_Mode: 1
@@ -2671,12 +2672,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8752825312878905314}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PopUpManager, Assembly-CSharp
         m_MethodName: CloseInformation
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 9035275392890082186}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2991,6 +2992,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!1 &4031906225113809585
@@ -3401,7 +3403,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8752825312878905314}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PopUpManager, Assembly-CSharp
         m_MethodName: PreviousCanvas
         m_Mode: 1
@@ -5023,6 +5025,7 @@ MonoBehaviour:
   panelGuardarropa: {fileID: 0}
   panelHome: {fileID: 0}
   pj: {fileID: 0}
+  pjF: {fileID: 0}
   mundo: {fileID: 0}
   changeMascota: {fileID: 0}
 --- !u!1 &8348719095055924608
@@ -5761,29 +5764,13 @@ PrefabInstance:
     - {fileID: 3501044802593933100, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
     - {fileID: 3472136734363498749, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7367788036395736394, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2162341868001707643, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2885482211224087110}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
---- !u!224 &4468348381047508308 stripped
+--- !u!224 &5061845301460506213 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7367788036395736394, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
-  m_PrefabInstance: {fileID: 6358351513390862366}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8752825312878905314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2397374311717083132, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
-  m_PrefabInstance: {fileID: 6358351513390862366}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e504be0ad7fa640bba6890c9fe06c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &9035275392890082186 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2692827233960084372, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2162341868001707643, guid: 8cd9dea21a81e8240805478bd75fea9b, type: 3}
   m_PrefabInstance: {fileID: 6358351513390862366}
   m_PrefabAsset: {fileID: 0}
