@@ -39,7 +39,7 @@ public class BoatManager : MonoBehaviour
         gameActive = true;
         DisableButton();
         SpawnBoat();
-        panelManager.MostrarSoloPanel("PanelMinijuego");
+        panelManager.MostrarSoloPanel("PanelGame");
         timerController.StartTimer();
 
     }

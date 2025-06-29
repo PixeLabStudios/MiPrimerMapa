@@ -11,6 +11,8 @@ public class TimerController : MonoBehaviour
 
     private float remainingTime;
     private bool timerRunning = false;
+    private bool timerPaused = false;
+    private Coroutine timerCoroutine;
 
     public delegate void TimerEnded();
     public event TimerEnded OnTimerEnd;
@@ -19,17 +21,40 @@ public class TimerController : MonoBehaviour
     {
         remainingTime = gameDuration;
         timerRunning = true;
-        StartCoroutine(UpdateTimer());
+        timerPaused = false;
+
+        if (timerCoroutine != null)
+            StopCoroutine(timerCoroutine);
+
+        timerCoroutine = StartCoroutine(UpdateTimer());
+    }
+
+    public void PauseTimer()
+    {
+        timerPaused = true;
+    }
+
+    public void ResumeTimer()
+    {
+        if (timerRunning && timerPaused)
+        {
+            timerPaused = false;
+        }
     }
 
     private IEnumerator UpdateTimer()
     {
-        while (remainingTime > 0)
+        while (remainingTime > 0f)
         {
-            yield return new WaitForSeconds(1f);
-            remainingTime -= 1f;
-            UpdateVisuals();
+            if (!timerPaused)
+            {
+                remainingTime -= Time.deltaTime;
+                UpdateVisuals();
+            }
+            yield return null;
         }
+
+        remainingTime = 0f;
         timerRunning = false;
         UpdateVisuals();
         OnTimerEnd?.Invoke();
@@ -42,9 +67,9 @@ public class TimerController : MonoBehaviour
             timerFillImage.fillAmount = fillAmount;
 
         if (timerText != null)
-            timerText.text = "Tiempo: " + Mathf.CeilToInt(remainingTime).ToString() + "s";
+            timerText.text = Mathf.CeilToInt(remainingTime).ToString();
     }
 
-    public bool IsRunning() => timerRunning;
+    public bool IsRunning() => timerRunning && !timerPaused;
+    public bool IsPaused() => timerPaused;
 }
-
