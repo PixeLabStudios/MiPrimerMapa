@@ -119,67 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &840518525
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.42851686
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9035339
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 129.253
-      objectReference: {fileID: 0}
-    - target: {fileID: 1382739407510253226, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764191175224685584, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_Name
-      value: Barquito
-      objectReference: {fileID: 0}
-    - target: {fileID: 1764191175224685584, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb3d768846ffde543b1b0ec21a73c380, type: 3}
 --- !u!1 &856898253
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,10 +2313,10 @@ RectTransform:
   - {fileID: 1246555548}
   m_Father: {fileID: 3266592000933768698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 96, y: 82.5}
-  m_SizeDelta: {x: 192, y: 165}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -82.5}
+  m_SizeDelta: {x: 317.69, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2962063408940201310
 GameObject:
@@ -2464,10 +2403,10 @@ RectTransform:
   - {fileID: 2934859699667417822}
   m_Father: {fileID: 1899311611743593997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 488.75}
-  m_SizeDelta: {x: -484, y: -952.5}
+  m_AnchoredPosition: {x: 0, y: -165.75}
+  m_SizeDelta: {x: 0, y: 331.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &3281440603105618785
 RectTransform:
@@ -3385,9 +3324,9 @@ RectTransform:
   - {fileID: 6423314854785430764}
   m_Father: {fileID: 3266592000933768698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -96, y: 82.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -250, y: -82.5}
   m_SizeDelta: {x: 192, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5454720921186819255
@@ -3676,7 +3615,7 @@ GameObject:
   - component: {fileID: 2049600972755673862}
   - component: {fileID: 5086790501536202340}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PanelAccesos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5106,4 +5045,3 @@ SceneRoots:
   - {fileID: 1639675932}
   - {fileID: 1209201120}
   - {fileID: 2098864792}
-  - {fileID: 840518525}

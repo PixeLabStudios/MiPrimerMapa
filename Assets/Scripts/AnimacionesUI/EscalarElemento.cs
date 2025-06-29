@@ -94,6 +94,12 @@ public class EscalarElemento : MonoBehaviour
             botonActualmenteEscalado = boton;
         }
     }
+    public void cambiaralfa(float nuevoAlfa)
+    {
+        Color colorActual = botonUnico.image.color;
+        colorActual.a = nuevoAlfa;
+        botonUnico.image.color = colorActual;
+    }
 
     // Animación rápida (tipo rebote)
     public IEnumerator AnimacionClickUnica(Button boton)
@@ -133,9 +139,26 @@ public class EscalarElemento : MonoBehaviour
         foreach (Button btn in botones)
         {
             if (btn == botonSeleccionado)
+            {
                 escalaObjetivo[btn] = escalaActiva;
+                SetAlpha(btn, 1f); // Totalmente visible
+            }
             else
+            {
                 escalaObjetivo[btn] = escalaNormal;
+                SetAlpha(btn, 0.5f); // Transparencia al 50%
+            }
         }
     }
+    private void SetAlpha(Button btn, float alpha)
+    {
+        if (btn.image != null)
+        {
+            Color color = btn.image.color;
+            color.a = alpha;
+            btn.image.color = color;
+        }
+    }
+
+
 }

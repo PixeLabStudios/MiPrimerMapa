@@ -978,6 +978,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1981402018}
+        m_TargetAssemblyTypeName: TimerController, Assembly-CSharp
+        m_MethodName: ResumeTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1445700264}
         m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
         m_MethodName: DisactivateBlur
@@ -3538,7 +3550,6 @@ GameObject:
   - component: {fileID: 892308946}
   - component: {fileID: 892308948}
   - component: {fileID: 892308947}
-  - component: {fileID: 892308949}
   m_Layer: 5
   m_Name: PanelCronometro
   m_TagString: Untagged
@@ -3607,21 +3618,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892308945}
   m_CullTransparentMesh: 1
---- !u!114 &892308949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 892308945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdbe7a3fd4d9f214fb3ff37f4d3f1b4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameDuration: 45
-  timerFillImage: {fileID: 2023648192}
-  timerText: {fileID: 1036537769}
 --- !u!1 &953101126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,6 +4628,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1981402018}
+        m_TargetAssemblyTypeName: TimerController, Assembly-CSharp
+        m_MethodName: ResumeTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1445700264}
         m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
         m_MethodName: DisactivateBlur
@@ -5310,7 +5318,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -165.75}
-  m_SizeDelta: {x: -1000, y: 331.5}
+  m_SizeDelta: {x: -799.99994, y: 331.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259039635
 MonoBehaviour:
@@ -7692,6 +7700,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1981402018}
+        m_TargetAssemblyTypeName: TimerController, Assembly-CSharp
+        m_MethodName: PauseTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1445700264}
         m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
         m_MethodName: ActivateBlur
@@ -7912,6 +7932,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1981402018}
+        m_TargetAssemblyTypeName: TimerController, Assembly-CSharp
+        m_MethodName: PauseTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1445700264}
         m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
         m_MethodName: ActivateBlur
@@ -9782,6 +9814,7 @@ GameObject:
   - component: {fileID: 1981402016}
   - component: {fileID: 1981402015}
   - component: {fileID: 1981402017}
+  - component: {fileID: 1981402018}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -9838,7 +9871,7 @@ MonoBehaviour:
   acceptPoint: {fileID: 329454957}
   rejectPoint: {fileID: 1048240357}
   velocidadBoteinicial: 7
-  timerController: {fileID: 892308949}
+  timerController: {fileID: 1981402018}
 --- !u!4 &1981402016
 Transform:
   m_ObjectHideFlags: 0
@@ -9951,6 +9984,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1981402018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981402014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbe7a3fd4d9f214fb3ff37f4d3f1b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameDuration: 45
+  timerFillImage: {fileID: 2023648192}
+  timerText: {fileID: 1036537769}
 --- !u!1 &1984485879
 GameObject:
   m_ObjectHideFlags: 0
