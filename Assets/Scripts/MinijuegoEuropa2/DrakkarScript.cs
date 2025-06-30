@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DrakkarScript : MonoBehaviour
 {
-    
+    Europa1UI ui;
     CharacterController controller;
     public GameObject bulletPrefab;
     public Joystick joystick;
@@ -51,6 +51,7 @@ public class DrakkarScript : MonoBehaviour
    
     private void Awake()
     {
+        ui = FindFirstObjectByType<Europa1UI>();
         controller = GetComponent<CharacterController>();
     }
     public IEnumerator GiveInvincibility() 
@@ -145,6 +146,7 @@ public class DrakkarScript : MonoBehaviour
         if (canBeHit)
         {
             currentHp += a;
+            ui.HideHearts(currentHp);
             StartCoroutine(GiveInvincibility());
         }
         else {

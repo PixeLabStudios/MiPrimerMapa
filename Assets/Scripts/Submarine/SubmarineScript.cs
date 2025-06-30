@@ -24,8 +24,7 @@ public class SubmarineScript : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (manager.GetCanShoot() && time > lastShot + rateOfFire && angle <90 && angle >0)
         {
-           GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position,Quaternion.identity);
-            
+           GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position,Quaternion.identity);          
             bullet.GetComponent<BulletScript>().SetDirection(direction);
             bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
                lastShot = time;
@@ -35,6 +34,7 @@ public class SubmarineScript : MonoBehaviour
     {
         time += Time.deltaTime;
         CheckInputMobile();
+        CheckInputPC();
     }
 
     void CheckInputMobile()
@@ -46,6 +46,7 @@ public class SubmarineScript : MonoBehaviour
             Shoot(GetTouchPosition(touch));
         }
     }
+    
     Vector3 GetTouchPosition(Touch touch)
     {
         RaycastHit hit;

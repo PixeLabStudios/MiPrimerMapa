@@ -63,7 +63,7 @@ public class AudioGameManager : MonoBehaviour
         int randomCountry;
         int randomBlock;
        
-        // Asingno el correcto a una bandera
+        // Asigno el correcto a una bandera
         randomCountry = Random.Range(0, audioDataRandom.list.Count); // el primer numero es para el correcto       
         randomBlock = Random.Range(0, pos.Count); // Seleccionar un bloque aleatorio para la bandera correcta
         audioClip = Resources.Load<AudioClip>(audioDataRandom.list[randomCountry].audioPath); // Cargar el audio
