@@ -97,4 +97,5 @@ public class Europe2Manager : MonoBehaviour
     {
         Destroy(other.gameObject);
     }
+
 }

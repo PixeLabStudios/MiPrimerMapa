@@ -8,6 +8,7 @@ public class PlayerScript : Unit
     MeleeAttack melee;
     EagleScript eagle;
     Vector3 input;
+    public HealthBar healthBar;
     public enum Device 
     {
         PC,Mobile
@@ -18,11 +19,13 @@ public class PlayerScript : Unit
         eagle = FindFirstObjectByType<EagleScript>();
         movement = GetComponent<PlayerMove>();
         melee = GetComponent<MeleeAttack>();
+        SetStats(350, 10, 50, 2);
+        healthBar.SetHealth(maxHp, hp);
     }
     private void Start()
     {
         currentDevice = Device.PC;
-        SetStats(350, 10, 50, 2);
+        
         melee.damage = damage;
         melee.range = 3;
         melee.rate = attackRate;
@@ -84,7 +87,11 @@ public class PlayerScript : Unit
         }
     }
 
-
+    public override void TakeDamage(int damage)
+    {
+        healthBar.SetCurrentHealth(hp - damage);
+        base.TakeDamage(damage);
+    }
 
 
 
