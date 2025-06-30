@@ -15,9 +15,11 @@ public class TabletScript : MonoBehaviour
     float targetYvalue;
     TabletGameManager manager;
     Vector3 position;
-    
+    bool isTabletOpen;
+
     private void Start()
     {
+        isTabletOpen = false;
         nameText.gameObject.SetActive(false);
         herbivoreButton.gameObject.SetActive(false);
         carnivoreButton.gameObject.SetActive(false);
@@ -36,11 +38,25 @@ public class TabletScript : MonoBehaviour
        position.y = yvalue;
        tabletObject.transform.localPosition = position;
 
+        if (isTabletOpen) 
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                manager.Choose("Herbivoro");
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                manager.Choose("Carnivoro");
+            }
+        }
+        
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Animal"))           
         {
+            isTabletOpen = true;
             ChangeText(other.GetComponent<AnimalScript>().animalData);
             manager.SetAnswer(other.GetComponent<AnimalScript>());
             herbivoreButton.interactable = true;
@@ -73,5 +89,6 @@ public class TabletScript : MonoBehaviour
         herbivoreButton.gameObject.SetActive(false);
         carnivoreButton.gameObject.SetActive(false);
         targetYvalue = -0.47f; 
+        isTabletOpen = false;
     }
 }

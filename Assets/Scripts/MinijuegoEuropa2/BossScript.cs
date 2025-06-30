@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 
 public class BossScript : MonoBehaviour
 {
+    public Europa1UI ui;
     Vector3 targetPos;
     public Transform[] playSpots;
     public Transform retreatSpot;
@@ -16,7 +17,7 @@ public class BossScript : MonoBehaviour
     float moveSpeed;
    
     public int hp;
-    int MaxHp;
+    public int MaxHp;
     bool canLoseHP;
     
     public enum Direction 
@@ -105,6 +106,7 @@ public class BossScript : MonoBehaviour
         yield return new WaitUntil(isNotMoving);
         canLoseHP = true;
         StartShooting();
+        ui.hpBar.SetActive(true);
         yield return new WaitForSeconds(5);
 
         while (canLoseHP)
@@ -169,6 +171,7 @@ public class BossScript : MonoBehaviour
         if (canLoseHP)
         {
             hp -= damage;
+            ui.SetHp();
             Debug.Log("El jefe perdioVida " + hp);
             if (hp <= 0)
             {
@@ -223,6 +226,7 @@ public class BossScript : MonoBehaviour
         currentStage++;
         currentDirection = Direction.Retreat;
         yield return new WaitUntil(isNotMoving);
+        ui.hpBar.SetActive(false);
         gameObject.SetActive(false);
     }
     private void OnTriggerEnter(Collider other)
