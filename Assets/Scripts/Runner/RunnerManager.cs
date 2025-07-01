@@ -3,16 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class RunnerManager : MonoBehaviour
 {
-    public RunnerUI runnerUI;
+    //public RunnerUI runnerUI;
     public GenerateObject objectGenerator;
     public RunnerScript1 runnerScript1; 
     public PanelManager panelManager;
 
     public void Start()
     {
-        runnerUI = GetComponent<RunnerUI>();
+        //runnerUI = GetComponent<RunnerUI>();
         StartCoroutine(objectGenerator.Generate(5f)); // Inicia la generacion de objetos
-        panelManager = GetComponent<PanelManager>();
+        //panelManager = GetComponent<PanelManager>();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -21,9 +21,9 @@ public class RunnerManager : MonoBehaviour
         {
             runnerScript1.ChangeSpeed(0);
             StopAllCoroutines(); // Detiene la generacion de objetos
-            runnerUI.ShowResults("Ganaste"); // Muestra el panel de resultados
-            panelManager.MostrarSoloPanel("FinJuego"); // Muestra el panel de fin de juego
-
+            //runnerUI.ShowResults("Ganaste"); // Muestra el panel de resultados
+            panelManager.MostrarSoloPanel("PanelFinJuego"); // Muestra el panel de fin de juego
+            
             //Despues deberia mostrar el puntaje
         }
     }

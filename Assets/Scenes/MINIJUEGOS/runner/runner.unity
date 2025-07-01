@@ -1660,7 +1660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &298732239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2910,6 +2910,18 @@ MonoBehaviour:
           m_StringArgument: PanelMenu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1273963199}
+        m_TargetAssemblyTypeName: RunnerManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &508303860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3445,6 +3457,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PanelGame
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1273963199}
+        m_TargetAssemblyTypeName: RunnerManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &600633258
@@ -4855,6 +4879,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PanelGuia
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1273963199}
+        m_TargetAssemblyTypeName: RunnerManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &918956913
@@ -6716,9 +6752,9 @@ RectTransform:
   - {fileID: 923512065}
   m_Father: {fileID: 778900984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 645, y: -131}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054016463
@@ -6855,9 +6891,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 778900984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 215, y: -131}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096158989
@@ -7697,9 +7733,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 778900984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1075, y: -131}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1231345154
@@ -8064,9 +8100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8425413dedb26445bf7282116f13d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runnerUI: {fileID: 0}
   objectGenerator: {fileID: 2050232194}
   runnerScript1: {fileID: 1635422625}
+  panelManager: {fileID: 236729194}
 --- !u!4 &1273963200
 Transform:
   m_ObjectHideFlags: 0
@@ -8115,10 +8151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: befe3c302ec75614dae54e932838e7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseButton: {fileID: 0}
-  piramideButton: {fileID: 0}
-  panel: {fileID: 0}
-  resultPanel: {fileID: 1827699938}
   resultText: {fileID: 53584854}
   Hearts:
   - {fileID: 1017202139}
@@ -8403,18 +8435,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236729195}
-        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
-        m_MethodName: DisactivateBlur
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 236729194}
         m_TargetAssemblyTypeName: PanelManager, Assembly-CSharp
         m_MethodName: MostrarSoloPanel
@@ -8425,6 +8445,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: PanelGame
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1273963199}
+        m_TargetAssemblyTypeName: RunnerManager, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 236729195}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: DisactivateBlur
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1309228826
@@ -9086,7 +9130,6 @@ GameObject:
   - component: {fileID: 1515443268}
   - component: {fileID: 1515443267}
   - component: {fileID: 1515443266}
-  - component: {fileID: 1515443265}
   m_Layer: 5
   m_Name: ButtonsMenu
   m_TagString: Untagged
@@ -9115,20 +9158,6 @@ RectTransform:
   m_AnchoredPosition: {x: 25, y: 422}
   m_SizeDelta: {x: 523, y: 844}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1515443265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1515443263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b32559018d5fc224880e8742864a7a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelPrincipal: {fileID: 0}
-  panelesLista: []
 --- !u!114 &1515443266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9349,6 +9378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
+  panelManager: {fileID: 236729194}
 --- !u!54 &1635422626
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10265,7 +10295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1870275122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11337,10 +11367,8 @@ MonoBehaviour:
   - {fileID: 1590450711}
   - {fileID: 1825403283}
   objects:
-  - {fileID: 8789357145313870121, guid: 336fd57d189a40f4ca98148d53452031, type: 3}
-  - {fileID: 5452548999415799469, guid: 09934bc13a6c6784c99e1ffa9704b6d6, type: 3}
-  - {fileID: 4151638958655993638, guid: 802c6147d037320408ff883ae3669b0d, type: 3}
-  - {fileID: 919132149155446097, guid: 932b053f0aa98ef4fae15cd496ed7f1f, type: 3}
+  - {fileID: 919132149155446097, guid: eac5a4b46dc137440a96f668cac82d1e, type: 3}
+  - {fileID: 919132149155446097, guid: 414682b8b293c1346855935c0297df46, type: 3}
 --- !u!1001 &2120036243
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ public class Europa1UI : MonoBehaviour
         {
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
+            //
         }
         hearts[i].SetActive(false);
     }

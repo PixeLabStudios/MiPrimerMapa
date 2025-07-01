@@ -32,7 +32,7 @@ public class RunnerScript1 : MonoBehaviour
         maxLives = 3;
         lives = maxLives;
         swipeThreshold = 45f;
-        panelManager = GetComponent<PanelManager>();
+        //panelManager = GetComponent<PanelManager>();
         
     }
 
@@ -101,7 +101,7 @@ public class RunnerScript1 : MonoBehaviour
     {
         if (other.CompareTag("Comida"))
         {
-           // Debug.Log("choque con comida");
+            // Debug.Log("choque con comida");
             if (lives < maxLives)
             {
                 ChangeLives(1);
@@ -109,7 +109,7 @@ public class RunnerScript1 : MonoBehaviour
             }
             Destroy(other.gameObject);
         }
-        else 
+        else if (other.CompareTag("Animal") && lives > 0)
         {
             ChangeLives(-1);
             runnerUI.HideHearts(lives);
@@ -118,16 +118,18 @@ public class RunnerScript1 : MonoBehaviour
             {
                 RunnerManager runnerManager = FindFirstObjectByType<RunnerManager>();
                 runnerManager.StopAllCoroutines();
-                runnerManager.runnerUI.ShowResults("Perdiste");
+                //runnerManager.runnerUI.ShowResults("Perdiste");
                 ChangeSpeed(0);
                 panelManager.MostrarSoloPanel("FinJuego");
                 // Debug.Log("perdiste todas las vidas");
                 //GameOver
                 //Destroy(gameObject);
                 //PauseGame();
+                Destroy(other.gameObject);
             }
-            Destroy(other.gameObject);
+
         }
+
     }
 
     void ChangeLives(int i)
