@@ -12,6 +12,7 @@ public class Europe2Manager : MonoBehaviour
     public int progress;    
     public int objectsSpeed;
     public int threshold;
+     
 
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class Europe2Manager : MonoBehaviour
         StopCoroutine(generation);
         //----------1da etapa---------//
         bossScript.gameObject.SetActive(true);
+        //MISCRIPTJOSE
         Coroutine bossMove = StartCoroutine(bossScript.HandleMovement());
         yield return new WaitUntil(IsInactive);
         threshold += 35;
@@ -58,7 +60,7 @@ public class Europe2Manager : MonoBehaviour
 
         StopCoroutine(generation);
         //----------2da etapa-jefe y 1 sub---------//
-
+        //MISCRIPTJOSE
         bossScript.gameObject.SetActive(true);
         
         bossMove = StartCoroutine(bossScript.HandleMovement());
@@ -77,12 +79,14 @@ public class Europe2Manager : MonoBehaviour
         }
         StopCoroutine(generation);
         //------------3era etapa jefe y 2 sub----------//
+        //MISCRIPTJOSE
         bossScript.gameObject.SetActive(true);
         bossScript.SetTurretStats(bossScript.mainTurret, 3, 4, 32);
         bossMove = StartCoroutine(bossScript.HandleMovement());
         enemySubs[0].gameObject.SetActive(true);
         enemySubs[1].gameObject.SetActive(true);
         yield return new WaitUntil(BossIsdead);
+        //LOGICA POANELVICTORIA
         StartCoroutine(enemySubs[0].Retreat());
         StartCoroutine(enemySubs[1].Retreat());
         
@@ -91,6 +95,7 @@ public class Europe2Manager : MonoBehaviour
     bool BossIsdead() 
     {
         return bossScript.hp <= 0;
+
     }
 
     private void OnTriggerEnter(Collider other)
