@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SubmarineGameManager : MonoBehaviour
+public class SubmarineGameManager : BaseGameManager
 {
     public GenerateObject generateObjects; // Referencia al script GenerateObjects
     public StarScoreDisplay starScoreDisplay; // Referencia al script StarScoreDisplay

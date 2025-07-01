@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Europe2Manager : MonoBehaviour
+public class Europe2Manager : BaseGameManager
 {
     public DrakkarScript drakkarScript;
     public BossScript bossScript;

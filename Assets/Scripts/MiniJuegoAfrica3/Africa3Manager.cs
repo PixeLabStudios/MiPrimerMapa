@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Africa3Manager : MonoBehaviour
+public class Africa3Manager : BaseGameManager
 {
     public List<Monument> monumentsRandom = new List<Monument>();
     [HideInInspector]public List<Monument> monumentsList = new List<Monument>(); 

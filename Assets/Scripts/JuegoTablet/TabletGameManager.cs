@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class TabletGameManager : MonoBehaviour
+public class TabletGameManager : BaseGameManager
 {
     int correctAnswers = 0;
     int incorrectAnswers = 0;

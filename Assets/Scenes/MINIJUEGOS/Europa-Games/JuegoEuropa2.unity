@@ -449,7 +449,7 @@ MonoBehaviour:
   - {fileID: 2081439658}
   hpBar: {fileID: 1160004212}
   slider: {fileID: 1160004214}
-  gameOverPanel: {fileID: 0}
+  gameOverPanel: {fileID: 272641407}
 --- !u!1 &83457111
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,6 +2326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4888809882561719454, guid: 7d533b70372b1c742b04d9c13eae8dd2, type: 3}
   joystick: {fileID: 572175850}
+  mobilePanel: {fileID: 987464899}
   shootButton: {fileID: 1550154567}
   bulletSpawn: {fileID: 1696777072}
   currentDevice: 0
@@ -2399,7 +2400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &987464900
 RectTransform:
   m_ObjectHideFlags: 0
