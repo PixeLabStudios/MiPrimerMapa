@@ -17,8 +17,9 @@ public class RunnerScript1 : MonoBehaviour
     int currentRow;
     bool alreadyMoving;
     #endregion
+    public PanelManager panelManager;
 
-    
+
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class RunnerScript1 : MonoBehaviour
         maxLives = 3;
         lives = maxLives;
         swipeThreshold = 45f;
+        panelManager = GetComponent<PanelManager>();
         
     }
 
@@ -118,7 +120,8 @@ public class RunnerScript1 : MonoBehaviour
                 runnerManager.StopAllCoroutines();
                 runnerManager.runnerUI.ShowResults("Perdiste");
                 ChangeSpeed(0);
-            // Debug.Log("perdiste todas las vidas");
+                panelManager.MostrarSoloPanel("FinJuego");
+                // Debug.Log("perdiste todas las vidas");
                 //GameOver
                 //Destroy(gameObject);
                 //PauseGame();
