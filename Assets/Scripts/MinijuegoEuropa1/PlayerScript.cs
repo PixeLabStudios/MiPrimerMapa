@@ -98,5 +98,6 @@ public class PlayerScript : Unit
     public override void OnDeath()
     {
         Debug.Log("me mori pipipi");
+        //logica de muerte y panel que llama al star
     }
 }

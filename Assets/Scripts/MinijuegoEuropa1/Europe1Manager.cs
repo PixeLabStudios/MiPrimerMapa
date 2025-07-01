@@ -40,6 +40,8 @@ public class Europe1Manager : MonoBehaviour
         Debug.Log("Ronda 5");
         StartCoroutine(StartRoundFive());
         yield return new WaitUntil(AreNoEnemies);
+        //logica que llama al POanel de estrellas
+
 
         Debug.Log("termino el juego");
     }

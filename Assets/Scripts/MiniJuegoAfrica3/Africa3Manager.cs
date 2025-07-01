@@ -59,6 +59,7 @@ public class Africa3Manager : MonoBehaviour
             if (correct >= monumentsNumber)
             {
                 //Juego terminado, mostrar resultados
+                //Panel Star
                 Debug.Log("el juego termino");
             }
             else
