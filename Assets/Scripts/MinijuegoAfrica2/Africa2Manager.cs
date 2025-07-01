@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Africa2Manager : MonoBehaviour
+public class Africa2Manager : BaseGameManager
 {
     public List<AnimalButtonScript> buttonsList = new(); 
     List<AnimalButtonScript> buttonsRandom = new();
@@ -26,6 +26,7 @@ public class Africa2Manager : MonoBehaviour
 
     private void Awake()
     {
+
         starScoreDisplay = FindFirstObjectByType<StarScoreDisplay>();
     }
     private void Start()

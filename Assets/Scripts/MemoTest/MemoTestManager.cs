@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MemoTestManager : MonoBehaviour
+public class MemoTestManager : BaseGameManager
 {
   //  public PlayerData playerData;
     public List<Sprite> imagesList = new();

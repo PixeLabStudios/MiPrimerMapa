@@ -2,7 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
-public class TrainManager : MonoBehaviour
+public class TrainManager : BaseGameManager
 {
     
     public int errors;
