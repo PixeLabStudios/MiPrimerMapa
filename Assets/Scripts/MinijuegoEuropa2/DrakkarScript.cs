@@ -11,6 +11,7 @@ public class DrakkarScript : MonoBehaviour
     CharacterController controller;
     public GameObject bulletPrefab;
     public Joystick joystick;
+    public GameObject mobilePanel;
     Vector3 inputMobile;
     Vector3 inputKeyboard;
 
@@ -43,7 +44,7 @@ public class DrakkarScript : MonoBehaviour
 
 
     public enum Device {
-        EDITOR,
+        
         MOBILE,
         PC,
     }
@@ -63,7 +64,7 @@ public class DrakkarScript : MonoBehaviour
 
     private void Start()
     {
-        currentDevice = Device.PC;
+       
         maxHp = 5;
         currentHp = maxHp;
         moveSpeed = 30;
@@ -75,36 +76,55 @@ public class DrakkarScript : MonoBehaviour
         limitVerticalTop = transform.position.z + 50;
         limitHorizontalLeft = transform.position.x - 35;
         limitHorizontalRight = transform.position.x + 35;
-        
+
         lastShoot = 0;
         fireRate = 0.5f;
         time = 0;
-        canBeHit =true;
+        canBeHit = true;
+        switch (currentDevice) 
+        {
+            
+            case Device.MOBILE:
+                mobilePanel.SetActive(true);
+                break;
+            case Device.PC:
+                mobilePanel.SetActive(false);
+                break;
+        }
     }
     
     private void Update()
     {
-        //Debug.Log(canBeHit);
-        #region Movil
-        inputMobile.x = joystick.Horizontal;
-        inputMobile.z = joystick.Vertical;
-
-        Move(inputMobile);
-        if (shootButton.buttonPressed) 
+        switch (currentDevice) 
         {
-            Shoot();
-        }
-        #endregion
+            
+            case Device.MOBILE:
+                #region Movil
+                inputMobile.x = joystick.Horizontal;
+                inputMobile.z = joystick.Vertical;
 
-        #region Pc
-        inputKeyboard.x = Input.GetAxis("Horizontal");
-        inputKeyboard.z = Input.GetAxis("Vertical");
-        Move(inputKeyboard);
-        if (Input.GetMouseButton(0))
-        {
-            Shoot();
+                Move(inputMobile);
+                if (shootButton.buttonPressed)
+                {
+                    Shoot();
+                }
+                #endregion
+                break;
+            case Device.PC:
+                #region Pc
+                inputKeyboard.x = Input.GetAxis("Horizontal");
+                inputKeyboard.z = Input.GetAxis("Vertical");
+                Move(inputKeyboard);
+                if (Input.GetMouseButton(0))
+                {
+                    Shoot();
+                }
+                #endregion
+                break;
         }
-        #endregion
+        
+
+        
         time += Time.deltaTime;
                 
     }
