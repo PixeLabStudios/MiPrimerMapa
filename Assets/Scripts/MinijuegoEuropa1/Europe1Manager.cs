@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Europe1Manager : MonoBehaviour
+public class Europe1Manager : BaseGameManager
 {
     public List<Unit> unitList =new();
     public List<Transform> spawnPoints =new();

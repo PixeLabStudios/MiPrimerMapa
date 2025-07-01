@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oceania1Manager : MonoBehaviour
+public class Oceania1Manager : BaseGameManager
 {
     public List<AnimalsDrag> options;
     public List<AnimalsOceania> data;
@@ -29,13 +29,14 @@ public class Oceania1Manager : MonoBehaviour
     {
         if (canAct)
         {
+            bool isCorrect = false;
             ChangeDrag(false);
-            bool iscorrect;
+            
             if (op.animal.animalRegion == region)
             {
                 Debug.Log("correcto");
                 correct++;
-                iscorrect = true;
+                isCorrect=true;
 
             }
             else
@@ -43,33 +44,23 @@ public class Oceania1Manager : MonoBehaviour
                 Debug.Log("incorrecto");
                 //Incorrecto
                 errors++;
-                iscorrect = false;
+                isCorrect = false;
             }
             yield return new WaitForSeconds(1f);
-            if (correct >= monumentsNumber)
+            if (isCorrect) 
             {
-                //Juego terminado, mostrar resultados
-                //Panel Star
-                Debug.Log("el juego termino");
-            }
-            else
-            {
-                if (iscorrect)
+                //Saco el correcto de la lista y lo destruyo
+                options.Remove(op);
+                Destroy(op.gameObject);
+                if (options.Count == 0)
                 {
-                    if (monumentsRandom.Count > 0)
-                    {
-                        int randomIndex = Random.Range(0, monumentsRandom.Count);
-                        op.monument = monumentsRandom[randomIndex];
-                        op.LoadData();
-                        monumentsRandom.RemoveAt(randomIndex);
-                    }
-                    else
-                    {
-                        Destroy(op.gameObject);
-                    }
+                    //Juego terminado, mostrar resultados
+                    //Panel Star
+                    Debug.Log("el juego termino");
                 }
-                ChangeDrag(true);
             }
+            //  habilito el poder arrastrar de nuevo
+            ChangeDrag(true);  
         }
     }
     void ChangeDrag(bool b)

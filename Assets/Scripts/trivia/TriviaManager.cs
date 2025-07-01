@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TriviaManager : MonoBehaviour
+public class TriviaManager : BaseGameManager
 {
     
     

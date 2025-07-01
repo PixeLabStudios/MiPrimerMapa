@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RunnerManager : MonoBehaviour
+public class RunnerManager : BaseGameManager
 {
     public RunnerUI runnerUI;
     public GenerateObject objectGenerator;
@@ -26,23 +26,12 @@ public class RunnerManager : MonoBehaviour
     }
     public void Restart() 
     {
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
     public void ExitGame() 
     {
         SceneManager.LoadScene("Antartida");
     }
-    
-
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0f; // Pausa el juego
-        // StopCoroutine(GenerateObject.Generate());
-    }
-    public void ResumeGame()
-    {
-        Time.timeScale = 1f; // Reanuda el juego
-        // StartCoroutine(GenerateObject.Generate());
-    }
+  
 }

@@ -37,7 +37,7 @@ public class RunnerScript1 : MonoBehaviour
     private void Update()
     {
         InputMobile();
-        
+        InputPC();
         transform.position += new Vector3(1*movementSpeed *Time.deltaTime,0,0);
        
     }
@@ -131,5 +131,15 @@ public class RunnerScript1 : MonoBehaviour
     {
        lives += i;
     }
-    
+    void InputPC()
+    {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Move(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Move(-1);
+        }
+    }
 }

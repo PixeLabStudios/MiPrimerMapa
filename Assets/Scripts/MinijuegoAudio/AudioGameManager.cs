@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 
-public class AudioGameManager : MonoBehaviour
+public class AudioGameManager : BaseGameManager
 {
     int correct; // Player's correct answers
     int errors; // Player's errors
