@@ -185,7 +185,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5473511107296324401, guid: dfe9bdf03519ab6459f2a413bd7dd3ed, type: 3}
+  - {fileID: -5473511107296324401, guid: c2fe18c958ec71143a0574f572c3ec12, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -210,7 +210,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 3431872596863016796, guid: dfe9bdf03519ab6459f2a413bd7dd3ed, type: 3}
+  m_Mesh: {fileID: 3431872596863016796, guid: c2fe18c958ec71143a0574f572c3ec12, type: 3}
   m_Bones:
   - {fileID: 3654186262848061765}
   - {fileID: 6485292197834404839}
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 5876001551107075133}
   m_Layer: 0
   m_Name: Seal
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -509,8 +509,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9.66, y: 3.01, z: 5.17}
+  m_Center: {x: 0, y: 0.77, z: 0}
 --- !u!1 &4561541551410994862
 GameObject:
   m_ObjectHideFlags: 0
