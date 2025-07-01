@@ -36,7 +36,7 @@ public class FirstPersonController : MonoBehaviour
             case Device.PC:
                 movementJoystick.gameObject.SetActive(false);
                 lookJoystick.gameObject.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.lockState = CursorLockMode.Locked;
                 break;
             case Device.Mobile:
                 movementJoystick.gameObject.SetActive(true);
