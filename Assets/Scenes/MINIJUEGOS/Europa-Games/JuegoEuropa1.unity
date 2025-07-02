@@ -2972,8 +2972,8 @@ MonoBehaviour:
   damage: 0
   moveSpeed: 0
   attackRate: 0
-  attackButton: {fileID: 0}
-  eagleAttackButton: {fileID: 0}
+  attackButton: {fileID: 521975143}
+  eagleAttackButton: {fileID: 1858267215}
   joystick: {fileID: 360536054}
   healthBar: {fileID: 1206393160}
   currentDevice: 1
