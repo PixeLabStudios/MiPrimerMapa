@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class PlayerScript : Unit
 {
-    Joystick joystick;
+    public ShootButton attackButton;
+    public ShootButton eagleAttackButton;
+    public Joystick joystick;
     PlayerMove movement;
     MeleeAttack melee;
     EagleScript eagle;
@@ -24,8 +26,16 @@ public class PlayerScript : Unit
     }
     private void Start()
     {
-        currentDevice = Device.PC;
-        
+        // currentDevice = Device.PC;
+        switch (currentDevice) 
+        {
+            case Device.PC:
+
+                break;
+            case Device.Mobile:
+
+                break;
+        }
         melee.damage = damage;
         melee.range = 3;
         melee.rate = attackRate;
@@ -43,9 +53,16 @@ public class PlayerScript : Unit
                     input.x = joystick.Horizontal;
                     input.y = joystick.Vertical;
                     input.z = 0;
-                    movement.Move(moveSpeed, input);
-               
-               
+                    movement.Move(moveSpeed, input,false);
+                if (attackButton.buttonPressed) 
+                { 
+                    Attack();
+                }
+                
+                if (eagleAttackButton.buttonPressed) 
+                {
+                    eagle.Attack();
+                }   
                 break;
             case Device.PC:
                 
@@ -53,7 +70,7 @@ public class PlayerScript : Unit
                 input.y = Input.GetAxis("Vertical");
                 input.z = 0;
 
-                movement.Move(moveSpeed, input);
+                movement.Move(moveSpeed, input,true);
                 if (Input.GetMouseButtonDown(0)) 
                 {
                     Attack();

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Africa2Manager : BaseGameManager
 {
     public List<AnimalButtonScript> buttonsList = new(); 
-    List<AnimalButtonScript> buttonsRandom = new();
+    
     public List<AfricanAnimal> animals = new();
     List<AfricanAnimal> animalRandom = new();
     public List<Sprite> fakeAnimals= new();
@@ -31,16 +31,13 @@ public class Africa2Manager : BaseGameManager
     }
     private void Start()
     {
-        foreach (AnimalButtonScript button in buttonsList) 
-        {
-            buttonsRandom.Add(button);
-        }
+  
 
         starPanel.SetActive(false);
         errors = 0;
-        buttonCount = buttonsRandom.Count;
+        buttonCount = buttonsList.Count;
         Shuffle();
-        currentRegion = "sabana";
+        
         correct = 0;
         currentRound = 1;
         StartCoroutine(ShowRegion());
