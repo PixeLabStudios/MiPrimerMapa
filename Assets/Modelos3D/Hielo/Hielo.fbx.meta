@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 9b8cf1a918a320d4ea56178051568e0a
+guid: 428cad4737c7c084ab2dc4d4243571a7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HieloClaro
+    second: {fileID: 2100000, guid: a186274f77784a940a0d6a4fbee6e5c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HieloOscuro
+    second: {fileID: 2100000, guid: d6d2d1ad175c8654399c6d2f21a032b2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
