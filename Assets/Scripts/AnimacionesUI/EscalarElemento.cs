@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,17 +26,15 @@ public class EscalarElemento : MonoBehaviour
     public float velocidadEscalado = 10f;
 
     private Dictionary<Button, Vector3> escalaObjetivo = new Dictionary<Button, Vector3>();
-
     private Button botonActualmenteEscalado = null;
 
     private void Start()
     {
-        if(botonUnico == null)
+        if (botonUnico == null)
         {
-            botonUnico = this.gameObject.GetComponent<Button>();
+            botonUnico = GetComponent<Button>();
         }
-        
-        // Setup para botones múltiples (modo lista)
+
         foreach (Button btn in botones)
         {
             escalaObjetivo[btn] = escalaNormal;
@@ -45,7 +42,6 @@ public class EscalarElemento : MonoBehaviour
             btn.onClick.AddListener(() => EscalarBoton(current));
         }
 
-        // Setup para el botón individual
         if (botonUnico != null)
         {
             if (modoFuncion == ModoFuncion.ToggleEscalaExclusiva)
@@ -61,7 +57,6 @@ public class EscalarElemento : MonoBehaviour
 
     private void Update()
     {
-        // Escalado suave para los botones en lista
         foreach (var kvp in escalaObjetivo)
         {
             Button btn = kvp.Key;
@@ -72,28 +67,25 @@ public class EscalarElemento : MonoBehaviour
         }
     }
 
-    //  Modo exclusivo — toggle con animación suave
     public void ToggleEscalaExclusiva(Button boton)
     {
         if (botonActualmenteEscalado == boton)
         {
-            // Ya estaba escalado → resetear
             boton.transform.localScale = escalaNormal;
             botonActualmenteEscalado = null;
         }
         else
         {
-            // Resetear el anterior (si existe)
             if (botonActualmenteEscalado != null)
             {
                 botonActualmenteEscalado.transform.localScale = escalaNormal;
             }
 
-            // Escalar el nuevo
             boton.transform.localScale = escalaActiva;
             botonActualmenteEscalado = boton;
         }
     }
+
     public void cambiaralfa(float nuevoAlfa)
     {
         Color colorActual = botonUnico.image.color;
@@ -101,39 +93,20 @@ public class EscalarElemento : MonoBehaviour
         botonUnico.image.color = colorActual;
     }
 
-    // Animación rápida (tipo rebote)
     public IEnumerator AnimacionClickUnica(Button boton)
     {
-        Transform t = boton.transform;
-        Vector3 original = t.localScale;
-        Vector3 pico = escalaActiva;
-
-        float duracion = 0.15f;
-        float tiempo = 0f;
-
-        // Escala hacia arriba
-        while (tiempo < duracion)
-        {
-            t.localScale = Vector3.Lerp(original, pico, tiempo / duracion);
-            tiempo += Time.deltaTime;
-            yield return null;
-        }
-
-        t.localScale = pico;
-
-        // Regreso
-        tiempo = 0f;
-        while (tiempo < duracion)
-        {
-            t.localScale = Vector3.Lerp(pico, original, tiempo / duracion);
-            tiempo += Time.deltaTime;
-            yield return null;
-        }
-
-        t.localScale = original;
+        yield return UIAnimator.ScaleBounce(boton.transform, escalaActiva, 0.15f);
+        yield return UIAnimator.ScaleBounce(boton.transform, escalaNormal, 0.15f);
     }
 
-    // Escalado para lista de botones múltiples (opcional)
+    public void ParpadearBoton(Button boton)
+    {
+        if (boton.image != null)
+        {
+            StartCoroutine(UIAnimator.Flash(boton.image, Color.white, 0.5f));
+        }
+    }
+
     public void EscalarBoton(Button botonSeleccionado)
     {
         foreach (Button btn in botones)
@@ -141,15 +114,16 @@ public class EscalarElemento : MonoBehaviour
             if (btn == botonSeleccionado)
             {
                 escalaObjetivo[btn] = escalaActiva;
-                SetAlpha(btn, 1f); // Totalmente visible
+                SetAlpha(btn, 1f);
             }
             else
             {
                 escalaObjetivo[btn] = escalaNormal;
-                SetAlpha(btn, 0.5f); // Transparencia al 50%
+                SetAlpha(btn, 0.5f);
             }
         }
     }
+
     private void SetAlpha(Button btn, float alpha)
     {
         if (btn.image != null)
@@ -159,6 +133,4 @@ public class EscalarElemento : MonoBehaviour
             btn.image.color = color;
         }
     }
-
-
 }
