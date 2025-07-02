@@ -3787,7 +3787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &506582730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5811,9 +5811,9 @@ RectTransform:
   - {fileID: 116907291}
   m_Father: {fileID: 1677121363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1266, y: -187.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892308947
@@ -10700,9 +10700,9 @@ RectTransform:
   - {fileID: 353460766}
   m_Father: {fileID: 1677121363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2126.6665, y: -267}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522107481
@@ -12391,7 +12391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones: []
   botonUnico: {fileID: 0}
-  modoFuncion: 1
+  modoFuncion: 0
   escalaActiva: {x: 1.2, y: 1.2, z: 1}
   escalaNormal: {x: 1, y: 1, z: 1}
   velocidadEscalado: 10
@@ -12832,9 +12832,9 @@ RectTransform:
   - {fileID: 1425556163}
   m_Father: {fileID: 1677121363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.3333, y: -267}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750142386

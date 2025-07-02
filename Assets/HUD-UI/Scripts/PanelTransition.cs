@@ -9,14 +9,7 @@ public class PanelTransition : MonoBehaviour
     {
         CanvasGroup cg = panel.GetComponent<CanvasGroup>();
         if (cg == null) cg = panel.AddComponent<CanvasGroup>();
-        float t = 0;
-        while (t < duration)    
-        {
-            t += Time.deltaTime;
-            cg.alpha = Mathf.Lerp(1, 0, t / duration);
-            yield return null;
-        }
-        cg.alpha = 0;
+        yield return UIAnimator.Fade(cg, 1f, 0f, duration);
         panel.SetActive(false);
     }
 
@@ -25,13 +18,6 @@ public class PanelTransition : MonoBehaviour
         CanvasGroup cg = panel.GetComponent<CanvasGroup>();
         if (cg == null) cg = panel.AddComponent<CanvasGroup>();
         panel.SetActive(true);
-        float t = 0;
-        while (t < duration)
-        {
-            t += Time.deltaTime;
-            cg.alpha = Mathf.Lerp(0, 1, t / duration);
-            yield return null;
-        }
-        cg.alpha = 1;
+        yield return UIAnimator.Fade(cg, 0f, 1f, duration);
     }
 }
