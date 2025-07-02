@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class PanelManager : MonoBehaviour
 {
+    public PanelTransition transicion;
+
     public GameObject panelPrincipal;
     public List<GameObject> panelesLista;
 
@@ -29,17 +31,25 @@ public class PanelManager : MonoBehaviour
 
     public void MostrarSoloPanel(string nombre)
     {
+        if (transicion == null)
+        {
+            Debug.LogError("Transición no está asignada al PanelManager.");
+            return;
+        }
+
         if (!paneles.ContainsKey(nombre))
         {
             Debug.LogWarning($"Panel '{nombre}' no encontrado.");
             return;
         }
 
-        if (panelActivoActual != null)
-            panelActivoActual.SetActive(false);
+        GameObject nuevoPanel = paneles[nombre];
 
-        paneles[nombre].SetActive(true);
-        panelActivoActual = paneles[nombre];
+        if (panelActivoActual != null)
+            StartCoroutine(transicion.FadeOut(panelActivoActual));
+
+        StartCoroutine(transicion.FadeIn(nuevoPanel));
+        panelActivoActual = nuevoPanel;
     }
 
     public void MostrarTodos(bool estado)

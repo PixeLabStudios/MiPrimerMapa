@@ -34,11 +34,13 @@ public class BoatManager : MonoBehaviour
 
     private void Start()
     {
+
         timerController.OnTimerEnd += EndGameDueToTime;
         
         gameActive = true;
         DisableButton();
         SpawnBoat();
+
         panelManager.MostrarSoloPanel("PanelGame");
         timerController.StartTimer();
 
