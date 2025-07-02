@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class TabletScript : MonoBehaviour
 {
+    FirstPersonController controller;
     public GameObject tabletPanel;
     public GameObject tabletObject;
     public TextMeshProUGUI nameText;
@@ -17,6 +18,11 @@ public class TabletScript : MonoBehaviour
     Vector3 position;
     bool isTabletOpen;
 
+    private void Awake()
+    {
+        manager = FindFirstObjectByType<TabletGameManager>();
+        controller = GetComponent<FirstPersonController>();
+    }
     private void Start()
     {
         isTabletOpen = false;
@@ -24,7 +30,7 @@ public class TabletScript : MonoBehaviour
         herbivoreButton.gameObject.SetActive(false);
         carnivoreButton.gameObject.SetActive(false);
         resultText.gameObject.SetActive(false);
-        manager = FindFirstObjectByType<TabletGameManager>();
+       
         herbivoreButton.onClick.AddListener(() => manager.Choose("Herbivoro"));
         carnivoreButton.onClick.AddListener(() => manager.Choose("Carnivoro"));
         yvalue = -.47f;
@@ -38,7 +44,8 @@ public class TabletScript : MonoBehaviour
        position.y = yvalue;
        tabletObject.transform.localPosition = position;
 
-        if (isTabletOpen) 
+        
+        if (isTabletOpen && controller.current == FirstPersonController.Device.PC) 
         {
             if (Input.GetMouseButtonDown(0))
             {

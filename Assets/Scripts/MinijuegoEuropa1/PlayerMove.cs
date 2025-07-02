@@ -11,17 +11,31 @@ public class PlayerMove : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-    public void Move(int speed,Vector3 input) 
+    public void Move(int speed,Vector3 input,bool hasTurn)
     {
-        Vector3 objective = MousePosition();
-        objective.y = transform.position.y;
-        Vector3 lookDirection = objective - transform.position;
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.deltaTime * 6);
-
         float delta = speed * Time.deltaTime;
-        direction = SetDirection(input);        
+        direction = SetDirection(input);
+        if (hasTurn) // Mira donde esta el mouse
+        {
+            Vector3 objective = MousePosition();
+            objective.y = transform.position.y;
+            Vector3 lookDirection = objective - transform.position;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.deltaTime * 6);
+        }
+
+        else  // Mira hacia donde se mueve calculado por la direccion
+        {
+            if(input.y !=0 || input.x != 0) // Solo gira si se mueve, sino se queda mirando donde estaba
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 6);
+            }
+                 
+        }
+       
         controller.Move(delta * direction);
-        
+
+
+
     }
 
     public static Vector3 MousePosition()
