@@ -5,10 +5,12 @@ using TMPro;
 
 public class AsiaMonumentManager : MonoBehaviour
 {
-    public List<MonumentData> monumentList;
-    private List<MonumentData> availableMonuments;
+    //public List<MonumentData> monumentList;
+    public List<PlaceData> placeList;
+    //private List<MonumentData> availableMonuments;
+    private List<PlaceData> availableplaces;
 
-    public Image monumentImageUI;
+    //public Image monumentImageUI;
     public TextMeshProUGUI monumentNameUI;
 
     public VictoryPanel victoryPanel;
@@ -16,7 +18,8 @@ public class AsiaMonumentManager : MonoBehaviour
 
     public UIManager uiManager;
 
-    private MonumentData currentMonument;
+    //private MonumentData currentMonument;
+    private PlaceData currentPlace;
     private int correctFirstTry = 0;
     private int totalErrors = 0;
     private bool answeredCorrectly = false;
@@ -25,7 +28,7 @@ public class AsiaMonumentManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        availableMonuments = new List<MonumentData>(monumentList);
+        availableplaces = new List<PlaceData>(placeList);
         pins = new Dictionary<string, PinController>();
 
         foreach (Transform child in pinParent)
@@ -40,24 +43,24 @@ public class AsiaMonumentManager : MonoBehaviour
 
     public void NextMonument()
     {
-        if (availableMonuments.Count == 0)
+        if (availableplaces.Count == 0)
         {
             ShowVictoryPanel();
             return;
         }
 
-        int index = Random.Range(0, availableMonuments.Count);
-        currentMonument = availableMonuments[index];
-        availableMonuments.RemoveAt(index);
+        int index = Random.Range(0, availableplaces.Count);
+        currentPlace = availableplaces[index];
+        availableplaces.RemoveAt(index);
 
-        monumentImageUI.sprite = currentMonument.image;
-        monumentNameUI.text = currentMonument.name;
+        //monumentImageUI.sprite = currentMonument.image;
+        monumentNameUI.text = currentPlace.name;
         answeredCorrectly = false;
     }
 
     public void EvaluateChoice(string selectedPinID)
     {
-        if (selectedPinID == currentMonument.correctPinID)
+        if (selectedPinID == currentPlace.correctPinID)
         {
             if (!answeredCorrectly)
             {

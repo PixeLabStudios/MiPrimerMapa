@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 using TMPro;
+using NUnit.Framework;
 
 public class PinController : MonoBehaviour
 {
     public string pinID;
     public GameObject infoPanel;
-    public TextMeshProUGUI infoText;
+    //public TextMeshProUGUI infoText;
     public Button chooseButton;
 
     private AsiaMonumentManager gameManager;
     private UIManager uiManager;
+
+    public List<GameObject> panelsInfo;
 
     public void Init(AsiaMonumentManager gm, UIManager ui)
     {
@@ -46,5 +50,17 @@ public class PinController : MonoBehaviour
     public void DisablePin()
     {
         GetComponent<Button>().interactable = false;
+    }
+
+    public void DisableAllPines()
+    {
+        if (panelsInfo != null)
+        {
+            for (int i = 0; i < panelsInfo.Count; i++)
+            {
+                if (i.ToString() != pinID)
+                panelsInfo[i].SetActive(false);
+            }
+        }
     }
 }
