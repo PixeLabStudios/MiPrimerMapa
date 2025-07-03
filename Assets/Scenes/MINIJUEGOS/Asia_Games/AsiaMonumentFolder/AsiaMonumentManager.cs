@@ -48,7 +48,7 @@ public class AsiaMonumentManager : MonoBehaviour
     {
         if (availableplaces.Count == 0)
         {
-            //ShowVictoryPanel();
+            ShowVictoryPanel();
             //panelManager.MostrarSoloPanel("PanelFinJuego");
             sendResult();
             return;
@@ -87,25 +87,32 @@ public class AsiaMonumentManager : MonoBehaviour
     }
     public void sendResult()
     {
+        //panelManager.MostrarSoloPanel("PanelFinJuego");
+
+        //if (totalErrors >= 10)
+        //{
+        //    scoreDisplay.ShowStars(0);
+
+        //}
+        //else if ( totalErrors == 0) {
+
+        //    scoreDisplay.ShowStars(100*10f);
+        //}
+        //else
+        //{
+        //    scoreDisplay.ShowStars((10-totalErrors) * 10f);
+        //}
+        int puntosJugables = correctFirstTry + totalErrors;
+        float score = (float)correctFirstTry / puntosJugables * 120f;
+
         panelManager.MostrarSoloPanel("PanelFinJuego");
-
-        if (totalErrors >= 10)
+        if (puntosJugables == 0)
         {
-            scoreDisplay.ShowStars(0);
-
+            score = 0f;
         }
-        else if ( totalErrors == 0) {
-
-            scoreDisplay.ShowStars(100*10f);
-        }
-        else
-        {
-
-        }
-        {
-            scoreDisplay.ShowStars(totalErrors * 10f);
-        }
+        scoreDisplay.ShowStars(score);
     }
+    
 
     void ShowVictoryPanel()
     {
