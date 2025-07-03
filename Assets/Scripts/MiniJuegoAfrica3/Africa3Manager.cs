@@ -9,6 +9,8 @@ public class Africa3Manager : BaseGameManager
     public List<Monument> monumentsRandom = new List<Monument>();
     [HideInInspector]public List<Monument> monumentsList = new List<Monument>(); 
     public List<MonumentScript>  options = new List<MonumentScript>();
+    public StarScoreDisplay starScoreDisplay;
+    public PanelManager panelManager;
 
     public int errors;
     public int correct;
@@ -60,6 +62,9 @@ public class Africa3Manager : BaseGameManager
             {
                 //Juego terminado, mostrar resultados
                 //Panel Star
+                float total = (float)correct / (float)monumentsNumber * 100f;
+                panelManager.MostrarSoloPanel("PanelFinJuego");
+                starScoreDisplay.ShowStars(total);
                 Debug.Log("el juego termino");
             }
             else
