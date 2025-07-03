@@ -62,7 +62,9 @@ public class Africa3Manager : BaseGameManager
             {
                 //Juego terminado, mostrar resultados
                 //Panel Star
-                float total = (float)correct / (float)monumentsNumber * 100f;
+                 int puntosJugables = correct + errors;
+
+                float total = (float)correct / (float)puntosJugables * 100f;
                 panelManager.MostrarSoloPanel("PanelFinJuego");
                 starScoreDisplay.ShowStars(total);
                 Debug.Log("el juego termino");

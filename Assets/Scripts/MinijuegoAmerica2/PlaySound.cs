@@ -19,7 +19,7 @@ public class PlaySound : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlaying = false;
-            clip.
+            //clip.
         }
     }
 }
