@@ -18,4 +18,8 @@ MonoBehaviour:
   - Rana de ojos rojos
   - Erizo africano
   - Canguro
+  sprites:
+  - {fileID: 21300000, guid: 70db31da2255d8241815bec8a3cd190b, type: 3}
+  - {fileID: 21300000, guid: 581c1dc7eab1e4443b95e4e6de346204, type: 3}
+  - {fileID: 21300000, guid: 40863f6b64edad94f84b6ba886e4b961, type: 3}
   correctAnswer: Rana de ojos rojos

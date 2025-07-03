@@ -18,4 +18,8 @@ MonoBehaviour:
   - "Hojas mojadas, ra\xEDces, tierra blanda"
   - Suelo nevado
   - 'Arena seca con grietas '
+  sprites:
+  - {fileID: 21300000, guid: e29eeb4e62393e94bb56c8170171332f, type: 3}
+  - {fileID: 21300000, guid: e706f25c60b65de4791c2551545e2716, type: 3}
+  - {fileID: 21300000, guid: f712b2cf4bbe5c64cb1f4098a79dd2e3, type: 3}
   correctAnswer: "Hojas mojadas, ra\xEDces, tierra blanda"

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class America2Manager : MonoBehaviour
 {
-   
+    public AudioSource audioSource;
     public int hp;
     public int correct;
     public int errors;
@@ -12,7 +12,10 @@ public class America2Manager : MonoBehaviour
     public Room[] rooms;
 
     public TextMeshProUGUI questionText;
-
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Start()
     {
         hp = 5;
