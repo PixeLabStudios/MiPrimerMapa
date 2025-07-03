@@ -13,9 +13,6 @@ public class AsiaMonumentManager : MonoBehaviour
     //public Image monumentImageUI;
     public TextMeshProUGUI monumentNameUI;
 
-    public StarScoreDisplay scoreDisplay;
-    public PanelManager panelManager;
-
     public VictoryPanel victoryPanel;
     public Transform pinParent;
 
@@ -48,9 +45,7 @@ public class AsiaMonumentManager : MonoBehaviour
     {
         if (availableplaces.Count == 0)
         {
-            //ShowVictoryPanel();
-            //panelManager.MostrarSoloPanel("PanelFinJuego");
-            sendResult();
+            ShowVictoryPanel();
             return;
         }
 
@@ -79,38 +74,14 @@ public class AsiaMonumentManager : MonoBehaviour
         else
         {
             totalErrors++;
-            //uiManager.ShowError("¡Incorrecto! Intenta de nuevo.");
-            
+            uiManager.ShowError("¡Incorrecto! Intenta de nuevo.");
             //UIManager.Instance.ShowError("¡Incorrecto! Intenta de nuevo.");
-
-        }
-    }
-    public void sendResult()
-    {
-        panelManager.MostrarSoloPanel("PanelFinJuego");
-
-        if (totalErrors >= 10)
-        {
-            scoreDisplay.ShowStars(0);
-
-        }
-        else if ( totalErrors == 0) {
-
-            scoreDisplay.ShowStars(100*10f);
-        }
-        else
-        {
-
-        }
-        {
-            scoreDisplay.ShowStars(totalErrors * 10f);
         }
     }
 
     void ShowVictoryPanel()
     {
         victoryPanel.Show(correctFirstTry, totalErrors);
-
     }
 
     public void RestartGame()

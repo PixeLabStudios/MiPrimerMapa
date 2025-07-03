@@ -26,12 +26,8 @@ public class BulletScript : MonoBehaviour
         if (other.CompareTag("Animal")) 
         {
             gameManager.errors++; 
-            MoveLeft script = other.GetComponent<MoveLeft>();
-            script.col.enabled = false;
-            script.animator.SetTrigger("dead");
-            script.StartCoroutine(script.Destroy()); // Start the coroutine to destroy the fish after 2 seconds
-
-
+            Destroy(other.gameObject);
+           
         }
         if (other.CompareTag("Submarino")) 
         {
