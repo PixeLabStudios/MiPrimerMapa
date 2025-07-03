@@ -69,7 +69,7 @@ public class EagleScript : MonoBehaviour
             isAttacking = true;
             chosenEnemy = manager.unitList[Random.Range(0, manager.unitList.Count)];
             target = chosenEnemy.transform.position;
-            nextAttack = Time.time +20f;
+            nextAttack = Time.time +10f;
         }
         
     }
