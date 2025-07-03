@@ -6,6 +6,7 @@ public class PlayerScript : Unit
     public ShootButton attackButton;
     public ShootButton eagleAttackButton;
     public Joystick joystick;
+    public GameObject panelMobile;
     PlayerMove movement;
     MeleeAttack melee;
     EagleScript eagle;
@@ -30,10 +31,10 @@ public class PlayerScript : Unit
         switch (currentDevice) 
         {
             case Device.PC:
-
+                panelMobile.SetActive(false);
                 break;
             case Device.Mobile:
-
+                panelMobile.SetActive(true);
                 break;
         }
         melee.damage = damage;
