@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c09f9596152bde4bac1ac8e2b30b78b, type: 3}
   m_Name: room3
   m_EditorClassIdentifier: 
-  questionText: "Observa las hojas. cu\xE1l de estas plantas necesita mucha agua
-    y vive en la sombra h\xFAmeda?"
+  questionText: "Escuch\xE1 con atenci\xF3n cu\xE1l de estos sonidos es de un ave
+    tropical real del continente americano?"
   answers:
   - perro
   - oveja
