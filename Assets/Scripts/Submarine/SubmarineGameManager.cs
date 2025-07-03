@@ -22,7 +22,7 @@ public class SubmarineGameManager : BaseGameManager
         points = 120; 
         successes = 0;
         errors = 0;
-     //   StartCoroutine(generateObjects.Generate(5f)); // Inicia la generación de objetos
+        StartCoroutine(generateObjects.Generate(5f)); // Inicia la generación de objetos
     }
 
     private void OnTriggerEnter(Collider other)
