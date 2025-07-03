@@ -23,7 +23,7 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), Time.deltaTime * 6);
         }
 
-        else  // Mira hacia donde se mueve, calculado por la direccion
+        else  // Mira hacia donde se mueve calculado por la direccion
         {
             if(input.y !=0 || input.x != 0) // Solo gira si se mueve, sino se queda mirando donde estaba
             {
