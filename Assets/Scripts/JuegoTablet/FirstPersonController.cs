@@ -31,18 +31,28 @@ public class FirstPersonController : MonoBehaviour
 
     private void Start()
     {
-        switch (current) 
-        {
-            case Device.PC:
-                movementJoystick.gameObject.SetActive(false);
-                lookJoystick.gameObject.SetActive(false);
-                //Cursor.lockState = CursorLockMode.Locked;
-                break;
-            case Device.Mobile:
-                movementJoystick.gameObject.SetActive(true);
-                lookJoystick.gameObject.SetActive(true);
-                break;
-        }
+        //if (Input.touchSupported)
+        //{
+        //    Debug.Log("Touch is supported, setting device to Mobile.");
+        //    current = Device.Mobile;
+        //}
+        //else 
+        //{
+        //    current = Device.PC;
+        //}
+
+            switch (current)
+            {
+                case Device.PC:
+                    movementJoystick.gameObject.SetActive(false);
+                    lookJoystick.gameObject.SetActive(false);
+                    //Cursor.lockState = CursorLockMode.Locked;
+                    break;
+                case Device.Mobile:
+                    movementJoystick.gameObject.SetActive(true);
+                    lookJoystick.gameObject.SetActive(true);
+                    break;
+            }
         moveSpeed = 10;
         sensitivity = 180;
     }
