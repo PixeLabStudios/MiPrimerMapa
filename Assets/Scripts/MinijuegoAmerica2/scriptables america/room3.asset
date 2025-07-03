@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c09f9596152bde4bac1ac8e2b30b78b, type: 3}
+  m_Name: room3
+  m_EditorClassIdentifier: 
+  questionText: "Escuch\xE1 con atenci\xF3n cu\xE1l de estos sonidos es de un ave
+    tropical real del continente americano?"
+  answers:
+  - perro
+  - oveja
+  - "tuc\xE1n"
+  sprites:
+  - {fileID: 21300000, guid: dcd0e7f2c2d3c344f8311073c42609ba, type: 3}
+  - {fileID: 21300000, guid: b5c0e4d935bf4884489ae3fc6e3dcafc, type: 3}
+  - {fileID: 21300000, guid: e35555c1804fe1b489403465645d284c, type: 3}
+  correctAnswer: "tuc\xE1n"

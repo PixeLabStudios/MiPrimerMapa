@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c09f9596152bde4bac1ac8e2b30b78b, type: 3}
+  m_Name: room4
+  m_EditorClassIdentifier: 
+  questionText: "cu\xE1l de estos suelos sentir\xEDas bajo tus pies si caminaras
+    en una selva h\xFAmeda?"
+  answers:
+  - "Hojas mojadas, ra\xEDces, tierra blanda"
+  - Suelo nevado
+  - 'Arena seca con grietas '
+  sprites:
+  - {fileID: 21300000, guid: e29eeb4e62393e94bb56c8170171332f, type: 3}
+  - {fileID: 21300000, guid: e706f25c60b65de4791c2551545e2716, type: 3}
+  - {fileID: 21300000, guid: f712b2cf4bbe5c64cb1f4098a79dd2e3, type: 3}
+  correctAnswer: "Hojas mojadas, ra\xEDces, tierra blanda"
