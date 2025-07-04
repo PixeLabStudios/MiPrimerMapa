@@ -9,7 +9,10 @@ using UnityEngine.UI;
 
 public class MemoTestManager : BaseGameManager
 {
-  //  public PlayerData playerData;
+    //  public PlayerData playerData;
+    public PanelManager panelManager;
+    public StarScoreDisplay starScoreDisplay;
+    public  AudioClip buttonPressed;
     public List<Sprite> imagesList = new();
     public GameObject prefab;
     public Transform canvasTransform;
@@ -19,13 +22,13 @@ public class MemoTestManager : BaseGameManager
     public float valueX ;
     public float valueY ;
 
-
+    //public Button restarbuton;
     public Button StartButton;
     List<CardScript> cardList = new();  
     CardScript[,] cardsGrid;
     MemoTestUIManager memoTestUIManager;
-    int correct;
-    int errors;
+    public int correct;
+    public int errors;
     private void Start()
     {
        
@@ -134,28 +137,45 @@ public class MemoTestManager : BaseGameManager
         StartCoroutine(ShowAllCards(3));
         memoTestUIManager.DisableStartButton();
     }
-    public IEnumerator CheckCards() 
+    public IEnumerator CheckCards()
     {
         canClick = false;
         yield return new WaitForSeconds(1);
+
         if (selectedCards[0].id == selectedCards[1].id)
         {
             correct++;
-            //memoTestUIManager.ChangeCorrectText(correct);
-            if (    correct == imagesList.Count) 
+            if (correct == imagesList.Count)
             {
-                memoTestUIManager.EnableStartButton();
+                EndGame();
+                yield break;
             }
         }
-        else 
+        else
         {
-            canClick = false;
             errors++;
-            //memoTestUIManager.ChangeErrorsText(errors);
             selectedCards[0].StartCoroutine(selectedCards[0].HideCard());
             selectedCards[1].StartCoroutine(selectedCards[1].HideCard());
         }
+
         selectedCards.Clear();
         canClick = true;
     }
+
+    void EndGame()
+    {
+        canClick = false;
+        memoTestUIManager.EnableStartButton();
+
+        int puntosJugables = errors + correct;
+        float score = (float)correct / puntosJugables * 120f;
+
+        panelManager.MostrarSoloPanel("PanelFinJuego");
+        if (puntosJugables == 0)
+        {
+            score = 0f;
+        }
+        starScoreDisplay.ShowStars(score);
+    }
+
 }
