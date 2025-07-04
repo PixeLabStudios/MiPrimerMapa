@@ -18,11 +18,14 @@ public class ChapterData
 {
     public string chapterName;
     public string iconPath;
+    public string audioPath;
     public List<PageData> pages;
 }
 
 public class BookController : MonoBehaviour
 {
+    public AudioSource narradorAudioSource;
+
     public GameObject pagePrefab;
     public Transform pageContainer;
     public BookPageNavigator navigator;
@@ -103,6 +106,22 @@ public class BookController : MonoBehaviour
             page.SetActive(false);
             chapterPages.Add(page);
         }
+        // Reproducir narración del capítulo si está disponible
+        if (!string.IsNullOrEmpty(chapters[index].audioPath) && narradorAudioSource != null)
+        {
+            AudioClip narracion = Resources.Load<AudioClip>(chapters[index].audioPath);
+            if (narracion != null)
+            {
+                narradorAudioSource.Stop();
+                narradorAudioSource.clip = narracion;
+                narradorAudioSource.Play();
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró el audio: " + chapters[index].audioPath);
+            }
+        }
+
 
         navigator.SetPages(chapterPages);
     }
