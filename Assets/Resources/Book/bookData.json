@@ -3,7 +3,7 @@
     {
       "chapterName": "Aguila Real",
       "iconPath": "Icons/Icon1",
-      "audioPath": "Audios/Narracion1",
+      "audioPath": "Audios/Aguila",
       "pages": [
         {
           "title": "Aguila Real",
@@ -15,7 +15,7 @@
     {
       "chapterName": "Coliseo Romano",
       "iconPath": "Icons/Icon2",
-      "audioPath": "Audios/Narracion2",
+      "audioPath": "Audios/Coliseo",
       "pages": [
         {
           "title": "Coliseo Romano",
@@ -27,7 +27,7 @@
     {
       "chapterName": "Lucha de gladiadores",
       "iconPath": "Icons/Icon3",
-      "audioPath": "Audios/Narracion3",
+      "audioPath": "Audios/Gladiadores",
       "pages": [
         {
           "title": "Lucha de gladiadores",
@@ -39,7 +39,7 @@
     {
       "chapterName": "Cuervo Europeo",
       "iconPath": "Icons/Icon4",
-      "audioPath": "Audios/Narracion4",
+      "audioPath": "Audios/CuervoEuropeo",
       "pages": [
         {
           "title": "Cuervo Europeo",
@@ -51,7 +51,7 @@
     {
       "chapterName": "Océano Atlántico",
       "iconPath": "Icons/Icon5",
-      "audioPath": "Audios/Narracion5",
+      "audioPath": "Audios/OceanoAtlantico",
       "pages": [
         {
           "title": "Océano Atlántico",
@@ -63,7 +63,7 @@
     {
       "chapterName": "Drakkar",
       "iconPath": "Icons/Icon6",
-      "audioPath": "Audios/Narracion6",
+      "audioPath": "Audios/Drakkar",
       "pages": [
         {
           "title": "Drakkar",
@@ -75,12 +75,48 @@
     {
       "chapterName": "Defensa Costera Inglesa",
       "iconPath": "Icons/Icon7",
-      "audioPath": "Audios/Narracion7",
+      "audioPath": "Audios/DefensaCostera",
       "pages": [
         {
           "title": "Defensa Costera Inglesa",
           "text": " ¿Qué hacían para defenderse?\n\t1.Vigías en la costa.\n\t2.Señales de fuego.\n\t3.Soldados en las playas.\n\t3.Trampas en el agua.\n\t4.Barcos para enfrentarlos antes de llegar.",
           "imagePath": "Images/Page7"
+        }
+      ]
+    },
+    {
+      "chapterName": "Jaguar",
+      "iconPath": "Icons/Icon8",
+      "audioPath": "Audios/CulturaVikinga",
+      "pages": [
+        {
+          "title": "Jaguar",
+          "text": "¿Qué hacían? Eran guerreros, comerciantes y exploradores.\n¿Qué creían? Tenían dioses como Odín y Thor.\n¿Cómo vivían? En casas de madera, cultivaban y criaban animales.\n¿Qué dejaron? Historias, mitos y tradiciones que aún se cuentan.",
+          "imagePath": "Images/Page8"
+        }
+      ]
+    },
+    {
+      "chapterName": "Caribú",
+      "iconPath": "Icons/Icon9",
+      "audioPath": "Audios/Jaguar",
+      "pages": [
+        {
+          "title": "Caribú",
+          "text": "¿Qué hacían? Eran guerreros, comerciantes y exploradores.\n¿Qué creían? Tenían dioses como Odín y Thor.\n¿Cómo vivían? En casas de madera, cultivaban y criaban animales.\n¿Qué dejaron? Historias, mitos y tradiciones que aún se cuentan.",
+          "imagePath": "Images/Page9"
+        }
+      ]
+    },
+    {
+      "chapterName": "CBisonte Americano",
+      "iconPath": "Icons/Icon10",
+      "audioPath": "Audios/CulturaVikinga",
+      "pages": [
+        {
+          "title": "Bisonte Americano",
+          "text": "¿Qué hacían? Eran guerreros, comerciantes y exploradores.\n¿Qué creían? Tenían dioses como Odín y Thor.\n¿Cómo vivían? En casas de madera, cultivaban y criaban animales.\n¿Qué dejaron? Historias, mitos y tradiciones que aún se cuentan.",
+          "imagePath": "Images/Page10"
         }
       ]
     }
