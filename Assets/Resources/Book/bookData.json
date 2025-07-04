@@ -3,6 +3,7 @@
     {
       "chapterName": "Aguila Real",
       "iconPath": "Icons/Icon1",
+      "audioPath": "Audios/Narracion1",
       "pages": [
         {
           "title": "Aguila Real",
@@ -14,6 +15,7 @@
     {
       "chapterName": "Coliseo Romano",
       "iconPath": "Icons/Icon2",
+      "audioPath": "Audios/Narracion2",
       "pages": [
         {
           "title": "Coliseo Romano",
@@ -25,6 +27,7 @@
     {
       "chapterName": "Lucha de gladiadores",
       "iconPath": "Icons/Icon3",
+      "audioPath": "Audios/Narracion3",
       "pages": [
         {
           "title": "Lucha de gladiadores",
@@ -36,6 +39,7 @@
     {
       "chapterName": "Cuervo Europeo",
       "iconPath": "Icons/Icon4",
+      "audioPath": "Audios/Narracion4",
       "pages": [
         {
           "title": "Cuervo Europeo",
@@ -47,6 +51,7 @@
     {
       "chapterName": "Océano Atlántico",
       "iconPath": "Icons/Icon5",
+      "audioPath": "Audios/Narracion5",
       "pages": [
         {
           "title": "Océano Atlántico",
@@ -58,6 +63,7 @@
     {
       "chapterName": "Drakkar",
       "iconPath": "Icons/Icon6",
+      "audioPath": "Audios/Narracion6",
       "pages": [
         {
           "title": "Drakkar",
@@ -69,6 +75,7 @@
     {
       "chapterName": "Defensa Costera Inglesa",
       "iconPath": "Icons/Icon7",
+      "audioPath": "Audios/Narracion7",
       "pages": [
         {
           "title": "Defensa Costera Inglesa",
