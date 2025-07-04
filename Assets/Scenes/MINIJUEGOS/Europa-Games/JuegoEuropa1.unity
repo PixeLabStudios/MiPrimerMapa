@@ -2021,7 +2021,7 @@ MonoBehaviour:
   - {fileID: 841748699}
   - {fileID: 1532429263}
   meleeRobot: {fileID: 6588842669252085657, guid: a64dd175830ac0340971429beef1f784, type: 3}
-  rangeRobot: {fileID: 251719075826499209, guid: 1c258374e0edc9447ab9abb6ccd0252b, type: 3}
+  rangeRobot: {fileID: 6546302479340677884, guid: e023772da0c5c2340aea3b219243ebbf, type: 3}
   lionRobot: {fileID: 6588842669252085657, guid: a64dd175830ac0340971429beef1f784, type: 3}
 --- !u!4 &1394570226
 Transform:
@@ -2930,7 +2930,7 @@ Transform:
   m_GameObject: {fileID: 2104926300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.1, z: 3.77}
+  m_LocalPosition: {x: 0, y: 3.1, z: 4.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3020,7 +3020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 2104926301}
-  range: 2.5
+  range: 3.65
   targetLayers:
     serializedVersion: 2
     m_Bits: 8192

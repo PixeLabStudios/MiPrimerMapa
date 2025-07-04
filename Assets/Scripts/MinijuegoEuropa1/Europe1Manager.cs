@@ -16,7 +16,7 @@ public class Europe1Manager : BaseGameManager
     {
         currentRound = 1;
         waitTime = 2;
-        StartCoroutine(Game());
+       // StartCoroutine(Game());
     }
 
     IEnumerator Game() 
