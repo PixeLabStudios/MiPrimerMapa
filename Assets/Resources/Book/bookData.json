@@ -1,35 +1,52 @@
 {
   "chapters": [
     {
-      "chapterName": "Capítulo 1",
+      "chapterName": "Aguila Real",
+      "iconPath": "Icons/Icon1",
       "pages": [
         {
-          "title": "Bienvenido",
-          "text": "Este es el comienzo...",
+          "title": "Aguila Real",
+          "text": "El águila real tiene una presencia histórica y cultural poderosa. Fue emblema del Imperio Romano, del Sacro Imperio Romano Germánico, del Imperio Austrohúngaro, Bizancio y Rusia. Aún hoy figura en escudos de países como Alemania, Polonia, Albania y más.",
           "imagePath": "Images/Page1"
         },
         {
-          "title": "Introducción",
-          "text": "lauty es re traica",
+          "title": "Aguila Real",
+          "text": "Es un símbolo de poder, visión y libertad, está asociada a la grandeza, el liderazgo y la vigilancia, valores muy presentes en la construcción histórica de Europa. \nEs un animal nativo y majestuoso: habita en regiones montañosas de Europa, desde Escocia hasta los Alpes y los Balcanes.",
           "imagePath": "Images/Page1_1"
-        },
-        {
-          "title": "Desarrollo",
-          "text": "blabalbalballballbalbla.",
-          "imagePath": "Images/Page1_2"
         }
       ]
     },
     {
-      "chapterName": "Capítulo 2",
+      "chapterName": "Coliseo Romano",
+      "iconPath": "Icons/Icon2",
       "pages": [
         {
-          "title": "La historia continúa",
-          "text": "Aquí empieza la aventura...",
+          "title": "Coliseo Romano",
+          "text": "El Coliseo Romano es un edificio muy grande y redondo que está en una ciudad llamada Roma, en el país Italia.\n ¿Para qué servía?\nHace muchos, muchos años, la gente iba al Coliseo para ver espectáculos. Allí luchaban gladiadores (como peleadores) y también hacían juegos con animales. Era como un gran estadio de fútbol, pero muy antiguo.",
           "imagePath": "Images/Page2"
+        },
+        {
+          "title": "Coliseo Romano",
+          "text": "¿Cuánta gente entraba?\n Podían entrar más de 50 mil personas. ¡Era enorme! Todos se sentaban en gradas y miraban lo que pasaba en el centro.\n¿De qué está hecho?\nEstá hecho de piedra y ladrillos. Aunque hoy está un poco roto porque pasó mucho tiempo, todavía se puede visitar.\n¿Por qué es importante?\nEs uno de los lugares más famosos del mundo. Nos muestra cómo vivía la gente en la Antigua Roma y cómo eran sus espectáculos.",
+          "imagePath": "Images/Page2_1"
+        }
+      ]
+    },
+    {
+      "chapterName": "Lucha de gladiadores",
+      "iconPath": "Icons/Icon3",
+      "pages": [
+        {
+          "title": "Lucha de gladiadores",
+          "text": "¿Qué era una lucha de gladiadores?\nHace muchos años, en la Antigua Roma, había unos luchadores llamados gladiadores.\n¿Qué hacían?\nLos gladiadores luchaban entre ellos o contra animales salvajes en un lugar muy grande llamado el Coliseo. La gente iba a verlos, como si fuera un show.\n¿Quiénes eran los gladiadores?\nEran personas fuertes. Algunos eran esclavos, otros eran soldados o hombres que querían fama.\n¿Tenían armas?\nSí. Usaban espadas, escudos, redes, cascos y otras cosas. Cada tipo de gladiador usaba armas distintas.",
+          "imagePath": "Images/Page3"
+        },
+        {
+          "title": "Lucha de gladiadores",
+          "text": "¿Era peligroso?\nSí. A veces uno de los gladiadores moría, pero otras veces se salvaban. Si peleaban bien, el público aplaudía y podían ganar la libertad.\n¿Por qué los miraban?\nA los romanos les gustaban los espectáculos fuertes. Iban al Coliseo como nosotros vamos a ver un partido o una película.",
+          "imagePath": "Images/Page3_1"
         }
       ]
     }
   ]
 }
-
