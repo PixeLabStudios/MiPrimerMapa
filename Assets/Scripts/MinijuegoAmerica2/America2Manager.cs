@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class America2Manager : MonoBehaviour
 {
+    public America2UI ui;
     public AudioSource audioSource;
     public int hp;
     public int correct;
@@ -14,6 +15,7 @@ public class America2Manager : MonoBehaviour
     public TextMeshProUGUI questionText;
     private void Awake()
     {
+        ui =GetComponent< America2UI>();
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
@@ -26,10 +28,6 @@ public class America2Manager : MonoBehaviour
     void LoadQuestion(Room currentRoom) 
     { 
         questionText.text = currentRoom.data.questionText;
-        // Load the question for the current room
-        Debug.Log("Loading question for room: " + currentRoom.name);
-        
-
     }
     public void NextQuestion() 
     {
