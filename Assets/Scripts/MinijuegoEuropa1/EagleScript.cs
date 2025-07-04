@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EagleScript : MonoBehaviour
 {
+    Animator animator;
     Europe1Manager manager;
     public Transform attachPoint;
     Unit chosenEnemy;
@@ -17,10 +18,12 @@ public class EagleScript : MonoBehaviour
    
     private void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         manager = FindFirstObjectByType<Europe1Manager>();
     }
     void Start()
     {
+        animator.SetTrigger("grab");
         targetIsgrabed=false;
         target = transform.position;
         restPosition = transform.position;
@@ -33,6 +36,7 @@ public class EagleScript : MonoBehaviour
     {
         if (isAttacking) 
         {
+            
             if (chosenEnemy == null)
             {
                 if (manager.unitList.Count == 0)
@@ -42,6 +46,8 @@ public class EagleScript : MonoBehaviour
                 }
                 else
                 {
+                    animator.ResetTrigger("grab");
+                    animator.SetTrigger("move");
                     target = manager.unitList[Random.Range(0, manager.unitList.Count)].transform.position;
                 }
 
@@ -77,6 +83,8 @@ public class EagleScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemigo") && !targetIsgrabed) 
         {
+            animator.ResetTrigger("move");
+            animator.SetTrigger("grab");
             targetIsgrabed = true;
             chosenEnemy = other.GetComponent<Unit>();
             other.transform.SetParent(attachPoint.transform);            
@@ -84,8 +92,10 @@ public class EagleScript : MonoBehaviour
         }
         if (other.gameObject.CompareTag("fuera")) // cuando llega aqui, mata al robot y vuelve a su position
         {
+            animator.ResetTrigger("grab");
+            animator.SetTrigger("move");
             isAttacking = false;
-            // deberia ir este audio https://youtu.be/elAB59cKZRc?t=2
+            
             chosenEnemy.GetComponent<Unit>().TakeDamage(10000);
            
             target = restPosition;

@@ -92,10 +92,10 @@
                     "questionText": "¿Qué tiene de especial su arquitectura?",
 
                     "answers": [
-                        "no se",
-                        "Que te importa",
-                        "si",
-                        "Respuesta Correcta"
+                        "Esta tallada en Piedra Roja",
+                        "Su antiguedad",
+                        "Su tamaño",
+                        
                     ],
                     "correctAnswer": "Que te importa"
                 },

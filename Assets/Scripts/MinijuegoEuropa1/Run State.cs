@@ -9,22 +9,26 @@ public class RunState :State
     {
         name = STATE.RUN;      
         agent.isStopped = false;
-       
+      //  agent.stoppingDistance = 3f;
        
     }
-    
+    public float currenthp;
+    Unit stat;
     public override void Enter()
     {
+        stat = robot.GetComponent<Unit>();
+        currenthp = stat.hp;
         Debug.Log("estoy en estado correr");
-      //anim.SetTrigger("run");
+        anim.SetTrigger("run");
         base.Enter();
     }
     public override void Update()
     {
+       
         agent.SetDestination(player.transform.position);
         if (agent.hasPath) 
         {
-            if (CanAttackPlayer(agent.stoppingDistance)) 
+            if (CanAttackPlayer(6)) 
             {
                
                 nextState = new AttackState(robot,anim,player,agent,meleeAttack);
@@ -36,9 +40,16 @@ public class RunState :State
             nextState = new FlyState(robot, anim, player, agent, meleeAttack);
             stage = EVENT.EXIT;
         }
-        
+        if (currenthp > stat.hp)
+        {
+            Debug.Log("Cambiando a estado de herido");
+            nextState = new HurtState(robot, anim, player, agent, meleeAttack);
+            stage = EVENT.EXIT;
+        }
     }
 
-    public override void Exit() { base.Exit(); }
+    public override void Exit() {
+        anim.ResetTrigger("run");
+        base.Exit(); }
     
 }
