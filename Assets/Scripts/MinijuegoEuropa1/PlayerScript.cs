@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerScript : Unit
 {
+    Animator anim;
     public ShootButton attackButton;
     public ShootButton eagleAttackButton;
     public Joystick joystick;
@@ -19,6 +20,7 @@ public class PlayerScript : Unit
     public Device currentDevice;
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         eagle = FindFirstObjectByType<EagleScript>();
         movement = GetComponent<PlayerMove>();
         melee = GetComponent<MeleeAttack>();
@@ -54,6 +56,14 @@ public class PlayerScript : Unit
                     input.x = joystick.Horizontal;
                     input.y = joystick.Vertical;
                     input.z = 0;
+                if (input.y == 0 && input.x == 0) 
+                {
+                    anim.SetBool("moving", false);
+                }
+                else 
+                {
+                    anim.SetBool("moving", true);
+                }
                     movement.Move(moveSpeed, input,false);
                 if (attackButton.buttonPressed) 
                 { 
@@ -70,11 +80,19 @@ public class PlayerScript : Unit
                 input.x = Input.GetAxis("Horizontal");
                 input.y = Input.GetAxis("Vertical");
                 input.z = 0;
-
+                if (input.y == 0 && input.x == 0)
+                {
+                    anim.SetBool("moving", false);
+                }
+                else
+                {
+                    anim.SetBool("moving", true);
+                }
                 movement.Move(moveSpeed, input,true);
                 if (Input.GetMouseButtonDown(0)) 
                 {
                     Attack();
+                    
                 }
                 if (Input.GetMouseButtonDown(1)) 
                 {
@@ -89,7 +107,7 @@ public class PlayerScript : Unit
         if (Time.time >= melee.nextAttack) 
         {
             melee.Attack(damage);
-           
+            anim.SetTrigger("attack");
             melee.nextAttack = Time.time + 1f/attackRate;
         }
     }
@@ -108,6 +126,7 @@ public class PlayerScript : Unit
     public override void TakeDamage(int damage)
     {
         healthBar.SetCurrentHealth(hp - damage);
+        anim.SetTrigger("hurt");
         base.TakeDamage(damage);
     }
 
