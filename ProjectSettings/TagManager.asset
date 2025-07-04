@@ -18,6 +18,10 @@ TagManager:
   - fuera
   - enemigo
   - Luz
+  - RoutePoint_Bison
+  - RoutePoint_Moose
+  - RoutePoint_Caribou
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -36,7 +40,7 @@ TagManager:
   - obstaculo
   - BotonInteractuable
   - puerta
-  - 
+  - Animal
   - 
   - 
   - 
