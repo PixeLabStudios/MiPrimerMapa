@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,4 +44,12 @@ public class BookPageNavigator : MonoBehaviour
 
         ShowPage(currentPage);
     }
+    public void SetPages(List<GameObject> newPages)
+    {
+        pages = newPages.ToArray();
+        currentPage = 0;
+        ShowPage(currentPage);
+    }
+
+
 }
