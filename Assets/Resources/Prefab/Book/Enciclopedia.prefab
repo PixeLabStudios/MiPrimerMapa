@@ -601,8 +601,9 @@ MonoBehaviour:
   pagePrefab: {fileID: 879615758896707072, guid: 778fbe840f5ac3c4ba7dd927fad19e8f, type: 3}
   pageContainer: {fileID: 4908123446683218764}
   navigator: {fileID: 1759394510367819113}
-  jsonFile: {fileID: 4900000, guid: de9d26662c6a3ac469150b2b2cdc9ae5, type: 3}
   chapterButtonContainer: {fileID: 1870820130246690841}
+  jsonFile: {fileID: 4900000, guid: de9d26662c6a3ac469150b2b2cdc9ae5, type: 3}
+  narradorAudioSource: {fileID: 0}
 --- !u!1 &1709115126732026441
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,8 +740,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3316371129456981889}
   - {fileID: 8862676231354461227}
+  - {fileID: 3316371129456981889}
   m_Father: {fileID: 1870820130246690841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
