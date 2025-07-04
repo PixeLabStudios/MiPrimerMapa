@@ -55,7 +55,7 @@ public class RangedRobot : Unit
                 anim.SetBool("moving", true);
                 agent.SetDestination(player.position);
                 anim.ResetTrigger("attack");
-                anim.SetTrigger("run");
+                
             }
         }
         else 
