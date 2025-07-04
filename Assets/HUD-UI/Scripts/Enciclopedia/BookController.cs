@@ -17,6 +17,7 @@ public class PageData
 public class ChapterData
 {
     public string chapterName;
+    public string iconPath;
     public List<PageData> pages;
 }
 
@@ -32,20 +33,37 @@ public class BookController : MonoBehaviour
 
     void Start()
     {
+        // 1. Cargar los capítulos
         Debug.Log("JSON Raw: " + jsonFile.text);
         chapters = JsonUtilityWrapper.LoadChapters(jsonFile.text);
         Debug.Log("Capítulos cargados: " + chapters.Count);
         Debug.Log("Primer título: " + chapters[0].pages[0].title);
 
+        // 2. Asignar botones de capítulo
         for (int i = 0; i < chapterButtonContainer.childCount; i++)
         {
             int chapterIndex = i;
             Button btn = chapterButtonContainer.GetChild(i).GetComponent<Button>();
+            btn.onClick.RemoveAllListeners();
             btn.onClick.AddListener(() => LoadChapter(chapterIndex));
+
+            var label = btn.transform.Find("Label")?.GetComponent<TextMeshProUGUI>();
+            if (label != null)
+                label.text = chapters[i].chapterName;
+
+            var icon = btn.transform.Find("Icon")?.GetComponent<Image>();
+            if (icon != null && !string.IsNullOrEmpty(chapters[i].iconPath))
+            {
+                Sprite s = Resources.Load<Sprite>(chapters[i].iconPath);
+                icon.sprite = s;
+                icon.gameObject.SetActive(true);
+            }
         }
 
+        // 3. Cargar el capítulo por defecto
         LoadChapter(0);
     }
+
 
 
     void LoadChapter(int index)
