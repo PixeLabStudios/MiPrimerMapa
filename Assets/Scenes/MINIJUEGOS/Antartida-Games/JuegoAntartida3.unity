@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 1209201120}
   - component: {fileID: 1209201119}
   - component: {fileID: 1209201118}
+  - component: {fileID: 1209201121}
   m_Layer: 0
   m_Name: HUD-UIManager
   m_TagString: Untagged
@@ -438,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32559018d5fc224880e8742864a7a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transicion: {fileID: 1209201121}
   panelPrincipal: {fileID: 4151470152337367747}
   panelesLista:
   - {fileID: 6672986347292981833}
@@ -471,6 +473,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1209201121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209201117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04ca6fa77f59de478af9cb34db6ad00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
 --- !u!1 &1246555547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32559018d5fc224880e8742864a7a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transicion: {fileID: 0}
   panelPrincipal: {fileID: 0}
   panelesLista: []
 --- !u!224 &1559315932918195105
