@@ -87,11 +87,11 @@
     {
       "chapterName": "Jaguar",
       "iconPath": "Icons/Icon8",
-      "audioPath": "Audios/CulturaVikinga",
+      "audioPath": "Audios/Jaguard",
       "pages": [
         {
           "title": "Jaguar",
-          "text": "¿Qué hacían? Eran guerreros, comerciantes y exploradores.\n¿Qué creían? Tenían dioses como Odín y Thor.\n¿Cómo vivían? En casas de madera, cultivaban y criaban animales.\n¿Qué dejaron? Historias, mitos y tradiciones que aún se cuentan.",
+          "text": "¿Qué es? El felino más grande de América.\n¿Cómo es? Fuerte, con pelaje manchado y le gusta nadar.\n¿Dónde vive? En selvas y zonas tropicales.\n¿Qué come? Carne de otros animales.",
           "imagePath": "Images/Page8"
         }
       ]
@@ -99,24 +99,72 @@
     {
       "chapterName": "Caribú",
       "iconPath": "Icons/Icon9",
-      "audioPath": "Audios/Jaguar",
+      "audioPath": "Audios/Caribu",
       "pages": [
         {
           "title": "Caribú",
-          "text": "¿Qué hacían? Eran guerreros, comerciantes y exploradores.\n¿Qué creían? Tenían dioses como Odín y Thor.\n¿Cómo vivían? En casas de madera, cultivaban y criaban animales.\n¿Qué dejaron? Historias, mitos y tradiciones que aún se cuentan.",
+          "text": "¿Qué es? Un animal similar al ciervo con grandes cuernos.\n¿Qué hace? Migra con otros buscando comida y seguridad.\n¿Dónde vive? En tundras y bosques fríos.\n¿Qué come? Líquenes en invierno; hojas y musgo en verano.\nDato curioso: Las hembras también tienen cuernos.",
           "imagePath": "Images/Page9"
         }
       ]
     },
     {
-      "chapterName": "CBisonte Americano",
+      "chapterName": "Bisonte Americano",
       "iconPath": "Icons/Icon10",
-      "audioPath": "Audios/CulturaVikinga",
+      "audioPath": "Audios/BisonteAmericano",
       "pages": [
         {
           "title": "Bisonte Americano",
-          "text": "¿Qué hacían? Eran guerreros, comerciantes y exploradores.\n¿Qué creían? Tenían dioses como Odín y Thor.\n¿Cómo vivían? En casas de madera, cultivaban y criaban animales.\n¿Qué dejaron? Historias, mitos y tradiciones que aún se cuentan.",
+          "text": "¿Qué es? Un animal grande y peludo, parecido a un toro.\n¿Qué hace? Se mueve según el clima buscando pasto.\n¿Dónde vive? En campos, valles y montañas.\n¿Qué come? Mucho pasto verde.",
           "imagePath": "Images/Page10"
+        }
+      ]
+    },
+    {
+      "chapterName": "Alce",
+      "iconPath": "Icons/Icon11",
+      "audioPath": "Audios/Alce",
+      "pages": [
+        {
+          "title": "Alce",
+          "text": "¿Qué es? El ciervo más grande del mundo.\n¿Qué hace? Se desplaza según la estación.\n¿Dónde vive? En bosques, montañas y zonas con agua.\n¿Qué come? Hojas, ramas y plantas acuáticas.",
+          "imagePath": "Images/Page11"
+        }
+      ]
+    },
+    {
+      "chapterName": "Mono Araña",
+      "iconPath": "Icons/Icon12",
+      "audioPath": "Audios/MonoAranna",
+      "pages": [
+        {
+          "title": "Mono Araña",
+          "text": "¿Qué es? Un mono delgado con brazos y cola larga.\n¿Cómo es? Muy ágil, parece una araña al colgarse.\n¿Dónde vive? En lo alto de los árboles de la selva.\n¿Qué come? Frutas, hojas, flores e insectos.",
+          "imagePath": "Images/Page12"
+        }
+      ]
+    },
+    {
+      "chapterName": "Tucán",
+      "iconPath": "Icons/Icon13",
+      "audioPath": "Audios/Tucan",
+      "pages": [
+        {
+          "title": "Tucán",
+          "text": "¿Qué es? Un ave con un pico enorme y colorido.\n¿Cómo es? De cuerpo oscuro y pico brillante.\n¿Dónde vive? En selvas tropicales.\n¿Qué come? Frutas, insectos y huevos.",
+          "imagePath": "Images/Page13"
+        }
+      ]
+    },
+    {
+      "chapterName": "Rana de Ojos Rojos",
+      "iconPath": "Icons/Icon14",
+      "audioPath": "Audios/RanaOjosRojos",
+      "pages": [
+        {
+          "title": "Rana de Ojos Rojos",
+          "text": "¿Qué es? Una rana pequeña con ojos rojos y colores vivos.\n¿Cómo es? Verde con patas naranjas o azules, no venenosa.\n¿Dónde vive? En hojas de la selva, activa de noche.\n¿Qué hace? Canta después de la lluvia y come insectos.",
+          "imagePath": "Images/Page14"
         }
       ]
     }
