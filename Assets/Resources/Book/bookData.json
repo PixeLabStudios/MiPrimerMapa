@@ -1,12 +1,25 @@
-[
-  {
-    "title": "Capítulo 1: Introducción",
-    "text": "Este es el texto introductorio del capítulo 1...",
-    "imagePath": "Images/Chapter1"
-  },
-  {
-    "title": "Capítulo 2: Historia",
-    "text": "Aquí empieza la historia del universo...",
-    "imagePath": "Images/Chapter2"
-  }
-]
+{
+  "chapters": [
+    {
+      "chapterName": "Capítulo 1",
+      "pages": [
+        {
+          "title": "Bienvenido",
+          "text": "Este es el comienzo...",
+          "imagePath": "Images/Page1"
+        }
+      ]
+    },
+    {
+      "chapterName": "Capítulo 2",
+      "pages": [
+        {
+          "title": "La historia continúa",
+          "text": "Aquí empieza la aventura...",
+          "imagePath": "Images/Page2"
+        }
+      ]
+    }
+  ]
+}
+

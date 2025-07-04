@@ -8,6 +8,7 @@ public static class JsonUtilityWrapper
 
     public static List<ChapterData> LoadChapters(string json)
     {
-        return JsonUtility.FromJson<ChapterList>("{\"chapters\":" + json + "}").chapters;
+        return JsonUtility.FromJson<ChapterList>(json).chapters;
     }
+
 }
