@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Capítulo 1: Introducción",
+    "text": "Este es el texto introductorio del capítulo 1...",
+    "imagePath": "Images/Chapter1"
+  },
+  {
+    "title": "Capítulo 2: Historia",
+    "text": "Aquí empieza la historia del universo...",
+    "imagePath": "Images/Chapter2"
+  }
+]
