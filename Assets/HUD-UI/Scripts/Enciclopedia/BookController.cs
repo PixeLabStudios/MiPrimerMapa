@@ -70,7 +70,6 @@ public class BookController : MonoBehaviour
             if (titleT == null) Debug.LogError("No se encontró 'Title' en el prefab");
             if (bodyT == null) Debug.LogError("No se encontró 'Body' en el prefab");
             if (imgT == null) Debug.LogError("No se encontró 'Illustration' en el prefab");
-
             page.transform.Find("Title").GetComponent<TextMeshProUGUI>().text = pageData.title;
             page.transform.Find("Body").GetComponent<TextMeshProUGUI>().text = pageData.text;
 
