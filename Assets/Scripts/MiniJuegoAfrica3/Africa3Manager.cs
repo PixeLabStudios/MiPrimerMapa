@@ -5,13 +5,17 @@ using UnityEngine;
 
 
 public class Africa3Manager : BaseGameManager
-{
+{   
+    
     public List<Monument> monumentsRandom = new List<Monument>();
     [HideInInspector]public List<Monument> monumentsList = new List<Monument>(); 
     public List<MonumentScript>  options = new List<MonumentScript>();
-
+ 
+    public int maxOptions = 4; // Numero de opciones que se muestran en pantalla
     public int errors;
     public int correct;
+    public StarScoreDisplay starScoreDisplay;
+    public PanelManager panelManager;
     int monumentsNumber;
     public bool canDrop;
     private void Start()
@@ -60,6 +64,11 @@ public class Africa3Manager : BaseGameManager
             {
                 //Juego terminado, mostrar resultados
                 //Panel Star
+                 int puntosJugables = correct + errors;
+
+                float total = (float)correct / (float)puntosJugables * 100f;
+                panelManager.MostrarSoloPanel("PanelFinJuego");
+                starScoreDisplay.ShowStars(total);
                 Debug.Log("el juego termino");
             }
             else

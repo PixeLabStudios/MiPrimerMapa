@@ -22,7 +22,7 @@ public class MonumentScript : MonoBehaviour,IBeginDragHandler, IDragHandler, IEn
     private void Start()
     {
         candrag = true;
-        startPosition = rectTransform.anchoredPosition;
+        startPosition = rectTransform.position;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -38,13 +38,14 @@ public class MonumentScript : MonoBehaviour,IBeginDragHandler, IDragHandler, IEn
         if (candrag) 
         {
             rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+
         }
         
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-
-        rectTransform.anchoredPosition = startPosition;
+        //rectTransform.position
+        rectTransform.position = startPosition;
         canvasGroup.alpha = 1f; // Reset the transparency
         canvasGroup.blocksRaycasts = true; // Re-enable raycasts
     }
