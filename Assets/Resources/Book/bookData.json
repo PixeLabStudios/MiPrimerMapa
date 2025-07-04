@@ -47,6 +47,22 @@
           "imagePath": "Images/Page3_1"
         }
       ]
+    },
+    {
+      "chapterName": "Cuervo Europeo",
+      "iconPath": "Icons/Icon4",
+      "pages": [
+        {
+          "title": "Cuervo Europeo",
+          "text": "El cuervo europeo es un pájaro negro, grande e inteligente.\nVive en muchos lugares de Europa: en bosques, montañas, campos y también cerca de las personas en las ciudades.\nEs un animal muy listo. Puede usar palitos o piedras para conseguir comida y también recuerda caras humanas. Le gusta jugar y aprender.\nCome de todo: frutas, insectos, huevos y hasta animales muertos. Por eso, ayuda a limpiar la naturaleza.",
+          "imagePath": "Images/Page4"
+        },
+        {
+          "title": "Cuervo Europeo",
+          "text": "El cuervo y los vikingos\nEn la historia de los vikingos, el cuervo era un animal muy importante.\nEl dios Odín tenía dos cuervos mágicos llamados Huginn (que significa pensamiento) y Muninn (que significa memoria).\nEllos volaban por el mundo y le contaban todo lo que veían.\nPor eso, los vikingos creían que el cuervo era un símbolo de sabiduría, fuerza y protección.\n¿Por qué es especial?\nEl cuervo europeo es especial porque es muy inteligente, fuerte, y ha sido parte de historias importantes de Europa durante mucho tiempo.",
+          "imagePath": "Images/Page4_1"
+        }
+      ]
     }
   ]
 }
