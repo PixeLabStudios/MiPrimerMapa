@@ -202,7 +202,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 65796333}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1843790768}
+        m_TargetAssemblyTypeName: AudioOnClick, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &65796333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,6 +1029,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1843790768}
+        m_TargetAssemblyTypeName: AudioOnClick, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ClipButton
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &324253422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,7 +1482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &619973736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2038,6 +2062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32559018d5fc224880e8742864a7a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transicion: {fileID: 0}
   panelPrincipal: {fileID: 0}
   panelesLista: []
 --- !u!114 &848511762
@@ -2272,6 +2297,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1843790768}
+        m_TargetAssemblyTypeName: AudioOnClick, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ClipButton
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &872351863
@@ -3060,6 +3097,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1843790768}
+        m_TargetAssemblyTypeName: AudioOnClick, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ClipButton
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1282839588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,6 +3643,7 @@ GameObject:
   - component: {fileID: 1494097227}
   - component: {fileID: 1494097225}
   - component: {fileID: 1494097226}
+  - component: {fileID: 1494097228}
   m_Layer: 0
   m_Name: HUD-UIManager
   m_TagString: Untagged
@@ -3626,6 +3676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32559018d5fc224880e8742864a7a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transicion: {fileID: 1494097228}
   panelPrincipal: {fileID: 1361789047}
   panelesLista:
   - {fileID: 671426385}
@@ -3645,6 +3696,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494097228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494097224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04ca6fa77f59de478af9cb34db6ad00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.5
 --- !u!1 &1506758468 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6001169202819422037, guid: f5930536ffb58464bacb893607ecf1bc, type: 3}
@@ -4661,6 +4725,7 @@ GameObject:
   - component: {fileID: 1843790766}
   - component: {fileID: 1843790765}
   - component: {fileID: 1843790767}
+  - component: {fileID: 1843790768}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4711,6 +4776,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idEscena: 0
+--- !u!114 &1843790768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843790764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d2f6fe20c62bd49a8fba8af1f4f93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1850245787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5347,6 +5424,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1843790768}
+        m_TargetAssemblyTypeName: AudioOnClick, Assembly-CSharp
+        m_MethodName: PlayClip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ClipButton
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2049057787
