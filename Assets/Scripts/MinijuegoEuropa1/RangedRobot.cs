@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class RangedRobot : Unit
 {
+    Animator anim;
     Europe1Manager manager;
     float bulletSpeed;
     float range;
@@ -14,6 +15,7 @@ public class RangedRobot : Unit
     float nextAttack=0;
     private void Awake()
     {
+        anim = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         player = FindFirstObjectByType<PlayerScript>().transform;
         manager = FindFirstObjectByType<Europe1Manager>();
@@ -44,16 +46,21 @@ public class RangedRobot : Unit
             if (CanAttack())
             {
                 agent.isStopped = true;
+                anim.SetBool("moving", false);
                 Attack();
             }
             else
             {
                 agent.isStopped = false;
+                anim.SetBool("moving", true);
                 agent.SetDestination(player.position);
+                anim.ResetTrigger("attack");
+                anim.SetTrigger("run");
             }
         }
         else 
         {
+            anim.SetTrigger("grabed");
             agent.enabled = false;
             col.enabled = false;
         }
@@ -67,8 +74,8 @@ public class RangedRobot : Unit
 
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 4);
         if (Time.time >=nextAttack) 
-        { 
-           
+        {
+            anim.SetTrigger("attack");
           GameObject  d=  Instantiate(bullet,spawn.position,Quaternion.identity);
           BulletMove script = d.GetComponent<BulletMove>();
           script.SetTarget(player.position,spawn.position);
@@ -78,7 +85,13 @@ public class RangedRobot : Unit
           
         }
     }
-
+    public override void TakeDamage(int damage)
+    {
+        
+        
+            anim.SetTrigger("hurt");        
+            base.TakeDamage(damage);
+    }
     public override void OnDeath()
     {
         
