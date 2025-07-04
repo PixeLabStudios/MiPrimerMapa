@@ -5,7 +5,7 @@ public class State
 {
    public enum STATE 
     {
-        ATTACK,RUN,FLY,DEAD
+        ATTACK,RUN,FLY,HURT
     };
     public enum EVENT 
     {

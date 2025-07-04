@@ -1,0 +1,35 @@
+{
+  "chapters": [
+    {
+      "chapterName": "Capítulo 1",
+      "pages": [
+        {
+          "title": "Bienvenido",
+          "text": "Este es el comienzo...",
+          "imagePath": "Images/Page1"
+        },
+        {
+          "title": "Introducción",
+          "text": "lauty es re traica",
+          "imagePath": "Images/Page1_1"
+        },
+        {
+          "title": "Desarrollo",
+          "text": "blabalbalballballbalbla.",
+          "imagePath": "Images/Page1_2"
+        }
+      ]
+    },
+    {
+      "chapterName": "Capítulo 2",
+      "pages": [
+        {
+          "title": "La historia continúa",
+          "text": "Aquí empieza la aventura...",
+          "imagePath": "Images/Page2"
+        }
+      ]
+    }
+  ]
+}
+

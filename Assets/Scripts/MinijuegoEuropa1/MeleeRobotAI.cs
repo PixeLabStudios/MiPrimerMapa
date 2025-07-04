@@ -12,7 +12,7 @@ public class MeleeRobotAI : Unit
     private void Awake()
     {
         meleeAttack = GetComponent<MeleeAttack>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         player = FindFirstObjectByType<PlayerScript>().transform;
         manager = FindFirstObjectByType<Europe1Manager>();

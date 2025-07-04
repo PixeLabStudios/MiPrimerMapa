@@ -71,7 +71,7 @@ public class Europe1Manager : BaseGameManager
         {
             GameObject a = Instantiate(meleeRobot, spawnPoints[Random.Range(0, spawnPoints.Count)].position, Quaternion.identity);
             Unit unit = a.GetComponent<Unit>();
-            unit.SetStats(200, 5, 5, 0.6f);
+            unit.SetStats(200, 5, 5, 0.8f);
             unitList.Add(unit);
             yield return new WaitForSeconds(2);
         }
