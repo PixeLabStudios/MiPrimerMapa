@@ -7,11 +7,12 @@ public class FlyState : State
     {
         name = STATE.FLY;
         agent.enabled = false;
-
+       
 
     }
     public override void Enter()
     {
+        anim.SetTrigger("grabed");
         robot.GetComponent<Collider>().enabled = false;
         Debug.Log("Me Agarraron.  F....");
         robot.transform.localPosition = Vector3.zero;

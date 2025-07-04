@@ -36,11 +36,13 @@ public class Room : MonoBehaviour
                 Debug.Log("incorrecto");
                 //Es incorrecto, pierde una vida
                 manager.hp--;
+                manager.ui.HideHearts(manager.hp);
                 manager.errors++;
             }
             else
             {
                 Debug.Log("correcto");
+
                 manager.correct++;
                 // La respuesta es correcta, marca la sala como completa
             }

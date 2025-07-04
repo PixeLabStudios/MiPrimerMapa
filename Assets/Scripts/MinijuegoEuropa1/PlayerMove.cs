@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
 
     public void Move(int speed,Vector3 input,bool hasTurn)
     {
+        
         float delta = speed * Time.deltaTime;
         direction = SetDirection(input);
         if (hasTurn) // Mira donde esta el mouse
