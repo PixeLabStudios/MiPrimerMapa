@@ -13791,8 +13791,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Arrastra el edifico a la region correcta
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
-  m_sharedMaterial: {fileID: 4428963325417155311, guid: 95e48bcaf164348448212e04caa586eb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 952c41077a5cb504ead6517b84b67f97, type: 2}
+  m_sharedMaterial: {fileID: -193601334274029745, guid: 952c41077a5cb504ead6517b84b67f97, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13816,7 +13816,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.55
+  m_fontSize: 41.65
   m_fontSizeBase: 19.88
   m_fontWeight: 400
   m_enableAutoSizing: 1
