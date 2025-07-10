@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 public class CambioEscena : MonoBehaviour
 {
     public int idEscena;
+    public SelectLevel currentCont;
+    
+    
     //public Transform puntoInicial;
     //public GameObject personaje;
     //public GameObject personajeInicial;
