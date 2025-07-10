@@ -12,6 +12,9 @@ public class Oceania1Manager : BaseGameManager
     int animalsNumber;
     public bool canDrop;
 
+    public PanelManager panelManager; // Referencia al panel manager
+    public StarScoreDisplay starScoreDisplay; // Referencia al sistema de estrellas
+
     private void Start()
     {
         animalsNumber = data.Count;
@@ -25,44 +28,46 @@ public class Oceania1Manager : BaseGameManager
         }
         canDrop = true;
     }
+
     public IEnumerator CheckAnswer(AnimalsDrag op, string region, bool canAct)
     {
         if (canAct)
         {
             bool isCorrect = false;
             ChangeDrag(false);
-            
+
             if (op.animal.animalRegion == region)
             {
                 Debug.Log("correcto");
                 correct++;
-                isCorrect=true;
-
+                isCorrect = true;
             }
             else
             {
                 Debug.Log("incorrecto");
-                //Incorrecto
                 errors++;
                 isCorrect = false;
             }
+
             yield return new WaitForSeconds(1f);
-            if (isCorrect) 
+
+            if (isCorrect)
             {
-                //Saco el correcto de la lista y lo destruyo
                 options.Remove(op);
                 Destroy(op.gameObject);
+
                 if (options.Count == 0)
                 {
-                    //Juego terminado, mostrar resultados
-                    //Panel Star
+                    // Juego terminado
                     Debug.Log("el juego termino");
+                    ShowVictoryPanel();
                 }
             }
-            //  habilito el poder arrastrar de nuevo
-            ChangeDrag(true);  
+
+            ChangeDrag(true);
         }
     }
+
     void ChangeDrag(bool b)
     {
         foreach (AnimalsDrag op in options)
@@ -71,5 +76,13 @@ public class Oceania1Manager : BaseGameManager
             op.SetCanDrag(b);
         }
     }
-}
 
+    void ShowVictoryPanel()
+    {
+        int puntosJugables = correct + errors;
+        float score = (puntosJugables == 0) ? 0f : (float)correct / puntosJugables * 120f;
+
+        panelManager.MostrarSoloPanel("PanelFinJuego");
+        starScoreDisplay.ShowStars(score);
+    }
+}
