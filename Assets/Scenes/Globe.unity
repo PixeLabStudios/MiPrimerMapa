@@ -1017,10 +1017,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1843790767}
-        m_TargetAssemblyTypeName: CambioEscena, Assembly-CSharp
-        m_MethodName: CambioDeEscena
-        m_Mode: 3
+      - m_Target: {fileID: 1843790769}
+        m_TargetAssemblyTypeName: CambioEscenaContinente, Assembly-CSharp
+        m_MethodName: CambiarSceneCont
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2005,6 +2005,8 @@ MonoBehaviour:
   - ContinenteAfricano
   - ContinenteEuropeo
   - Oceania
+  namesContinentes: []
+  currentContinente: 0
   nameContinente: {fileID: 1750069411}
   bloqueado: {fileID: 115046079}
   botonPlay: {fileID: 324253419}
@@ -4726,6 +4728,7 @@ GameObject:
   - component: {fileID: 1843790765}
   - component: {fileID: 1843790767}
   - component: {fileID: 1843790768}
+  - component: {fileID: 1843790769}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4788,6 +4791,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d2f6fe20c62bd49a8fba8af1f4f93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1843790769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843790764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff117b80bf0a7c46bc2cfb26924493f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCont: {fileID: 831737121}
 --- !u!1 &1850245787
 GameObject:
   m_ObjectHideFlags: 0
