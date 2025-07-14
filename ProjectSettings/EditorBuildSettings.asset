@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MINIJUEGOS/Desactivar_Bomba.unity
     guid: 6badbc183b2ec75468c55be4b78c64dc
+  - enabled: 1
+    path: Assets/Scripts/SaveSystem/Example/Tablero1.unity
+    guid: f17d3f19482773149942334d3331f543
+  - enabled: 1
+    path: Assets/Scripts/SaveSystem/Example/Game1_1.unity
+    guid: 6329934a3d1043649ac3bfbd23a47475
+  - enabled: 1
+    path: Assets/Scripts/SaveSystem/Example/Game1_2.unity
+    guid: fac4f79b75b0a28429dca0abf07973bc
+  - enabled: 1
+    path: Assets/Scripts/SaveSystem/Example/Game1_3.unity
+    guid: 60d65e15b7126e24ab65857808be1ca8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

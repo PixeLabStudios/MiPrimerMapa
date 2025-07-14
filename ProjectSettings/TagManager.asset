@@ -22,6 +22,7 @@ TagManager:
   - RoutePoint_Moose
   - RoutePoint_Caribou
   - Pickup
+  - MinigamePoint
   layers:
   - Default
   - TransparentFX
