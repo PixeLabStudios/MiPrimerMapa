@@ -59,7 +59,7 @@ public class Africa3Manager : BaseGameManager
                 errors++;
                 iscorrect = false;
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             if (correct >= monumentsNumber)
             {
                 //Juego terminado, mostrar resultados
