@@ -32,3 +32,4 @@ public class PlayerProgress
 {
     public List<BoardProgress> boards = new();
 }
+

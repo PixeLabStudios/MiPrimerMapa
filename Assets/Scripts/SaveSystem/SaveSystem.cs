@@ -31,5 +31,23 @@ public static class SaveSystem
         }
         return new PlayerProgress();
     }
-}
 
+    public static void DeleteProgress()
+    {
+        if (File.Exists(SavePath))
+        {
+            File.Delete(SavePath);
+            Debug.Log("Progreso borrado.");
+        }
+    }
+
+    public static void ResetToDefault()
+    {
+        TextAsset defaultJson = Resources.Load<TextAsset>("DefaultProgress");
+        if (defaultJson != null)
+        {
+            File.WriteAllText(SavePath, defaultJson.text);
+            Debug.Log("Progreso reiniciado al estado por defecto.");
+        }
+    }
+}

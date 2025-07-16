@@ -18,4 +18,8 @@ public class AddStar : MonoBehaviour
     {
         starCallExample.starsAsPoints++;
     }
+    public void DebugJson()
+    {
+        GameProgressManager.Instance.PrintProgressJson();
+    }
 }

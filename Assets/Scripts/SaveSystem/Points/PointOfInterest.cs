@@ -61,3 +61,4 @@ public class PointOfInterest : MonoBehaviour
 
     public bool IsUnlocked() => isUnlocked;
 }
+
