@@ -5,7 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     //public Joystick joystick;
-    //public Animator animator;
+    public Animator Manimator;
+    public Animator Fanimator;
     //public GameObject joystickPanel;
     public Transform carryPoint;
 
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform respawnPoint;
     public float knockbackForce = 5f;
-    private bool isStunned = false;
+    [HideInInspector]public bool isStunned = false;
 
     public bool IsCarrying => carriedObject != null;
 
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
         isStunned = true;
         //animator.SetTrigger("Hurt"); // Asegurate de tener un Trigger llamado "Hurt"
-        VictoryManager.instance.RegisterHit();
+        //VictoryManager.instance.RegisterHit();
 
         // Empuje
         StartCoroutine(HitReaction(hitDirection));
@@ -92,7 +93,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Espera a que termine la animación (opcionalmente podés usar anim events)
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
 
         TeleportToStart();
         isStunned = false;
@@ -103,5 +104,42 @@ public class PlayerController : MonoBehaviour
         controller.enabled = false;
         transform.position = respawnPoint.position;
         controller.enabled = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.CompareTag("enemigo"))
+        {
+            Debug.Log("zzzzzzzzzzzzzzzzzzzzzzzz");
+            //OnHit(transform.position);
+        }
+        
+    }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("enemigo"))
+        {
+            Debug.Log("embestido");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("enemigo"))
+        {
+            Manimator.SetTrigger("stuned");
+            Fanimator.SetTrigger("stuned");
+            // Calcula la dirección base del empuje
+            Vector3 hitDirection = (transform.position - other.transform.position);
+
+            // Anula la componente 'y' para que no haya empuje vertical
+            hitDirection.y = 0f;
+
+            // Normaliza el vector para asegurar una fuerza consistente
+            hitDirection = hitDirection.normalized;
+
+            OnHit(hitDirection);
+        }
     }
 }

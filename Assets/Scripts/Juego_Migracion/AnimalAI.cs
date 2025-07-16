@@ -22,12 +22,23 @@ public abstract class AnimalAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isAggressive || returning) return;
+        //if (!isAggressive || returning) return;
+        if (!isAggressive) return;
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance < detectRadius && CanAttack())
         {
+            returning = false;
             StartCoroutine(AttackSequence());
+        }
+        else
+        {
+            returning = true;
+        }
+
+        if (returning)
+        {
+            StartCoroutine(ReturnToOrigin());
         }
     }
 
@@ -36,12 +47,13 @@ public abstract class AnimalAI : MonoBehaviour
 
     protected IEnumerator ReturnToOrigin()
     {
-        returning = true;
+        //returning = true;
+        animator.SetBool("walk", true);
         agent.isStopped = false;
         agent.SetDestination(originPoint.position);
         yield return new WaitUntil(() => Vector3.Distance(transform.position, originPoint.position) < 0.5f);
         agent.isStopped = true;
-        returning = false;
-        animator.Play("Idle");
+        //returning = false;
+        animator.SetBool("walk", false);
     }
 }
