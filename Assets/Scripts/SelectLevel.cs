@@ -11,10 +11,10 @@ public class SelectLevel : MonoBehaviour
     public List<string> continentes = new List<string>();
 
     [Header("Nombres de Continentes")]
-    private List<string> namesContinentes = new List<string>();
+    [HideInInspector]public List<string> namesContinentes = new List<string>();
 
     [Header("ID de Continente Actual")]
-    private int currentContinente;
+    [HideInInspector]public int currentContinente;
 
     [Header("UI Referencias")]
     public TextMeshProUGUI nameContinente;
@@ -28,8 +28,8 @@ public class SelectLevel : MonoBehaviour
     {
         namesContinentes = new List<string>
         {
-            "ANTÁRTIDA", "AMÉRICA CENTRAL", "AMÉRICA DEL NORTE", "AMÉRICA DEL SUR",
-            "ASIA", "ÁFRICA", "EUROPA", "OCEANÍA"
+            "Antartida", "AMÉRICA CENTRAL", "AMÉRICA DEL NORTE", "AMÉRICA DEL SUR",
+            "ASIA", "ÁFRICA", "EUROPA", "Oceania"
         };
 
         // Establecer nombre e icono inicial

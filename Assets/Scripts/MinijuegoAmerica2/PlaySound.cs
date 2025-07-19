@@ -3,23 +3,29 @@ using UnityEngine;
 public class PlaySound : MonoBehaviour
 {
    public AudioClip clip;
+    public America2Manager manager;
 
-    bool isPlaying = false;
 
+    private void Awake()
+    {
+        manager = FindFirstObjectByType<America2Manager>();
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isPlaying)
+        if (other.CompareTag("player"))
         {
-            isPlaying = true;
-            AudioSource.PlayClipAtPoint(clip, transform.position);
+            manager.audioSource.Stop();
+            manager.audioSource.clip = clip;
+            manager.audioSource.Play();
+            
         }
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("player"))
         {
-            isPlaying = false;
-            //  clip.
+            manager.audioSource.Stop();
+
         }
     }
 }

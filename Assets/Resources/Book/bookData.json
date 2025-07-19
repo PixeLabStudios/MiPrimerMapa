@@ -3,64 +3,168 @@
     {
       "chapterName": "Aguila Real",
       "iconPath": "Icons/Icon1",
+      "audioPath": "Audios/Aguila",
       "pages": [
         {
           "title": "Aguila Real",
-          "text": "El águila real tiene una presencia histórica y cultural poderosa. Fue emblema del Imperio Romano, del Sacro Imperio Romano Germánico, del Imperio Austrohúngaro, Bizancio y Rusia. Aún hoy figura en escudos de países como Alemania, Polonia, Albania y más.",
+          "text": " ¿Qué representa? Un símbolo de poder, libertad y vigilancia usado por antiguos imperios y países actuales.\n¿Dónde vive? En montañas de Europa, como los Alpes y los Balcanes.",
           "imagePath": "Images/Page1"
-        },
-        {
-          "title": "Aguila Real",
-          "text": "Es un símbolo de poder, visión y libertad, está asociada a la grandeza, el liderazgo y la vigilancia, valores muy presentes en la construcción histórica de Europa. \nEs un animal nativo y majestuoso: habita en regiones montañosas de Europa, desde Escocia hasta los Alpes y los Balcanes.",
-          "imagePath": "Images/Page1_1"
         }
       ]
     },
     {
       "chapterName": "Coliseo Romano",
       "iconPath": "Icons/Icon2",
+      "audioPath": "Audios/Coliseo",
       "pages": [
         {
           "title": "Coliseo Romano",
-          "text": "El Coliseo Romano es un edificio muy grande y redondo que está en una ciudad llamada Roma, en el país Italia.\n ¿Para qué servía?\nHace muchos, muchos años, la gente iba al Coliseo para ver espectáculos. Allí luchaban gladiadores (como peleadores) y también hacían juegos con animales. Era como un gran estadio de fútbol, pero muy antiguo.",
+          "text": "   ¿Para qué servía? Para espectáculos con gladiadores y animales.\n¿Cuánta gente entraba? Más de 50 mil personas.\n¿De qué está hecho? De piedra y ladrillos.\n¿Por qué es importante? Muestra cómo vivían y se entretenían los romanos.",
           "imagePath": "Images/Page2"
-        },
-        {
-          "title": "Coliseo Romano",
-          "text": "¿Cuánta gente entraba?\n Podían entrar más de 50 mil personas. ¡Era enorme! Todos se sentaban en gradas y miraban lo que pasaba en el centro.\n¿De qué está hecho?\nEstá hecho de piedra y ladrillos. Aunque hoy está un poco roto porque pasó mucho tiempo, todavía se puede visitar.\n¿Por qué es importante?\nEs uno de los lugares más famosos del mundo. Nos muestra cómo vivía la gente en la Antigua Roma y cómo eran sus espectáculos.",
-          "imagePath": "Images/Page2_1"
         }
       ]
     },
     {
       "chapterName": "Lucha de gladiadores",
       "iconPath": "Icons/Icon3",
+      "audioPath": "Audios/Gladiadores",
       "pages": [
         {
           "title": "Lucha de gladiadores",
-          "text": "¿Qué era una lucha de gladiadores?\nHace muchos años, en la Antigua Roma, había unos luchadores llamados gladiadores.\n¿Qué hacían?\nLos gladiadores luchaban entre ellos o contra animales salvajes en un lugar muy grande llamado el Coliseo. La gente iba a verlos, como si fuera un show.\n¿Quiénes eran los gladiadores?\nEran personas fuertes. Algunos eran esclavos, otros eran soldados o hombres que querían fama.\n¿Tenían armas?\nSí. Usaban espadas, escudos, redes, cascos y otras cosas. Cada tipo de gladiador usaba armas distintas.",
+          "text": " ¿Qué era? Combates en el Coliseo entre personas o contra animales.\n¿Quiénes eran? Esclavos, soldados o voluntarios.\n¿Tenían armas? Sí, distintas según el tipo de gladiador.\n¿Era peligroso? Sí, a veces morían, otras ganaban fama o libertad.",
           "imagePath": "Images/Page3"
-        },
-        {
-          "title": "Lucha de gladiadores",
-          "text": "¿Era peligroso?\nSí. A veces uno de los gladiadores moría, pero otras veces se salvaban. Si peleaban bien, el público aplaudía y podían ganar la libertad.\n¿Por qué los miraban?\nA los romanos les gustaban los espectáculos fuertes. Iban al Coliseo como nosotros vamos a ver un partido o una película.",
-          "imagePath": "Images/Page3_1"
         }
       ]
     },
     {
       "chapterName": "Cuervo Europeo",
       "iconPath": "Icons/Icon4",
+      "audioPath": "Audios/CuervoEuropeo",
       "pages": [
         {
           "title": "Cuervo Europeo",
-          "text": "El cuervo europeo es un pájaro negro, grande e inteligente.\nVive en muchos lugares de Europa: en bosques, montañas, campos y también cerca de las personas en las ciudades.\nEs un animal muy listo. Puede usar palitos o piedras para conseguir comida y también recuerda caras humanas. Le gusta jugar y aprender.\nCome de todo: frutas, insectos, huevos y hasta animales muertos. Por eso, ayuda a limpiar la naturaleza.",
+          "text": " ¿Qué es? Un ave negra e inteligente.\n¿Dónde vive? En bosques, campos, montañas y ciudades.\n¿Qué hace? Usa herramientas, recuerda caras y limpia la naturaleza.\n¿Qué simboliza? Para los vikingos era sabiduría y protección (Huginn y Muninn de Odín).",
           "imagePath": "Images/Page4"
-        },
+        }
+      ]
+    },
+    {
+      "chapterName": "Océano Atlántico",
+      "iconPath": "Icons/Icon5",
+      "audioPath": "Audios/OceanoAtlantico",
+      "pages": [
         {
-          "title": "Cuervo Europeo",
-          "text": "El cuervo y los vikingos\nEn la historia de los vikingos, el cuervo era un animal muy importante.\nEl dios Odín tenía dos cuervos mágicos llamados Huginn (que significa pensamiento) y Muninn (que significa memoria).\nEllos volaban por el mundo y le contaban todo lo que veían.\nPor eso, los vikingos creían que el cuervo era un símbolo de sabiduría, fuerza y protección.\n¿Por qué es especial?\nEl cuervo europeo es especial porque es muy inteligente, fuerte, y ha sido parte de historias importantes de Europa durante mucho tiempo.",
-          "imagePath": "Images/Page4_1"
+          "title": "Océano Atlántico",
+          "text": "¿Qué es? Un océano enorme que conecta Europa, América y África.\n¿Dónde está? A la izquierda de Europa en los mapas.\n¿Por qué es importante? Sirvió para viajes, comercio y separa continentes.",
+          "imagePath": "Images/Page5"
+        }
+      ]
+    },
+    {
+      "chapterName": "Drakkar",
+      "iconPath": "Icons/Icon6",
+      "audioPath": "Audios/Drakkar",
+      "pages": [
+        {
+          "title": "Drakkar",
+          "text": "¿Qué es? Barco largo vikingo con remos y vela.\n¿Cómo era? Estrecho, rápido y con cabeza de dragón.\n¿Para qué lo usaban? Viajar, explorar, comerciar y atacar.\n¿Por qué era importante? Permitió a los vikingos llegar a muchos lugares.",
+          "imagePath": "Images/Page6"
+        }
+      ]
+    },
+    {
+      "chapterName": "Defensa Costera Inglesa",
+      "iconPath": "Icons/Icon7",
+      "audioPath": "Audios/DefensaCostera",
+      "pages": [
+        {
+          "title": "Defensa Costera Inglesa",
+          "text": " ¿Qué hacían para defenderse?\n\t1.Vigías en la costa.\n\t2.Señales de fuego.\n\t3.Soldados en las playas.\n\t3.Trampas en el agua.\n\t4.Barcos para enfrentarlos antes de llegar.",
+          "imagePath": "Images/Page7"
+        }
+      ]
+    },
+    {
+      "chapterName": "Jaguar",
+      "iconPath": "Icons/Icon8",
+      "audioPath": "Audios/Jaguard",
+      "pages": [
+        {
+          "title": "Jaguar",
+          "text": "¿Qué es? El felino más grande de América.\n¿Cómo es? Fuerte, con pelaje manchado y le gusta nadar.\n¿Dónde vive? En selvas y zonas tropicales.\n¿Qué come? Carne de otros animales.",
+          "imagePath": "Images/Page8"
+        }
+      ]
+    },
+    {
+      "chapterName": "Caribú",
+      "iconPath": "Icons/Icon9",
+      "audioPath": "Audios/Caribu",
+      "pages": [
+        {
+          "title": "Caribú",
+          "text": "¿Qué es? Un animal similar al ciervo con grandes cuernos.\n¿Qué hace? Migra con otros buscando comida y seguridad.\n¿Dónde vive? En tundras y bosques fríos.\n¿Qué come? Líquenes en invierno; hojas y musgo en verano.\nDato curioso: Las hembras también tienen cuernos.",
+          "imagePath": "Images/Page9"
+        }
+      ]
+    },
+    {
+      "chapterName": "Bisonte Americano",
+      "iconPath": "Icons/Icon10",
+      "audioPath": "Audios/BisonteAmericano",
+      "pages": [
+        {
+          "title": "Bisonte Americano",
+          "text": "¿Qué es? Un animal grande y peludo, parecido a un toro.\n¿Qué hace? Se mueve según el clima buscando pasto.\n¿Dónde vive? En campos, valles y montañas.\n¿Qué come? Mucho pasto verde.",
+          "imagePath": "Images/Page10"
+        }
+      ]
+    },
+    {
+      "chapterName": "Alce",
+      "iconPath": "Icons/Icon11",
+      "audioPath": "Audios/Alce",
+      "pages": [
+        {
+          "title": "Alce",
+          "text": "¿Qué es? El ciervo más grande del mundo.\n¿Qué hace? Se desplaza según la estación.\n¿Dónde vive? En bosques, montañas y zonas con agua.\n¿Qué come? Hojas, ramas y plantas acuáticas.",
+          "imagePath": "Images/Page11"
+        }
+      ]
+    },
+    {
+      "chapterName": "Mono Araña",
+      "iconPath": "Icons/Icon12",
+      "audioPath": "Audios/MonoAranna",
+      "pages": [
+        {
+          "title": "Mono Araña",
+          "text": "¿Qué es? Un mono delgado con brazos y cola larga.\n¿Cómo es? Muy ágil, parece una araña al colgarse.\n¿Dónde vive? En lo alto de los árboles de la selva.\n¿Qué come? Frutas, hojas, flores e insectos.",
+          "imagePath": "Images/Page12"
+        }
+      ]
+    },
+    {
+      "chapterName": "Tucán",
+      "iconPath": "Icons/Icon13",
+      "audioPath": "Audios/Tucan",
+      "pages": [
+        {
+          "title": "Tucán",
+          "text": "¿Qué es? Un ave con un pico enorme y colorido.\n¿Cómo es? De cuerpo oscuro y pico brillante.\n¿Dónde vive? En selvas tropicales.\n¿Qué come? Frutas, insectos y huevos.",
+          "imagePath": "Images/Page13"
+        }
+      ]
+    },
+    {
+      "chapterName": "Rana de Ojos Rojos",
+      "iconPath": "Icons/Icon14",
+      "audioPath": "Audios/RanaOjosRojos",
+      "pages": [
+        {
+          "title": "Rana de Ojos Rojos",
+          "text": "¿Qué es? Una rana pequeña con ojos rojos y colores vivos.\n¿Cómo es? Verde con patas naranjas o azules, no venenosa.\n¿Dónde vive? En hojas de la selva, activa de noche.\n¿Qué hace? Canta después de la lluvia y come insectos.",
+          "imagePath": "Images/Page14"
         }
       ]
     }

@@ -26,7 +26,7 @@ public class PlayerInteract : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(currentDoor);
+       
         //cast a ray
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit hit, interactDistance, layerMask))
         {
