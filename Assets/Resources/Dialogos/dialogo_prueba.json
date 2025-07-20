@@ -1,0 +1,11 @@
+{
+  "dialogos": [
+    {
+      "personaje": "Messi",
+      "nombre": "Messi",
+      "imagen": "Dialogos/Sprites/Messi.png",
+      "texto": "¡que miras bobo!",
+      "multimedia": "Dialogos/Contenido/Messi.png"
+    }
+  ]
+}
