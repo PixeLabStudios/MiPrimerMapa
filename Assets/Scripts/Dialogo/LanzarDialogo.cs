@@ -14,6 +14,7 @@ public class LanzarDialogo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
             TextAsset archivo = Resources.Load<TextAsset>(nombreArchivo);
             manager.CargarDialogoDesdeJSON(archivo);
         }
