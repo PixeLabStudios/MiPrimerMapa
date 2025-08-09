@@ -22,6 +22,7 @@ TagManager:
   - RoutePoint_Moose
   - RoutePoint_Caribou
   - Pickup
+  - obstaculo
   layers:
   - Default
   - TransparentFX

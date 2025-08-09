@@ -7,12 +7,13 @@ public class PlayerScript : Unit
     public ShootButton attackButton;
     public ShootButton eagleAttackButton;
     public Joystick joystick;
-    public GameObject panelMobile;
+    public GameObject panelMobile; 
+    public HealthBar healthBar;
+    public int baseMoveSpeed;
     PlayerMove movement;
     MeleeAttack melee;
     EagleScript eagle;
     Vector3 input;
-    public HealthBar healthBar;
     public enum Device 
     {
         PC,Mobile
@@ -26,6 +27,7 @@ public class PlayerScript : Unit
         melee = GetComponent<MeleeAttack>();
         SetStats(350, 10, 50, 2);
         healthBar.SetHealth(maxHp, hp);
+        baseMoveSpeed = moveSpeed;
     }
     private void Start()
     {
