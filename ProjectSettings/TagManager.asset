@@ -22,7 +22,11 @@ TagManager:
   - RoutePoint_Moose
   - RoutePoint_Caribou
   - Pickup
+<<<<<<< HEAD
   - MinigamePoint
+=======
+  - obstaculo
+>>>>>>> origin/Adrian
   layers:
   - Default
   - TransparentFX
@@ -41,7 +45,7 @@ TagManager:
   - obstaculo
   - BotonInteractuable
   - puerta
-  - Animal
+  - 
   - 
   - 
   - 

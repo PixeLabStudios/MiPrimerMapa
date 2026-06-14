@@ -82,7 +82,7 @@ public class Oceania1Manager : BaseGameManager
         int puntosJugables = correct + errors;
         float score = (puntosJugables == 0) ? 0f : (float)correct / puntosJugables * 120f;
 
-        panelManager.MostrarSoloPanel("PanelFinJuego");
-        starScoreDisplay.ShowStars(score);
+       // panelManager.MostrarSoloPanel("PanelFinJuego");
+       // starScoreDisplay.ShowStars(score);
     }
 }
