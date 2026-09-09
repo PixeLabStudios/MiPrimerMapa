@@ -10,6 +10,8 @@ public class DrakkarScript : MonoBehaviour
     Europa1UI ui;
     CharacterController controller;
     public GameObject bulletPrefab;
+    public GameObject Fuego1;
+    public GameObject Fuego2;
     public Joystick joystick;
     public GameObject mobilePanel;
     Vector3 inputMobile;
@@ -74,8 +76,8 @@ public class DrakkarScript : MonoBehaviour
         inputKeyboard = new Vector3(0, 0, 0);
         limitVerticalBottom = transform.position.z;
         limitVerticalTop = transform.position.z + 50;
-        limitHorizontalLeft = transform.position.x - 35;
-        limitHorizontalRight = transform.position.x + 35;
+        limitHorizontalLeft = transform.position.x - 50;
+        limitHorizontalRight = transform.position.x + 50;
 
         lastShoot = 0;
         fireRate = 0.5f;
@@ -122,8 +124,8 @@ public class DrakkarScript : MonoBehaviour
                 #endregion
                 break;
         }
-        
 
+        
         
         time += Time.deltaTime;
                 
@@ -141,8 +143,21 @@ public class DrakkarScript : MonoBehaviour
             input.x = 0;
         }
         controller.Move(moveSpeed * Time.deltaTime * input);
+        Rotacion(input);
 
 
+    }
+    void Rotacion(Vector3 input)
+    {
+        //controller.transform.Rotate(0, input.x, 0);
+        if (input.sqrMagnitude > 0.01f)
+        {
+            // Calculamos la rotación deseada orientando el frente del objeto hacia la dirección del movimiento.
+            Quaternion rotacionObjetivo = Quaternion.LookRotation(input, Vector3.up);
+
+            // Suavizamos la transición desde la rotación actual hacia la objetivo.
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotacionObjetivo, 20.0f * Time.deltaTime);
+        }
     }
 
     public void ChangeSpeed(int value) 
@@ -168,11 +183,23 @@ public class DrakkarScript : MonoBehaviour
             currentHp += a;
             ui.HideHearts(currentHp);
             StartCoroutine(GiveInvincibility());
+            fuegoHp();
         }
         else {
             Debug.Log("soy inmune");
         }
        
+    }
+    public void fuegoHp()
+    {
+        if(currentHp < 4 )
+        {
+            Fuego1.SetActive(true);
+            if (currentHp < 2)
+            {
+                Fuego2.SetActive(true);
+            }
+        }
     }
     
     public Vector3 GetDrakkarPos() 
