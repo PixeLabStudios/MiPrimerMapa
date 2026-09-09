@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2696609713264631732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3332929256019411335}
+  - component: {fileID: 3017906365686880110}
+  - component: {fileID: 3840100012071141066}
+  m_Layer: 0
+  m_Name: SubmarinoCamuflaje
+  m_TagString: Submarino
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3332929256019411335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2696609713264631732}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.199915, y: -0.082359105, z: 6.896896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3740757920569264542}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3017906365686880110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2696609713264631732}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8434935, y: 1, z: 1}
+  m_Center: {x: 0.3395486, y: 0, z: 0}
+--- !u!114 &3840100012071141066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2696609713264631732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e092b9a8d81ff5f49969bcfaec9d6ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  col: {fileID: 0}
+--- !u!1001 &3882012364034116505
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3332929256019411335}
+    m_Modifications:
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_Name
+      value: SubmarinoCamuflaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3393095659015614550, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+    - {fileID: 5978679070904516651, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+--- !u!4 &3740757920569264542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 447679555347350023, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+  m_PrefabInstance: {fileID: 3882012364034116505}
+  m_PrefabAsset: {fileID: 0}

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerScript : Unit
 {
     Animator anim;
+    Europe1Manager manager;
     public ShootButton attackButton;
     public ShootButton eagleAttackButton;
     public Joystick joystick;
@@ -21,6 +22,7 @@ public class PlayerScript : Unit
     public Device currentDevice;
     private void Awake()
     {
+        manager = FindFirstObjectByType<Europe1Manager>();
         anim = GetComponent<Animator>();
         eagle = FindFirstObjectByType<EagleScript>();
         movement = GetComponent<PlayerMove>();
@@ -47,9 +49,7 @@ public class PlayerScript : Unit
 
     }
     private void Update()
-    {
-        
-        
+    {     
         switch (currentDevice) 
         {
             case Device.Mobile:
@@ -90,11 +90,10 @@ public class PlayerScript : Unit
                 {
                     anim.SetBool("moving", true);
                 }
-                movement.Move(moveSpeed, input,true);
+                movement.Move(moveSpeed, input,false);
                 if (Input.GetMouseButtonDown(0)) 
                 {
-                    Attack();
-                    
+                    Attack();             
                 }
                 if (Input.GetMouseButtonDown(1)) 
                 {
@@ -136,7 +135,8 @@ public class PlayerScript : Unit
 
     public override void OnDeath()
     {
-        Debug.Log("me mori pipipi");
+        Time.timeScale = 0; 
+        manager.Defeat();
         //logica de muerte y panel que llama al star
     }
 }

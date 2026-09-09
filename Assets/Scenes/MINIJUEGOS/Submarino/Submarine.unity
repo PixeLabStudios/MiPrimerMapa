@@ -947,17 +947,18 @@ MonoBehaviour:
   - {fileID: 1719494376}
   - {fileID: 317589873}
   objects:
-  - {fileID: 8223622150278506697, guid: 17bfad2aa88e1974397f2aa06ace3702, type: 3}
   - {fileID: 5915322224859969667, guid: ea30372f7f1ce3148ab18cbb9ee7888f, type: 3}
+  - {fileID: 8223622150278506697, guid: 17bfad2aa88e1974397f2aa06ace3702, type: 3}
   - {fileID: 4825397357426737875, guid: 0c2a786361cb3af488249c2ad7fd192c, type: 3}
   - {fileID: 177971020398525491, guid: b27e67fbe1ce8d84988117f424ee2cee, type: 3}
   - {fileID: 5372321155109403128, guid: 6783dc0c1e8d1a941b3d3228ca432aba, type: 3}
-  - {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
-  - {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
-  - {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
-  - {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
-  - {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
-  - {fileID: 972120576868964541, guid: 3c5c81bbb14541845977d976c6e38573, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &982716215
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -10,43 +11,58 @@ public class Europe1Manager : BaseGameManager
     public GameObject meleeRobot;
     public GameObject rangeRobot;
     public GameObject lionRobot;
+    public Europe1UI ui;
+
+    
     int currentRound;
     int waitTime;
     void Start()
     {
+        Time.timeScale = 1;
         currentRound = 1;
         waitTime = 2;
+        ui.gameOverPanel.SetActive(false);
         StartCoroutine(Game());
     }
 
     IEnumerator Game() 
     {
         Debug.Log("Ronda 1");
+        ui.roundText.text = "Ronda 1";
         StartCoroutine(StartRoundOne());
         yield return new WaitUntil(AreNoEnemies);
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Ronda 2");
+        ui.roundText.text = "Ronda 2";
         StartCoroutine(StartRoundTwo());
         yield return new WaitUntil(AreNoEnemies);
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Ronda 3");
+        ui.roundText.text = "Ronda 3";
         StartCoroutine(StartRoundThree());
         yield return new WaitUntil(AreNoEnemies);
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Ronda 4");
+        ui.roundText.text = "Ronda 4";
         StartCoroutine(StartRoundFour());
         yield return new WaitUntil(AreNoEnemies);
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Ronda 5");
+        ui.roundText.text = "Ronda 5";
         StartCoroutine(StartRoundFive());
         yield return new WaitUntil(AreNoEnemies);
-        //logica que llama al POanel de estrellas
+        //logica que llama al Panel de estrellas
 
 
         Debug.Log("termino el juego");
     }
     bool AreNoEnemies() { return unitList.Count <= 0; }
-    
+
+    public void Defeat() 
+    { 
+        Time.timeScale = 0;
+        ui.gameOverPanel.SetActive(true);
+    }
     
     IEnumerator StartRoundOne() 
     {

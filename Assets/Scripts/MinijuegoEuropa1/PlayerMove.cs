@@ -17,8 +17,7 @@ public class PlayerMove : MonoBehaviour
     {
 
         float delta = speed * Time.deltaTime;
-        direction = SetDirection(input);
-        
+        direction = SetDirection(input);     
         Turn(hasTurn, input);
 
         controller.Move(delta * direction);
@@ -28,7 +27,6 @@ public class PlayerMove : MonoBehaviour
         
         direction = SetDirection(input);
         Turn(hasToTurn, input);
-
         direction.x = direction.x * speed; 
         direction.z = direction.z * speed;
         direction.y = rb.linearVelocity.y; 
