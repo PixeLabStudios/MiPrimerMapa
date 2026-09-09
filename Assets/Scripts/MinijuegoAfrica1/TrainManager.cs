@@ -11,29 +11,39 @@ public class TrainManager : BaseGameManager
     bool isRoundStarted;
     float time;
     float maxTime;
+    TrainUI trainUI;
 
     public Transform centerPosition;
-   
     public  List<AnimalMove> africanAnimals = new List<AnimalMove>(); //Animales africanos disponibles para elegir
     public  List<AnimalMove> otherAnimals = new List<AnimalMove>();   //animales de otros continentes para elegir
     public List<AnimalMove> animalsInTrain = new List<AnimalMove>();  //Animales que ya llegaron al tren
     public List<AnimalMove> animalsSelected = new List<AnimalMove>(); //Animales que fueron seleccionados para la ronda e iran al centro para ser elegidos
     public LayerMask mask;
 
+    private void Awake()
+    {
+        trainUI = FindFirstObjectByType<TrainUI>();
+    }
     private void Start()
     {
+        
         maxAnimals = africanAnimals.Count;
         isRoundStarted = false;
         maxTime = 30f;
         time = maxTime;
         errors = 0;
         points = 0;
+        trainUI.EnableText(trainUI.textObjective, false);
+        trainUI.ChangeText(trainUI.textErrors, errors.ToString());
+        trainUI.ChangeText(trainUI.textCurrentAnimals, animalsInTrain.Count.ToString());
+        trainUI.ChangeText(trainUI.textMaxAnimals, africanAnimals.Count.ToString());
+        
         StartRound();
     }
 
     private void Update()
     {
-        
+
         
         if (isRoundStarted)
         {
@@ -61,6 +71,8 @@ public class TrainManager : BaseGameManager
     }
     void StartRound() 
     {
+        trainUI.EnableText(trainUI.textObjective,false);
+        
         isRoundStarted = false;
         time = maxTime;
         int randomIndex;
@@ -84,8 +96,7 @@ public class TrainManager : BaseGameManager
         }
         //agarro un animal que no es africano
             randomIndex = Random.Range(0, otherAnimals.Count);
-            animalsSelected.Add(otherAnimals[randomIndex]);
-            
+            animalsSelected.Add(otherAnimals[randomIndex]);        
             StartCoroutine(MoveAnimalsToCenter(centerPosition.position));
         
     }
@@ -110,6 +121,8 @@ public class TrainManager : BaseGameManager
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(AnimalsStopped);
         Debug.Log("Todos los animales han llegado al centro");
+        trainUI.EnableText(trainUI.textObjective, true);
+        trainUI.ChangeText(trainUI.textObjective, "Selecciona un Animal");
         isRoundStarted = true;
     }
     bool AnimalsStopped() 
@@ -140,18 +153,18 @@ public class TrainManager : BaseGameManager
         if (script.data== null)
         {      
             Debug.Log("Correcto");
+            trainUI.ChangeText(trainUI.textObjective, "Correcto");
             yield return new WaitForSeconds(1f);
             yield return new WaitUntil(AnimalsStopped);
-
-            
-           
-
+            trainUI.EnableText(trainUI.textObjective, false);
         }
         else 
         {
             Debug.Log("Incorrecto");
             script.points = 0;
             errors++;
+            trainUI.ChangeText(trainUI.textErrors, errors.ToString());
+            trainUI.ChangeText(trainUI.textObjective, "Incorrecto");
             africanAnimals.Add(script);
             if (animalsInTrain.Count >0) 
             {
@@ -166,7 +179,7 @@ public class TrainManager : BaseGameManager
         if (animalsInTrain.Count >= maxAnimals) 
         {
             Debug.Log("Fin del juego, has conseguido " + points + " puntos y has cometido " + errors + " errores.");
-            //llamar al coso de estrellas
+            trainUI.ChangeText(trainUI.textObjective, "Termino el juego.");
         }
         else 
         {
@@ -187,9 +200,10 @@ public class TrainManager : BaseGameManager
         }
         else 
         {
-            points += script.points;
+            points += script.points;            
             script.points = 0; // le saco los puntos porque ya lo uso
             animalsInTrain.Add(script);
+            trainUI.ChangeText(trainUI.textCurrentAnimals, animalsInTrain.Count.ToString());
             animalsSelected.Remove(script);
             //poner sonido de acierto
         }
@@ -208,5 +222,6 @@ public class TrainManager : BaseGameManager
         animalsInTrain[random].Warp();
         africanAnimals.Add(animalsInTrain[random]);
         animalsInTrain.RemoveAt(random);
+        trainUI.ChangeText(trainUI.textCurrentAnimals, animalsInTrain.Count.ToString());
     }
 }

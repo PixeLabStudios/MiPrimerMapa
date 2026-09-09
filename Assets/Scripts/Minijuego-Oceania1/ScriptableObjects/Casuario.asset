@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b9585869d8d9146ae6fa80220fbb38, type: 3}
   m_Name: Casuario
   m_EditorClassIdentifier: 
-  animalSprite: {fileID: 0}
+  animalSprite: {fileID: 21300000, guid: c8fc530eb80fe8741b07dc9ab6959b84, type: 3}
   animalName: Casuario
   animalRegion: Melanesia

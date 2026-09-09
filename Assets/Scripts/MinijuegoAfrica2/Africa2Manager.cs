@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Africa2Manager : BaseGameManager
 {
     public List<AnimalButtonScript> buttonsList = new(); 
-    
+  
     public List<AfricanAnimal> animals = new();
     List<AfricanAnimal> animalRandom = new();
     public List<Sprite> fakeAnimals= new();
@@ -22,6 +22,8 @@ public class Africa2Manager : BaseGameManager
     public GameObject starPanel;
     public GameObject regionPanel;
     public TextMeshProUGUI regionName;
+    public PanelManager panelManager;
+    public Image regionImage;
     StarScoreDisplay starScoreDisplay;
 
     private void Awake()
@@ -70,7 +72,7 @@ public class Africa2Manager : BaseGameManager
             random.RemoveAt(index);
             contador++;
         }
-        Debug.Log("ejecute esto: " + contador + " veces");
+       
     }
 
     IEnumerator ShowRegion() 
@@ -79,12 +81,13 @@ public class Africa2Manager : BaseGameManager
         int randomIndex;
         randomIndex = Random.Range(0, regions.Count);
         Sprite sprite = regions[randomIndex];
-        regionPanel.gameObject.SetActive(true);
+       
+        regionPanel.SetActive(true);
         currentRegion = sprite.name;
-        regionPanel.gameObject.GetComponent<Image>().sprite = sprite;
+        regionImage.sprite = sprite;
         regionName.text = currentRegion;
         regions.RemoveAt(randomIndex);
-        //quizas mostrar animacion de puerta abriendose
+       
         yield return new WaitForSeconds(4f);
         
         regionPanel.SetActive(false);

@@ -1304,6 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32559018d5fc224880e8742864a7a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transicion: {fileID: 0}
   panelPrincipal: {fileID: 1708689395}
   panelesLista:
   - {fileID: 1708689395}
@@ -11546,8 +11547,10 @@ MonoBehaviour:
   - {fileID: 1590450711}
   - {fileID: 1825403283}
   objects:
-  - {fileID: 919132149155446097, guid: eac5a4b46dc137440a96f668cac82d1e, type: 3}
-  - {fileID: 919132149155446097, guid: 414682b8b293c1346855935c0297df46, type: 3}
+  - {fileID: 8336852076458313677, guid: 7e12375a95c674444882ae98552679a1, type: 3}
+  - {fileID: 4151638958655993638, guid: 35b3c5fb26955ef4cb4bc734842125a7, type: 3}
+  - {fileID: 172809364162384716, guid: 3995b81206a34774e86ea58c129cf501, type: 3}
+  - {fileID: 8789357145313870121, guid: 7d240b212c6a45843b1ebe9cbc9e768c, type: 3}
 --- !u!1001 &2120036243
 PrefabInstance:
   m_ObjectHideFlags: 0

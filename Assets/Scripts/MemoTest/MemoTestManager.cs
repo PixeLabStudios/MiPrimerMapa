@@ -12,7 +12,7 @@ public class MemoTestManager : BaseGameManager
     //  public PlayerData playerData;
     public PanelManager panelManager;
     public StarScoreDisplay starScoreDisplay;
-    public  AudioClip buttonPressed;
+    public AudioClip buttonPressed;
     public List<Sprite> imagesList = new();
     public GameObject prefab;
     public Transform canvasTransform;
@@ -85,8 +85,8 @@ public class MemoTestManager : BaseGameManager
     void MoveCards() 
     {
         Vector2 firstPoint = new Vector2(valueX, valueY); // punto de inicio
-        float width= prefab.GetComponent<RectTransform>().rect.width *2.3f;
-        float height = prefab.GetComponent<RectTransform>().rect.height *1.6f;
+        float width= prefab.GetComponent<RectTransform>().rect.width *1.5f;
+        float height = prefab.GetComponent<RectTransform>().rect.height *1.15f;
         for (int i = 0; i < cardsGrid.GetLength(0); i++)
         {
             for (int j = 0; j < cardsGrid.GetLength(1); j++)

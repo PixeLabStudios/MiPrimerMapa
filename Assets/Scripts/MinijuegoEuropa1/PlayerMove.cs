@@ -1,22 +1,43 @@
 using UnityEngine;
 
+
 public class PlayerMove : MonoBehaviour
 {
     Vector3 direction;
-   
+    Rigidbody rb;
     CharacterController controller;
     public Transform cameraTransform;
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    public void Move(int speed,Vector3 input,bool hasTurn)
+    public void Move(int speed, Vector3 input, bool hasTurn)
     {
-        
+
         float delta = speed * Time.deltaTime;
         direction = SetDirection(input);
-        if (hasTurn) // Mira donde esta el mouse
+        
+        Turn(hasTurn, input);
+
+        controller.Move(delta * direction);
+    }
+    public void MoveRB(int speed, Vector3 input, bool hasToTurn) 
+    {
+        
+        direction = SetDirection(input);
+        Turn(hasToTurn, input);
+
+        direction.x = direction.x * speed; 
+        direction.z = direction.z * speed;
+        direction.y = rb.linearVelocity.y; 
+        rb.linearVelocity= direction;
+       // rb.MovePosition(transform.position + direction *speed *0.25f);
+    }
+    void Turn(bool hasMouse,Vector3 input) 
+    {
+        if (hasMouse) // Mira donde esta el mouse
         {
             Vector3 objective = MousePosition();
             objective.y = transform.position.y;
@@ -26,19 +47,13 @@ public class PlayerMove : MonoBehaviour
 
         else  // Mira hacia donde se mueve, calculado por la direccion
         {
-            if(input.y !=0 || input.x != 0) // Solo gira si se mueve, sino se queda mirando donde estaba
+            if (input.y != 0 || input.x != 0) // Solo gira si se mueve, sino se queda mirando donde estaba
             {
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 6);
             }
-                 
+
         }
-       
-        controller.Move(delta * direction);
-
-
-
     }
-
     public static Vector3 MousePosition()
     {
         Vector3 mousePos = new Vector3(0, 0, 0);

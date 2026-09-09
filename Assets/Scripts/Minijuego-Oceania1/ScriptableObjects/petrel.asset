@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b9585869d8d9146ae6fa80220fbb38, type: 3}
   m_Name: petrel
   m_EditorClassIdentifier: 
-  animalSprite: {fileID: 0}
+  animalSprite: {fileID: 21300000, guid: add53e5ff4f8ee6448d3d2fd6a6685b4, type: 3}
   animalName: "Petrel de Tahit\xED"
   animalRegion: Polinesia

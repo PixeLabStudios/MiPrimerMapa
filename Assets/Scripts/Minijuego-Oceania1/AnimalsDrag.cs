@@ -28,6 +28,7 @@ public class AnimalsDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         if (candrag)
         {
+            startPosition = rectTransform.anchoredPosition; // Store the initial position
             canvasGroup.alpha = 0.6f; // Make the object semi-transparent while dragging
             canvasGroup.blocksRaycasts = false; // Allow raycasts to pass through the object while dragging
         }
@@ -49,7 +50,7 @@ public class AnimalsDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     }
     public void LoadData()
     {
-       // image.sprite = animal.animalSprite;
+        image.sprite = animal.animalSprite;
         nameText.text = animal.animalName;
 
 

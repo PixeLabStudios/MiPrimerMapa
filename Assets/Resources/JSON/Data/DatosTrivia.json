@@ -94,10 +94,10 @@
                     "answers": [
                         "Esta tallada en Piedra Roja",
                         "Su antiguedad",
-                        "Su tamaño",
+                        "Su tamaño"
                         
                     ],
-                    "correctAnswer": "Que te importa"
+                    "correctAnswer": "Esta tallada en Piedra Roja"
                 },
                 {
                     "questionText": "¿Fue un centro comercial, religioso o militar?",

@@ -64,7 +64,7 @@ public class TriviaManager : BaseGameManager
         cardsPanel.SetActive(true);
         playButton.gameObject.SetActive(true);
         instructionText.gameObject.SetActive(false);
-        dataList = JsonUtility.FromJson<SerializableList<CardData>>(File.ReadAllText(Application.dataPath + "/Resources/JSON/DatosTrivia.json"));
+        dataList = JsonUtility.FromJson<SerializableList<CardData>>(File.ReadAllText(Application.dataPath + "/Resources/JSON/Data/DatosTrivia.json"));
         roundPanel.SetActive(false);
         
     }
@@ -118,7 +118,7 @@ public class TriviaManager : BaseGameManager
     void LoadData() 
     {
             
-            dataRandom = JsonUtility.FromJson<SerializableList<CardData>>(File.ReadAllText(Application.dataPath + "/Resources/JSON/DatosTrivia.json")); // todos los datos    
+            dataRandom = JsonUtility.FromJson<SerializableList<CardData>>(File.ReadAllText(Application.dataPath + "/Resources/JSON/Data/DatosTrivia.json")); // todos los datos    
             Debug.Log(dataRandom.list.Count); // imprime en la consola que los datos de trivia se han cargado correctamente.
             int randomIndex;
             foreach (TriviaCard card in triviaCards) 
