@@ -22,6 +22,7 @@ public class Europe2Manager : BaseGameManager
 
     void Start()
     {
+        Time.timeScale = 1;
         progress = 0;
         objectsSpeed = 25;
         threshold = 35;

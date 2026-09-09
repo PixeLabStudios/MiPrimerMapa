@@ -1768,31 +1768,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 85
+      value: 84.09344
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000008983735
+      value: -0.0000009536743
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 64.71792
+      value: 57.436584
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9238797
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.38268322
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1800,7 +1800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 38359caddeb4b7b45b2878c0f34012c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -16551,7 +16551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1803113683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18213,6 +18213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idEscena: 0
+  currentCont: {fileID: 0}
 --- !u!4 &2113635297
 Transform:
   m_ObjectHideFlags: 0

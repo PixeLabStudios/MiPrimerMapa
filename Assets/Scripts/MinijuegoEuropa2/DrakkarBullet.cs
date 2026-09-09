@@ -7,7 +7,7 @@ public class DrakkarBullet : MonoBehaviour
     Vector3 firstPos;
     void Start()
     {
-        damage = 2;
+        damage = 20;
         speed = 45;
         firstPos = transform.position;
     }

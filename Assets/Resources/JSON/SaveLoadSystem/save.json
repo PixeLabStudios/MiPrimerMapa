@@ -1,0 +1,20 @@
+{
+  "lastPlayerPosition": {
+    "x": 0,
+    "y": 1.1,
+    "z": 0
+  },
+  "boards": [
+    {
+      "boardId": "board_1",
+      "currentPosition": 3,
+      "miniGames": [
+        {
+          "miniGameId": "minigame_1",
+          "stars": 4,
+          "unlocked": true
+        }
+      ]
+    }
+  ]
+}
