@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Europe2Manager : BaseGameManager
 {
@@ -39,7 +40,8 @@ public class Europe2Manager : BaseGameManager
     }
     public void Salir()
     {
-        Application.Quit(); 
+        //Application.Quit(); 
+        SceneManager.LoadScene(0);
     }
     bool IsInactive() 
     {

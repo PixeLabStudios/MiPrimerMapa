@@ -28,7 +28,7 @@ public class CambioEscenaContinente : MonoBehaviour
     public void CambioProvisorio()
     {
         //Debug.Log(currentCont.namesContinentes[currentCont.currentContinente]);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
 
 }
