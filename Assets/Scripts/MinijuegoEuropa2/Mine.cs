@@ -3,6 +3,7 @@ using UnityEngine;
 public class Mine : Obstacle
 
 {
+    public GameObject explosion;
    
     private void Update()
     {
@@ -12,6 +13,7 @@ public class Mine : Obstacle
     {
         script.ChangeHp(-1);
         Debug.Log("Choque con una mina. Quito una vida" );
+        Instantiate(explosion, transform.position, explosion.transform.rotation);
         Destroy(this.gameObject);
     }
 }

@@ -9,6 +9,8 @@ public class Europa1UI : MonoBehaviour
     public Slider slider;
     Europe2Manager manager;
     public GameObject gameOverPanel;
+    public GameObject victoriaPanel;
+    public AudioSource audioSource;
     private void Awake()
     {
         manager = FindFirstObjectByType<Europe2Manager>();
@@ -16,6 +18,7 @@ public class Europa1UI : MonoBehaviour
     private void Start()
     {
         gameOverPanel.SetActive(false);
+        victoriaPanel.SetActive(false);
         ShowAllLives();
         hpBar.SetActive(false);
 
@@ -39,6 +42,7 @@ public class Europa1UI : MonoBehaviour
         if (i <= 0)
         {
             Time.timeScale = 0;
+            audioSource.Stop();
             gameOverPanel.SetActive(true);
             //
         }
@@ -48,5 +52,6 @@ public class Europa1UI : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        manager.EmpezarJuego();
     }
 }

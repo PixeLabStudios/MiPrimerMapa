@@ -12,6 +12,8 @@ public class Europe2Manager : BaseGameManager
     public int progress;    
     public int objectsSpeed;
     public int threshold;
+    public GameObject panelStart;
+    public AudioSource audioSource;
      
 
     private void Awake()
@@ -22,7 +24,14 @@ public class Europe2Manager : BaseGameManager
 
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
+        
+    }
+    public void EmpezarJuego()
+    {
+        Time.timeScale= 1; 
+        panelStart.SetActive(false);
+        audioSource.Play();
         progress = 0;
         objectsSpeed = 25;
         threshold = 35;

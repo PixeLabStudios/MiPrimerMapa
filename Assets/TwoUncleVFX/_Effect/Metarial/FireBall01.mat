@@ -107,13 +107,13 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Base_Color: {r: 1, g: 0, b: 0.07051277, a: 1}
-    - _Color: {r: 1.4980392, g: 0.109300636, b: 0, a: 1}
+    - _Base_Color: {r: 1, g: 0.36892486, b: 0, a: 1}
+    - _Color: {r: 1.4980392, g: 0.17058499, b: 0, a: 1}
     - _Emission_Color: {r: 0.4811321, g: 0.088510156, b: 0.088510156, a: 0}
     - _NoiseVectorPower: {r: -0.2, g: -0.2, b: 0, a: 0}
     - _Noise_Speed: {r: -1, g: 1, b: 0, a: 0}
     - _OffsetVeolcity: {r: -1, g: 0.1, b: 0, a: 0}
     - _Trail_Color: {r: 0.8862745, g: 0.23553331, b: 0, a: 0}
-    - _VC_Color: {r: 2.9960787, g: 0.7920967, b: 0, a: 1}
+    - _VC_Color: {r: 2.9960787, g: 0.029651543, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

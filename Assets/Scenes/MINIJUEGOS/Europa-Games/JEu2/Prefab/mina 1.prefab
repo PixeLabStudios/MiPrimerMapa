@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   obstacleName: 
+  explosion: {fileID: 1007127540951276732, guid: 0a880c6a92d4b0142b62df85cf468cd8, type: 3}
 --- !u!65 &947011420762261878
 BoxCollider:
   m_ObjectHideFlags: 0

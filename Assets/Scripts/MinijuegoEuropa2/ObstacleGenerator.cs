@@ -51,6 +51,12 @@ public class ObstacleGenerator : MonoBehaviour
                     case 2:
                         CreateMine(randomSpot, indexes);
                         break;
+                    case 3:
+                        CreateMine(randomSpot, indexes);
+                        break;
+                    case 4:
+                        CreateMine(randomSpot, indexes);
+                        break;
                 }
                 indexes.RemoveAt(randomSpot);
             }

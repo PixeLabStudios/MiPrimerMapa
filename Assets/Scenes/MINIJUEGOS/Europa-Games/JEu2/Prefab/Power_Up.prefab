@@ -124,6 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   obstacleName: 
+  particula: {fileID: 100006, guid: 5a4f42053d42eb941b482d3347d7e196, type: 3}
 --- !u!1001 &2860904348935685444
 PrefabInstance:
   m_ObjectHideFlags: 0

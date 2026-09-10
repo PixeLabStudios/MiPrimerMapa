@@ -13,6 +13,10 @@ public class BossScript : MonoBehaviour
     public List<TurretScript> sideTurrets;
     public TurretScript mainTurret;
     public int currentStage;
+    public GameObject explosion;
+    public GameObject explosion2;
+    public GameObject PanelVictoria;
+    public AudioSource audioSource;
 
     float moveSpeed;
    
@@ -161,10 +165,16 @@ public class BossScript : MonoBehaviour
     {
         //Dejo de disparar y quito una torreta
         StopShooting();
+        sideTurrets[sideTurrets.Count - 1].ActivarExplosion();
         Destroy(sideTurrets[sideTurrets.Count-1].gameObject);
         sideTurrets.RemoveAt(sideTurrets.Count - 1);
-
        
+    }
+    public void Victoria()
+    {
+        Time.timeScale = 0;
+        audioSource.Stop();
+        PanelVictoria.SetActive(true);
     }
     public void TakeDamage(int damage) 
     {
@@ -175,9 +185,11 @@ public class BossScript : MonoBehaviour
             Debug.Log("El jefe perdioVida " + hp);
             if (hp <= 0)
             {
-                Destroy(gameObject);
-
+                explosion2.SetActive(true);
                 StopCoroutine(HandleMovement());
+                //Destroy(gameObject, 4f);
+                Invoke("Victoria",3f);
+                
                 return;
             }
             float percentange = (float)hp / (float)MaxHp;
@@ -231,13 +243,11 @@ public class BossScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))  
-        {
-            other.GetComponent<DrakkarScript>().ChangeHp(-1);
-        }
+        
         if (other.CompareTag("balaDrakar")) 
         {
             TakeDamage(other.GetComponent<DrakkarBullet>().damage);
+            Instantiate(explosion, other.transform.position, explosion.transform.rotation);
             Destroy(other.gameObject);
         }
     }

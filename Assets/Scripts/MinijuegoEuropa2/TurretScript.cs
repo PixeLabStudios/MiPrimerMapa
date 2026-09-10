@@ -10,6 +10,9 @@ public class TurretScript : MonoBehaviour
     public float fireTime;
     public float scale;
     public float speed;
+    public AudioSource AudioSource;
+    public AudioClip audioClip;
+    public GameObject explocion;
 
     void Start()
     {
@@ -25,6 +28,7 @@ public class TurretScript : MonoBehaviour
     {
         while (true) 
         {
+            AudioSource.PlayOneShot(audioClip);
             GameObject b = Instantiate(prefab,spawnLocation.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y + 270, transform.rotation.z));
             b.transform.LookAt(manager.drakkarScript.GetDrakkarPos());
             Bulletship script = b.GetComponent<Bulletship>();
@@ -57,6 +61,10 @@ public class TurretScript : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 90 * Time.deltaTime);
         }
+    }
+    public void ActivarExplosion()
+    {
+        explocion.SetActive(true);
     }
 
     public void OnDisable()

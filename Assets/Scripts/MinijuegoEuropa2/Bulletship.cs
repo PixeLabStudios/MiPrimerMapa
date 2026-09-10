@@ -6,7 +6,7 @@ public class Bulletship : Obstacle
     public float speed;
     Vector3 direction;
     Vector2 initialPos;
-    
+    public GameObject explosion;
     
     // Update is called once per frame
     void Update()
@@ -32,12 +32,14 @@ public class Bulletship : Obstacle
     {
         Debug.Log("Choque con una bala");
         script.ChangeHp(-1);
+        Instantiate(explosion, transform.position, explosion.transform.rotation);
         Destroy(this.gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("agua")) 
         {
+            Instantiate(explosion, transform.position, explosion.transform.rotation);
             Destroy(this.gameObject);
         }
     }

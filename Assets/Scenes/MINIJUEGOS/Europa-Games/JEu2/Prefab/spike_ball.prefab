@@ -70,6 +70,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   obstacleName: 
   speed: 0
+  explosion: {fileID: 1620140131458704099, guid: 3bc7d7d4a87957545ae468a9d7f514c7, type: 3}
 --- !u!1 &3304277828673607007
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class EnemySubScript : MonoBehaviour
     float targetY;
     public GameObject torpedoPrefab;
     public Transform spawn;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
     
     float time;
     private void Awake()
@@ -74,6 +76,7 @@ public class EnemySubScript : MonoBehaviour
      
         float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;     
         GameObject bullet = Instantiate(torpedoPrefab, spawn.position, Quaternion.identity);
+        audioSource.PlayOneShot(audioClip);
         Bulletship script = bullet.GetComponent<Bulletship>();
         script.SetTarget(manager.drakkarScript.GetDrakkarPos(),spawn.position);
         script.speed = speed;

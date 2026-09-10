@@ -16,6 +16,8 @@ public class DrakkarScript : MonoBehaviour
     public GameObject mobilePanel;
     Vector3 inputMobile;
     Vector3 inputKeyboard;
+    public AudioClip audioClip;
+    public AudioSource audioSource;
 
     #region Movement
     public ShootButton shootButton;
@@ -71,7 +73,7 @@ public class DrakkarScript : MonoBehaviour
         currentHp = maxHp;
         moveSpeed = 30;
         lowestSpeed = 15;
-        maxSpeed = 60;
+        maxSpeed = 40;
         inputMobile = new Vector3(0, 0, 0);
         inputKeyboard = new Vector3(0, 0, 0);
         limitVerticalBottom = transform.position.z;
@@ -173,6 +175,7 @@ public class DrakkarScript : MonoBehaviour
         if (other.TryGetComponent<Obstacle>(out var script)) 
         { 
             script.Impact(this); 
+
         }
     }
     public void ChangeHp(int a) 
@@ -211,6 +214,7 @@ public class DrakkarScript : MonoBehaviour
     {
         if (time > lastShoot +fireRate) 
         {
+            audioSource.PlayOneShot(audioClip);
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
             lastShoot = time;
         }
