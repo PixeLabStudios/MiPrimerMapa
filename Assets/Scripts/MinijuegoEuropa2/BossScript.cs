@@ -242,4 +242,17 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<DrakkarScript>().ChangeHp(-1);
+        }
+        if (collision.gameObject.CompareTag("balaDrakar"))
+        {
+            TakeDamage(collision.gameObject.GetComponent<DrakkarBullet>().damage);
+            Destroy(collision.gameObject);
+        }
+    }
+
 }
