@@ -2010,7 +2010,7 @@ MonoBehaviour:
   nameContinente: {fileID: 1750069411}
   bloqueado: {fileID: 115046079}
   botonPlay: {fileID: 324253419}
-  continentesDesbloqueados: 00000000
+  continentesDesbloqueados: 0600000000000000
 --- !u!1 &848511759
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,6 +4779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idEscena: 0
+  currentCont: {fileID: 0}
 --- !u!114 &1843790768
 MonoBehaviour:
   m_ObjectHideFlags: 0

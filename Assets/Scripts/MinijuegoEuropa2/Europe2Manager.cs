@@ -37,6 +37,10 @@ public class Europe2Manager : BaseGameManager
         threshold = 35;
         StartCoroutine(StartGame());
     }
+    public void Salir()
+    {
+        Application.Quit(); 
+    }
     bool IsInactive() 
     {
         return !(bossScript.gameObject.activeSelf);
